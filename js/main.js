@@ -25,8 +25,8 @@ function applyLang(lang) {
   document.querySelectorAll('[data-ko]').forEach(el => {
     const text = lang === 'ko' ? el.dataset.ko : el.dataset.en;
     if (text !== undefined) {
-      // 줄바꿈 처리
-      if (text.includes('\n')) {
+      // 줄바꿈 또는 HTML 태그 포함 시 innerHTML 사용
+      if (text.includes('\n') || text.includes('<')) {
         el.innerHTML = text.replace(/\n/g, '<br>');
       } else {
         el.textContent = text;
