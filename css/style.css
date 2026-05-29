@@ -335,9 +335,13 @@ p  { font-size: 1rem; font-weight: 400; }
    ============================================================ */
 .hero {
   position: relative;
-  height: calc(100vh - var(--nav-height));
-  min-height: 500px;
+  width: 100%;
+  height: 100vh;
+  min-height: 600px;
   overflow: hidden;
+  /* 네비게이션 바 높이만큼 패딩 (가려짐 방지) */
+  padding-top: var(--nav-height);
+  box-sizing: border-box;
 }
 .hero__slides {
   position: relative;
@@ -355,6 +359,7 @@ p  { font-size: 1rem; font-weight: 400; }
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center center;
 }
 .hero__overlay {
   position: absolute;
@@ -1589,6 +1594,14 @@ p  { font-size: 1rem; font-weight: 400; }
 /* ============================================================
    RESPONSIVE
    ============================================================ */
+/* 태블릿 (768px ~ 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hero {
+    height: 70vh;
+    min-height: 500px;
+  }
+}
+
 @media (max-width: 1023px) {
   .grid-3, .room-preview-grid, .rooms-grid, .seorak-grid,
   .facility-card-grid, .discount-grid, .ota-grid, .feature-grid {
@@ -1623,10 +1636,32 @@ p  { font-size: 1rem; font-weight: 400; }
   /* 하단 CTA 바 언어 토글 표시 */
   .mobile-cta__lang { display: flex; }
 
-  .hero { height: 70vh; min-height: 400px; }
+  /* 히어로 모바일 최적화 */
+  .hero {
+    height: 100svh;
+    min-height: 500px;
+    padding-top: 56px;
+  }
+  .hero__slide img {
+    object-fit: cover;
+    object-position: center center;
+  }
+  .hero__title {
+    font-size: 1.8rem;
+    line-height: 1.3;
+  }
+  .hero__subtitle {
+    font-size: 1rem;
+  }
   .hero__dots { bottom: 160px; }
   .booking-bar__inner { flex-direction: column; }
   .booking-bar__field { min-width: 100%; }
+  .booking-bar__field input,
+  .booking-bar__field select {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
 
   .trust-bar__inner { gap: 12px; }
   .trust-bar__divider { display: none; }
