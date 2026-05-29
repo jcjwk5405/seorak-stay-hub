@@ -262,6 +262,14 @@ p  { font-size: 1rem; font-weight: 400; }
   background: var(--color-primary);
   color: #fff;
 }
+/* 데스크톱 전용 토글 (기본 표시, 모바일에서 숨김) */
+.lang-toggle-desktop {
+  display: flex;
+}
+/* 모바일 전용 토글 (기본 숨김, 모바일에서 표시) */
+.lang-toggle-mobile {
+  display: none;
+}
 .navbar__reserve-btn {
   background: var(--color-accent);
   color: #fff;
@@ -818,8 +826,30 @@ p  { font-size: 1rem; font-weight: 400; }
 }
 .mobile-cta__inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  grid-template-columns: auto 1fr 1fr;
+  gap: 8px;
+  align-items: center;
+}
+/* 하단 CTA 바 언어 토글 */
+.mobile-cta__lang {
+  border: 1px solid rgba(255,255,255,0.25) !important;
+  border-radius: 6px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.mobile-cta__lang button {
+  padding: 8px 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: rgba(255,255,255,0.6);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.mobile-cta__lang button.active {
+  background: var(--color-primary);
+  color: #fff;
 }
 .mobile-cta__btn {
   display: flex;
@@ -1585,6 +1615,13 @@ p  { font-size: 1rem; font-weight: 400; }
   .navbar__reserve-btn { display: none; }
   .hamburger { display: flex; }
   .lang-toggle { display: none; }
+  /* 모바일 전용 토글 표시 */
+  .lang-toggle-mobile { display: flex; }
+  .lang-toggle-desktop { display: none; }
+  /* 예약하기 버튼 숨김 (모바일) */
+  .navbar__reserve-btn--desktop { display: none; }
+  /* 하단 CTA 바 언어 토글 표시 */
+  .mobile-cta__lang { display: flex; }
 
   .hero { height: 70vh; min-height: 400px; }
   .hero__dots { bottom: 160px; }
