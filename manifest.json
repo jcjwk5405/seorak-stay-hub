@@ -1,27 +1,42 @@
 {
   "name": "설악산유스호스텔",
-  "short_name": "설악유스",
-  "description": "설악산 C지구 설악산유스호스텔 - 자연 속으로, 설악산의 품에서",
-  "start_url": "/index.html",
+  "short_name": "설악산유스호스텔",
+  "description": "설악산 국립공원 도보 5분 – 설악산유스호스텔 공식 홈페이지",
+  "start_url": "/seorak-hostel/",
+  "scope": "/seorak-hostel/",
   "display": "standalone",
-  "background_color": "#0a1628",
-  "theme_color": "#1e3a5f",
+  "background_color": "#ffffff",
+  "theme_color": "#2C5F2E",
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "images/icon-192.svg",
+      "src": "images/icon-192.png",
       "sizes": "192x192",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "images/icon-512.svg",
+      "src": "images/icon-512.png",
       "sizes": "512x512",
-      "type": "image/svg+xml",
+      "type": "image/png",
       "purpose": "any maskable"
     }
   ],
   "categories": ["travel", "lifestyle"],
   "lang": "ko",
-  "screenshots": []
+  "screenshots": [],
+  "shortcuts": [
+    {
+      "name": "예약 안내",
+      "short_name": "예약",
+      "url": "/seorak-hostel/reservation.html",
+      "icons": [{ "src": "images/icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "객실 안내",
+      "short_name": "객실",
+      "url": "/seorak-hostel/rooms.html",
+      "icons": [{ "src": "images/icon-192.png", "sizes": "192x192" }]
+    }
+  ]
 }

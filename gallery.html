@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>갤러리 – 설악산유스호스텔</title>
+  <meta name="description" content="설악산유스호스텔 갤러리 – 건물 외관, 로비, 객실, 시설 사진 모음.">
+  <meta name="theme-color" content="#2C5F2E">
+  <link rel="manifest" href="manifest.json">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <div class="page-hero">
+    <div class="page-hero__breadcrumb">
+      <a href="index.html">홈</a> <span>›</span> <span>갤러리</span>
+    </div>
+    <h1 class="page-hero__title">갤러리</h1>
+    <p class="page-hero__subtitle">설악산유스호스텔의 아름다운 공간을 사진으로 만나보세요</p>
+  </div>
+
+  <section class="section">
+    <div class="container">
+      <!-- 필터 탭 -->
+      <div class="room-filter" style="margin-bottom:32px;">
+        <button class="gallery-filter-btn filter-btn active" data-filter="all">전체</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="exterior">외관</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="lobby">로비·프런트</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="bed">침대룸</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="ondol">온돌룸</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="facility">시설</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="outdoor">야외</button>
+      </div>
+
+      <!-- 갤러리 그리드 -->
+      <div class="gallery-grid">
+        <!-- 외관 -->
+        <div class="gallery-item" data-category="exterior" data-src="images/건물외관_01_1024x768.png" data-caption="설악산유스호스텔 전경">
+          <img src="images/건물외관_01_1024x768.png" alt="설악산유스호스텔 전경" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="exterior" data-src="images/외관_05_598x399.png" data-caption="설악산을 배경으로 한 입구">
+          <img src="images/외관_05_598x399.png" alt="설악산을 배경으로 한 입구" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+
+        <!-- 로비·프런트 -->
+        <div class="gallery-item" data-category="lobby" data-src="images/로비_01_968x607.jpeg" data-caption="넓고 따뜻한 로비">
+          <img src="images/로비_01_968x607.jpeg" alt="넓고 따뜻한 로비" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="lobby" data-src="images/프론트_339x206.jpeg" data-caption="24시간 프런트 데스크">
+          <img src="images/프론트_339x206.jpeg" alt="24시간 프런트 데스크" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+
+        <!-- 침대룸 -->
+        <div class="gallery-item" data-category="bed" data-src="images/침대1_1280x1024.png" data-caption="스탠다드 침대룸">
+          <img src="images/침대1_1280x1024.png" alt="스탠다드 침대룸" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="bed" data-src="images/침대_4.jpg" data-caption="밝은 자연광의 더블룸">
+          <img src="images/침대_4.jpg" alt="밝은 자연광의 더블룸" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="bed" data-src="images/침대_5.jpg" data-caption="스탠다드 침대룸 측면">
+          <img src="images/침대_5.jpg" alt="스탠다드 침대룸 측면" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="bed" data-src="images/침대_6.jpeg" data-caption="트윈 침대룸">
+          <img src="images/침대_6.jpeg" alt="트윈 침대룸" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="bed" data-src="images/침대2_15_696x392.png" data-caption="트윈룸 — 에어컨·드레서">
+          <img src="images/침대2_15_696x392.png" alt="트윈룸 에어컨·드레서" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="bed" data-src="images/침대3_17_696x392.png" data-caption="넓은 스탠다드 침대룸">
+          <img src="images/침대3_17_696x392.png" alt="넓은 스탠다드 침대룸" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="bed" data-src="images/객실_18_696x392.png" data-caption="우드 인테리어 리모델링 객실">
+          <img src="images/객실_18_696x392.png" alt="우드 인테리어 리모델링 객실" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+
+        <!-- 온돌룸 -->
+        <div class="gallery-item" data-category="ondol" data-src="images/온돌_05.png" data-caption="VIP 온돌+거실 — 슬라이딩 도어">
+          <img src="images/온돌_05.png" alt="VIP 온돌+거실" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="ondol" data-src="images/온돌1_06_375x250.jpeg" data-caption="스탠다드 온돌룸">
+          <img src="images/온돌1_06_375x250.jpeg" alt="스탠다드 온돌룸" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="ondol" data-src="images/온돌3.jpg" data-caption="VIP 온돌+거실 전체 뷰">
+          <img src="images/온돌3.jpg" alt="VIP 온돌+거실 전체 뷰" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+        <div class="gallery-item" data-category="ondol" data-src="images/온돌4_16_696x392.png" data-caption="온돌 바닥 침구">
+          <img src="images/온돌4_16_696x392.png" alt="온돌 바닥 침구" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+
+        <!-- 시설 -->
+        <div class="gallery-item" data-category="facility" data-src="images/강당_03_339x206.jpeg" data-caption="강당·연회장 — 단체 행사 가능">
+          <img src="images/강당_03_339x206.jpeg" alt="강당·연회장" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+
+        <!-- 야외 -->
+        <div class="gallery-item" data-category="outdoor" data-src="images/기타_06_339x206.jpeg" data-caption="야외 데크 야경">
+          <img src="images/기타_06_339x206.jpeg" alt="야외 데크 야경" loading="lazy">
+          <div class="gallery-item__overlay"><span>🔍</span></div>
+        </div>
+      </div>
+
+      <!-- 갤러리 카운트 -->
+      <p style="text-align:center;color:var(--color-text-sub);margin-top:24px;font-size:0.9rem;">총 17장의 사진</p>
+    </div>
+  </section>
+
+  <!-- 라이트박스 -->
+  <div class="lightbox" id="lightbox">
+    <div class="lightbox__content">
+      <button class="lightbox__close" aria-label="닫기">✕</button>
+      <img class="lightbox__img" src="" alt="">
+      <div class="lightbox__nav">
+        <button class="lightbox__prev" aria-label="이전">‹</button>
+        <button class="lightbox__next" aria-label="다음">›</button>
+      </div>
+      <p class="lightbox__caption"></p>
+    </div>
+  </div>
+
+  <!-- CTA -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner__title">직접 눈으로 확인하세요</h2>
+      <p class="cta-banner__text">설악산유스호스텔에서 특별한 추억을 만들어 보세요</p>
+      <a href="reservation.html" class="btn btn--primary">지금 예약하기</a>
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

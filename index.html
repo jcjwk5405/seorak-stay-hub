@@ -3,503 +3,327 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#1e3a5f">
-  <meta name="description" content="설악산 C지구에 위치한 설악산유스호스텔 — 82개 객실, 자연 속의 힐링 공간. 직접 예약 시 최저가 보장.">
-  <meta property="og:title" content="설악산유스호스텔 | 자연 속으로, 설악산의 품에서">
-  <meta property="og:description" content="설악산 C지구 소재, 82개 객실의 설악산유스호스텔 공식 홈페이지">
+  <title>설악산유스호스텔 – 자연 속으로, 설악산의 품에서</title>
+  <meta name="description" content="설악산유스호스텔 – 설악산 국립공원 도보 5분, 속초 청봉로 173. 스탠다드 침대룸·온돌룸·패밀리룸·도미토리. 직접 예약 시 5% 할인.">
+  <meta name="keywords" content="설악산 숙박, 속초 유스호스텔, 설악동 숙소, 설악산 호텔, 속초 게스트하우스, 설악산유스호스텔">
+  <meta property="og:title" content="설악산유스호스텔 – 자연 속으로, 설악산의 품에서">
+  <meta property="og:description" content="설악산 국립공원 도보 5분, 총 82객실. 직접 예약 시 OTA 대비 5% 할인.">
+  <meta property="og:image" content="images/건물외관_01_1024x768.png">
   <meta property="og:type" content="website">
-  <title>설악산유스호스텔 | 자연 속으로, 설악산의 품에서</title>
+  <meta property="og:url" content="https://jcjwk5405.github.io/seorak-hostel/">
+  <meta name="theme-color" content="#2C5F2E">
   <link rel="manifest" href="manifest.json">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="icon" type="image/svg+xml" href="images/icon-192.svg">
-  <link rel="apple-touch-icon" href="images/icon-192.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <div id="navbar-placeholder"></div>
 
-<!-- Notice Bar -->
-<div class="notice-bar">
-  <span class="notice-label">공지</span>
-  <div class="notice-scroll">
-    🌸 2026년 여름 성수기 예약 오픈 — 7월 15일부터 8월 31일 · 홈페이지 직접 예약 시 5% 추가 할인 제공 · 설악산 케이블카 정상 운행 중
-  </div>
-</div>
-
-<!-- Navigation -->
-<nav class="nav" id="mainNav">
-  <div class="nav-inner">
-    <a href="index.html" class="nav-logo">
-      <span class="nav-logo-main">설악산유스호스텔</span>
-      <span class="nav-logo-sub">Seoraksan Youth Hostel · C District</span>
-    </a>
-    <ul class="nav-links">
-      <li><a href="pages/about.html">호스텔 소개</a></li>
-      <li><a href="pages/rooms.html">객실 안내</a></li>
-      <li><a href="pages/facilities.html">시설 안내</a></li>
-      <li><a href="pages/pricing.html">요금 안내</a></li>
-      <li><a href="pages/gallery.html">갤러리</a></li>
-      <li><a href="pages/reservation.html" class="nav-reserve-btn">예약하기</a></li>
-    </ul>
-    <button class="nav-toggle" onclick="toggleNav()" aria-label="메뉴">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
-</nav>
-<div class="nav-mobile" id="mobileMenu">
-  <a href="pages/about.html">🏔 호스텔 소개</a>
-  <a href="pages/rooms.html">🛏 객실 안내</a>
-  <a href="pages/facilities.html">🏊 시설 안내</a>
-  <a href="pages/pricing.html">💰 요금 안내</a>
-  <a href="pages/gallery.html">📸 갤러리</a>
-  <a href="pages/reservation.html" class="mobile-reserve">📅 예약하기</a>
-</div>
-
-<!-- Hero Section -->
-<section class="hero">
-  <div class="hero-bg">
-    <canvas id="heroCanvas" class="hero-canvas"></canvas>
-    <div class="hero-overlay"></div>
-  </div>
-  <div class="container" style="width:100%; max-width:1200px; margin:0 auto;">
-    <div class="hero-content">
-      <div class="hero-badge">
-        <span>🏔</span> 설악산 국립공원 C지구 공식 숙소
+  <section class="hero">
+    <div class="hero__slides">
+      <div class="hero__slide active">
+        <img src="images/건물외관_01_1024x768.png" alt="설악산유스호스텔 건물 전경">
+        <div class="hero__overlay"></div>
       </div>
-      <h1 class="hero-title">
-        자연 속으로,<br><span>설악산</span>의 품에서
-      </h1>
-      <p class="hero-subtitle serif-display">Into Nature, Rest in Seoraksan</p>
-      <div class="hero-stats">
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">82</div>
-          <div class="hero-stat-label">개 객실</div>
-        </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">4.3</div>
-          <div class="hero-stat-label">평균 평점</div>
-        </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">30</div>
-          <div class="hero-stat-label">년 운영</div>
-        </div>
-        <div class="hero-stat-item">
-          <div class="hero-stat-num">5분</div>
-          <div class="hero-stat-label">케이블카 거리</div>
-        </div>
+      <div class="hero__slide">
+        <img src="images/기타_06_339x206.jpeg" alt="야외 데크 야경">
+        <div class="hero__overlay"></div>
       </div>
-      <!-- Quick Booking Bar -->
-      <form class="booking-bar" onsubmit="handleSearch(event)">
-        <div class="booking-field">
-          <label>체크인</label>
-          <input type="date" id="checkin" required>
+      <div class="hero__slide">
+        <img src="images/침대1_1280x1024.png" alt="스탠다드 침대룸 내부">
+        <div class="hero__overlay"></div>
+      </div>
+    </div>
+    <div class="hero__content">
+      <div class="hero__badge" data-i18n="hero_badge">설악산 국립공원 도보 5분</div>
+      <h1 class="hero__title" data-i18n="hero_title">자연 속으로,<br>설악산의 품에서</h1>
+      <p class="hero__subtitle" data-i18n="hero_subtitle">Into Nature, Embrace of Seoraksan</p>
+    </div>
+    <div class="hero__dots">
+      <span class="hero__dot active"></span>
+      <span class="hero__dot"></span>
+      <span class="hero__dot"></span>
+    </div>
+    <div class="booking-bar">
+      <form class="booking-bar__inner" id="booking-form">
+        <div class="booking-bar__field">
+          <label for="checkin" data-i18n="hero_checkin">체크인</label>
+          <input type="date" id="checkin" name="checkin">
         </div>
-        <div class="booking-field">
-          <label>체크아웃</label>
-          <input type="date" id="checkout" required>
+        <div class="booking-bar__field">
+          <label for="checkout" data-i18n="hero_checkout">체크아웃</label>
+          <input type="date" id="checkout" name="checkout">
         </div>
-        <div class="booking-field">
-          <label>인원</label>
-          <select id="guests">
-            <option value="1">1인</option>
-            <option value="2" selected>2인</option>
-            <option value="3">3인</option>
-            <option value="4">4인</option>
-            <option value="5">5인 이상</option>
+        <div class="booking-bar__field" style="max-width:130px;">
+          <label for="guests" data-i18n="hero_guests">인원</label>
+          <select id="guests" name="guests">
+            <option value="1">1명</option>
+            <option value="2" selected>2명</option>
+            <option value="3">3명</option>
+            <option value="4">4명</option>
+            <option value="5">5명 이상</option>
           </select>
         </div>
-        <button type="submit" class="btn-search">객실 검색</button>
+        <button type="submit" class="btn btn--primary" data-i18n="hero_btn">예약 가능 확인</button>
       </form>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Features Strip -->
-<section class="section-sm" style="background: rgba(15,28,50,0.9); border-bottom: 1px solid rgba(200,168,75,0.1);">
-  <div class="container">
-    <div class="feature-grid fade-up">
-      <div class="feature-item">
-        <div class="feature-icon">🏔</div>
-        <div class="feature-name">설악산 바로 앞</div>
-        <div class="feature-desc">국립공원 인접, 케이블카 5분</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🛜</div>
-        <div class="feature-name">무료 Wi-Fi</div>
-        <div class="feature-desc">전 객실 고속 인터넷</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🅿️</div>
-        <div class="feature-name">무료 주차</div>
-        <div class="feature-desc">셀프 주차 무료 제공</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🍳</div>
-        <div class="feature-name">공용 주방</div>
-        <div class="feature-desc">셀프 취사 가능</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🐾</div>
-        <div class="feature-name">반려동물 동반 불가</div>
-        <div class="feature-desc">사전 문의 필수</div>
-      </div>
-      <div class="feature-item">
-        <div class="feature-icon">🏆</div>
-        <div class="feature-name">HIKOREA 정식 회원</div>
-        <div class="feature-desc">한국유스호스텔연맹 가입</div>
-      </div>
+  <div class="trust-bar">
+    <div class="trust-bar__inner">
+      <span class="trust-bar__item">🏨 <span data-i18n="trust_rooms">82실 운영</span></span>
+      <span class="trust-bar__divider">|</span>
+      <span class="trust-bar__item">📍 <span data-i18n="trust_walk">설악산 도보 5분</span></span>
+      <span class="trust-bar__divider">|</span>
+      <span class="trust-bar__item">⭐ <span data-i18n="trust_rating">아고다 7.9 / 위치 8.6</span></span>
+      <span class="trust-bar__divider">|</span>
+      <span class="trust-bar__item">🅿️ <span data-i18n="trust_parking">무료 주차 30대</span></span>
     </div>
   </div>
-</section>
 
-<!-- Direct Booking Banner -->
-<div style="background: linear-gradient(90deg, rgba(200,168,75,0.15), rgba(200,168,75,0.08)); border-top: 1px solid rgba(200,168,75,0.3); border-bottom: 1px solid rgba(200,168,75,0.3); padding: 16px 28px; text-align: center;">
-  <p style="font-size: 0.88rem; color: var(--gold-pale);">
-    🎁 <strong style="color:var(--gold);">홈페이지 직접 예약 특별 혜택</strong> — OTA 대비 5% 추가 할인 · 무료 생수 2병 제공 · HIKOREA 회원 10% 추가 할인
-  </p>
-</div>
-
-<!-- Room Preview Section -->
-<section class="section">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="section-label">Accommodation</span>
-      <h2 class="section-title">다양한 <em>객실 타입</em></h2>
-      <p class="section-desc">총 82개 객실로 혼자, 둘이, 가족과 함께 — 모든 여행 형태에 맞는 공간을 갖추고 있습니다.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="grid-3">
-      <!-- Room 1 -->
-      <div class="room-card fade-up stagger-1">
-        <div class="room-img-wrap">
-          <div class="room-illustration" style="background: linear-gradient(135deg, #1a3358, #0d1e3a);">
-            <span style="font-size:5rem; opacity:0.8">🛏</span>
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title" data-i18n="section_rooms">다양한 객실 타입</h2>
+        <p class="section__subtitle" data-i18n="section_rooms_sub">설악산 뷰와 함께하는 편안한 휴식</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="room-preview-grid">
+        <div class="card">
+          <img class="card__img" src="images/침대1_1280x1024.png" alt="스탠다드 침대룸" loading="lazy">
+          <div class="card__body">
+            <div style="display:flex;gap:6px;margin-bottom:8px;"><span class="badge badge--accent">인기</span></div>
+            <h3 class="card__title">스탠다드 침대룸</h3>
+            <p class="card__text">더블침대 1개 · 기준 2인 · 23㎡ · 마운틴뷰</p>
+            <div class="card__price">55,000원~</div>
+            <a href="rooms.html#bed" class="btn btn--secondary btn--sm btn--full" data-i18n="view_detail">자세히 보기</a>
           </div>
-          <div class="room-badge">인기</div>
         </div>
-        <div class="room-body">
-          <div class="room-meta">
-            <span class="room-meta-item"><span class="room-meta-icon">👤</span> 기준 2인</span>
-            <span class="room-meta-item"><span class="room-meta-icon">📐</span> 약 20㎡</span>
+        <div class="card">
+          <img class="card__img" src="images/온돌_05.png" alt="VIP 온돌+거실" loading="lazy">
+          <div class="card__body">
+            <div style="display:flex;gap:6px;margin-bottom:8px;"><span class="badge badge--primary">VIP</span></div>
+            <h3 class="card__title">VIP 온돌+거실</h3>
+            <p class="card__text">온돌+거실 분리 · 기준 3인 · 43㎡</p>
+            <div class="card__price">90,000원~</div>
+            <a href="rooms.html#ondol" class="btn btn--secondary btn--sm btn--full" data-i18n="view_detail">자세히 보기</a>
           </div>
-          <h3 class="room-title">스탠다드 온돌룸</h3>
-          <p class="room-desc">전통 온돌 바닥 난방과 현대적 편의시설이 조화를 이루는 한국형 객실. 설악산 트레킹 후 온기 있는 휴식을 제공합니다.</p>
-          <div class="room-amenities">
-            <span class="amenity-tag">온돌 난방</span>
-            <span class="amenity-tag">에어컨</span>
-            <span class="amenity-tag">평면 TV</span>
-            <span class="amenity-tag">전용 욕실</span>
+        </div>
+        <div class="card">
+          <img class="card__img" src="images/침대_6.jpeg" alt="스탠다드 트윈룸" loading="lazy">
+          <div class="card__body">
+            <div style="display:flex;gap:6px;margin-bottom:8px;"><span class="badge badge--blue">추천</span></div>
+            <h3 class="card__title">스탠다드 트윈룸</h3>
+            <p class="card__text">싱글침대 2개 · 기준 2인 · 23㎡ · 마운틴뷰</p>
+            <div class="card__price">55,000원~</div>
+            <a href="rooms.html#twin" class="btn btn--secondary btn--sm btn--full" data-i18n="view_detail">자세히 보기</a>
           </div>
-          <div class="room-price-row">
-            <div class="room-price">
-              <span class="room-price-from">1박 시작가</span>
-              <span class="room-price-num">50,000</span>
-              <span class="room-price-suffix">원~</span>
+        </div>
+        <div class="card">
+          <img class="card__img" src="images/온돌4_16_696x392.png" alt="스탠다드 온돌룸" loading="lazy">
+          <div class="card__body">
+            <div style="display:flex;gap:6px;margin-bottom:8px;"><span class="badge badge--accent">가성비</span></div>
+            <h3 class="card__title">스탠다드 온돌룸</h3>
+            <p class="card__text">온돌 바닥 난방 · 기준 2인 · 23㎡</p>
+            <div class="card__price">50,000원~</div>
+            <a href="rooms.html#std" class="btn btn--secondary btn--sm btn--full" data-i18n="view_detail">자세히 보기</a>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-32">
+        <a href="rooms.html" class="btn btn--primary">전체 객실 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sub">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title" data-i18n="section_facilities">편의 시설 한눈에</h2>
+        <p class="section__subtitle" data-i18n="section_facilities_sub">투숙객을 위한 다양한 편의시설</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="facility-grid">
+        <div class="facility-item">
+          <div class="facility-item__icon">🍳</div>
+          <div><div class="facility-item__title">공용 주방</div><div class="facility-item__desc">전기레인지·전자레인지·냉장고·식기대여 | 07:00~22:00</div></div>
+        </div>
+        <div class="facility-item">
+          <div class="facility-item__icon">🔥</div>
+          <div><div class="facility-item__title">야외 바베큐</div><div class="facility-item__desc">선착순 무료 (화로 제공, 숯·그릴 별도)</div></div>
+        </div>
+        <div class="facility-item">
+          <div class="facility-item__icon">🏢</div>
+          <div><div class="facility-item__title">강당·세미나실</div><div class="facility-item__desc">단체 수련회·기업 워크숍·세미나 가능</div></div>
+        </div>
+        <div class="facility-item">
+          <div class="facility-item__icon">🅿️</div>
+          <div><div class="facility-item__title">무료 주차</div><div class="facility-item__desc">셀프 주차 30대 | 공영주차장 150m</div></div>
+        </div>
+        <div class="facility-item">
+          <div class="facility-item__icon">🐾</div>
+          <div><div class="facility-item__title">반려동물 동반</div><div class="facility-item__desc">10kg 이하 소형견·고양이 (사전 문의 필수)</div></div>
+        </div>
+        <div class="facility-item">
+          <div class="facility-item__icon">🧺</div>
+          <div><div class="facility-item__title">코인 세탁실</div><div class="facility-item__desc">24시간 운영 | 세탁기 3,000원 / 건조기 2,000원</div></div>
+        </div>
+      </div>
+      <div class="text-center mt-32">
+        <a href="facilities.html" class="btn btn--secondary">시설 전체 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title" data-i18n="section_seorak">설악산이 바로 문 앞에</h2>
+        <p class="section__subtitle" data-i18n="section_seorak_sub">국립공원, 케이블카, 워터피아 — 모두 가까이</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="seorak-grid">
+        <div class="seorak-card">
+          <div class="seorak-card__icon">🚶</div>
+          <h3 class="seorak-card__title">국립공원 소공원 입구</h3>
+          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:12px;">울산바위·비선대·공룡능선 트레킹 출발점</p>
+          <span class="seorak-card__time">차량 3분</span>
+        </div>
+        <div class="seorak-card">
+          <div class="seorak-card__icon">🚡</div>
+          <h3 class="seorak-card__title">설악산 케이블카</h3>
+          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:12px;">권금성까지 5분, 설악산 전경 파노라마</p>
+          <span class="seorak-card__time">차량 11분</span>
+        </div>
+        <div class="seorak-card">
+          <div class="seorak-card__icon">🏊</div>
+          <h3 class="seorak-card__title">설악 워터피아</h3>
+          <p style="color:var(--color-text-sub);font-size:0.9rem;margin-bottom:12px;">온천·워터파크 복합 리조트</p>
+          <span class="seorak-card__time">차량 10분</span>
+        </div>
+      </div>
+      <div class="text-center">
+        <a href="https://map.kakao.com/link/search/설악산유스호스텔" target="_blank" rel="noopener" class="btn btn--secondary" data-i18n="map_kakao_btn">카카오맵으로 보기</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--sub">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title" data-i18n="section_reviews">투숙객 생생 후기</h2>
+        <p class="section__subtitle" data-i18n="section_reviews_sub">실제 투숙객의 솔직한 이야기</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="review-slider">
+        <div class="review-slides">
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+              <p class="review-card__text">"침구류도 매우 깨끗하고 설악산과 속초 관광하기 좋은 위치이며 주변에 식당들도 많이 영업하고 있어서 편리했습니다."</p>
+              <div class="review-card__author">Ungbin</div>
+              <div class="review-card__platform">부킹닷컴 10/10</div>
             </div>
-            <a href="pages/rooms.html#ondol" class="btn btn-outline btn-sm">자세히 보기</a>
           </div>
-        </div>
-      </div>
-      <!-- Room 2 -->
-      <div class="room-card fade-up stagger-2">
-        <div class="room-img-wrap">
-          <div class="room-illustration" style="background: linear-gradient(135deg, #1e4060, #102030);">
-            <span style="font-size:5rem; opacity:0.8">🛋</span>
-          </div>
-          <div class="room-badge" style="background: var(--sage);">가족 추천</div>
-        </div>
-        <div class="room-body">
-          <div class="room-meta">
-            <span class="room-meta-item"><span class="room-meta-icon">👤</span> 기준 4인</span>
-            <span class="room-meta-item"><span class="room-meta-icon">📐</span> 약 35㎡</span>
-          </div>
-          <h3 class="room-title">패밀리 룸</h3>
-          <p class="room-desc">넓은 공간에 침대와 온돌이 함께 배치된 가족 전용 객실. 아이들과 함께하는 설악산 여행에 최적화된 구성입니다.</p>
-          <div class="room-amenities">
-            <span class="amenity-tag">침대+온돌</span>
-            <span class="amenity-tag">에어컨</span>
-            <span class="amenity-tag">넓은 공간</span>
-            <span class="amenity-tag">4인 구성</span>
-          </div>
-          <div class="room-price-row">
-            <div class="room-price">
-              <span class="room-price-from">1박 시작가</span>
-              <span class="room-price-num">90,000</span>
-              <span class="room-price-suffix">원~</span>
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-card__stars">⭐⭐⭐⭐⭐</div>
+              <p class="review-card__text">"호텔이 설악산 국립공원과 가까워 여행하기 좋았고, 택시로 약 15분에 속초 시내가 있어 이동하기도 너무 좋았습니다!"</p>
+              <div class="review-card__author">Duckhip</div>
+              <div class="review-card__platform">트립닷컴</div>
             </div>
-            <a href="pages/rooms.html#family" class="btn btn-outline btn-sm">자세히 보기</a>
           </div>
-        </div>
-      </div>
-      <!-- Room 3 -->
-      <div class="room-card fade-up stagger-3">
-        <div class="room-img-wrap">
-          <div class="room-illustration" style="background: linear-gradient(135deg, #1a2840, #0a1420);">
-            <span style="font-size:5rem; opacity:0.8">🎒</span>
-          </div>
-          <div class="room-badge" style="background: var(--rust);">솔로 여행</div>
-        </div>
-        <div class="room-body">
-          <div class="room-meta">
-            <span class="room-meta-item"><span class="room-meta-icon">👤</span> 1인 기준</span>
-            <span class="room-meta-item"><span class="room-meta-icon">🛏</span> 4~6인 도미</span>
-          </div>
-          <h3 class="room-title">도미토리 룸</h3>
-          <p class="room-desc">배낭여행객을 위한 합리적인 공용 객실. 개인 락커와 커튼으로 프라이버시를 확보하고 새로운 여행자를 만날 수 있습니다.</p>
-          <div class="room-amenities">
-            <span class="amenity-tag">개인 락커</span>
-            <span class="amenity-tag">개인 커튼</span>
-            <span class="amenity-tag">무료 Wi-Fi</span>
-            <span class="amenity-tag">공용 욕실</span>
-          </div>
-          <div class="room-price-row">
-            <div class="room-price">
-              <span class="room-price-from">1박 시작가</span>
-              <span class="room-price-num">20,000</span>
-              <span class="room-price-suffix">원~</span>
+          <div class="review-slide">
+            <div class="review-card">
+              <div class="review-card__stars">⭐⭐⭐⭐</div>
+              <p class="review-card__text">"오래된 숙소라 별 기대를 안 했는데 깨끗하게 관리하시고 서비스 바로바로 해결해 주십니다."</p>
+              <div class="review-card__author">리뷰어</div>
+              <div class="review-card__platform">트립닷컴</div>
             </div>
-            <a href="pages/rooms.html#dormitory" class="btn btn-outline btn-sm">자세히 보기</a>
+          </div>
+        </div>
+        <div class="review-nav">
+          <button class="review-prev" aria-label="이전">&#8592;</button>
+          <div class="review-dots">
+            <span class="review-dot active"></span>
+            <span class="review-dot"></span>
+            <span class="review-dot"></span>
+          </div>
+          <button class="review-next" aria-label="다음">&#8594;</button>
+        </div>
+      </div>
+      <div class="rating-badges">
+        <div class="rating-badge"><div class="rating-badge__platform">아고다</div><div class="rating-badge__score">7.9</div></div>
+        <div class="rating-badge"><div class="rating-badge__platform">호텔스컴바인</div><div class="rating-badge__score">7.3</div></div>
+        <div class="rating-badge"><div class="rating-badge__platform">트립닷컴</div><div class="rating-badge__score">7.6</div></div>
+        <div class="rating-badge"><div class="rating-badge__platform">부킹닷컴</div><div class="rating-badge__score">7.2</div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-banner">
+    <div class="container">
+      <h2 class="cta-banner__title" data-i18n="cta_banner_title">🏠 홈페이지 직접 예약 시 특별 혜택</h2>
+      <p class="cta-banner__text" data-i18n="cta_banner_text">OTA 대비 5% 추가 할인 + 무료 생수 2병 제공</p>
+      <a href="reservation.html" class="btn btn--primary" data-i18n="cta_btn">지금 예약하기</a>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2 class="section__title" data-i18n="section_map">오시는 길</h2>
+        <p class="section__subtitle" data-i18n="section_map_sub">강원특별자치도 속초시 청봉로 173</p>
+        <div class="section__divider"></div>
+      </div>
+      <div class="map-section">
+        <div class="map-embed">
+          <iframe src="https://map.kakao.com/link/map/설악산유스호스텔,38.1219,128.4658" title="설악산유스호스텔 위치" allowfullscreen loading="lazy"></iframe>
+        </div>
+        <div class="map-info">
+          <h3 class="map-info__title">교통편 안내</h3>
+          <div class="transport-list">
+            <div class="transport-item">
+              <div class="transport-item__icon">🚗</div>
+              <div class="transport-item__text">
+                <div class="transport-item__label" data-i18n="map_car">자가용</div>
+                <span data-i18n="map_car_desc">속초IC → 설악동 방면 → 청봉로 173</span>
+              </div>
+            </div>
+            <div class="transport-item">
+              <div class="transport-item__icon">🚌</div>
+              <div class="transport-item__text">
+                <div class="transport-item__label" data-i18n="map_bus">고속버스</div>
+                <span data-i18n="map_bus_desc">동서울/서울고속 → 속초터미널 → 버스/택시</span>
+              </div>
+            </div>
+            <div class="transport-item">
+              <div class="transport-item__icon">🚆</div>
+              <div class="transport-item__text">
+                <div class="transport-item__label" data-i18n="map_train">KTX</div>
+                <span data-i18n="map_train_desc">강릉역 → 속초행 시외버스 → 설악동 하차</span>
+              </div>
+            </div>
+            <div class="transport-item">
+              <div class="transport-item__icon">🚶</div>
+              <div class="transport-item__text">
+                <div class="transport-item__label" data-i18n="map_walk">버스정류장</div>
+                <span data-i18n="map_walk_desc">도보 1분 거리</span>
+              </div>
+            </div>
+          </div>
+          <div class="mt-24">
+            <a href="https://map.kakao.com/link/search/설악산유스호스텔" target="_blank" rel="noopener" class="btn btn--primary" data-i18n="map_kakao_btn">카카오맵으로 보기</a>
           </div>
         </div>
       </div>
     </div>
-    <div class="text-center mt-32 fade-up">
-      <a href="pages/rooms.html" class="btn btn-primary btn-lg">전체 객실 보기 (6종)</a>
-    </div>
-  </div>
-</section>
+  </section>
 
-<div class="divider"></div>
-
-<!-- Facilities Preview -->
-<section class="section">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="section-label">Facilities</span>
-      <h2 class="section-title">편리한 <em>부대시설</em></h2>
-      <p class="section-desc">트레킹 전후 필요한 모든 편의 시설을 한 곳에서 이용하세요.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="grid-4 fade-up">
-      <div class="facility-card">
-        <div class="facility-card-icon">🍳</div>
-        <h4 class="facility-card-title">공용 주방</h4>
-        <p class="facility-card-desc">전기레인지·전자레인지·냉장고 구비, 셀프 취사 가능</p>
-        <span class="facility-hours">⏰ 07:00~22:00</span>
-      </div>
-      <div class="facility-card">
-        <div class="facility-card-icon">🍽</div>
-        <h4 class="facility-card-title">식당 / 레스토랑</h4>
-        <p class="facility-card-desc">한식 중심 메뉴, 조식·석식 운영 (별도 예약)</p>
-        <span class="facility-hours">⏰ 조식 07~09시</span>
-      </div>
-      <div class="facility-card">
-        <div class="facility-card-icon">🏢</div>
-        <h4 class="facility-card-title">연회장 · 세미나실</h4>
-        <p class="facility-card-desc">단체 행사·기업 워크숍, 프로젝터·음향 완비</p>
-        <span class="facility-hours">📞 사전 예약 필수</span>
-      </div>
-      <div class="facility-card">
-        <div class="facility-card-icon">🧺</div>
-        <h4 class="facility-card-title">세탁실</h4>
-        <p class="facility-card-desc">코인 세탁기·건조기 운영, 24시간 이용 가능</p>
-        <span class="facility-hours">🪙 세탁 3,000원</span>
-      </div>
-    </div>
-    <div class="text-center mt-32 fade-up">
-      <a href="pages/facilities.html" class="btn btn-ghost">전체 시설 안내 →</a>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- Reviews Section -->
-<section class="section" style="background: rgba(8,16,30,0.5);">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="section-label">Reviews</span>
-      <h2 class="section-title">투숙객 <em>이용 후기</em></h2>
-      <div class="section-divider"></div>
-    </div>
-    <div class="grid-3 fade-up">
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"설악산 등반 후 온돌방에서의 하룻밤이 정말 최고였어요. 뜨끈뜨끈한 바닥 난방 덕분에 피로가 싹 풀렸습니다. 주변 환경도 조용하고 공기가 맑아서 정말 힐링이 됐어요."</p>
-        <div class="review-author">
-          <div class="review-avatar">🧗</div>
-          <div>
-            <div class="review-name">김지훈 님</div>
-            <div class="review-date">2025년 10월 · 스탠다드 온돌룸</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★☆</div>
-        <p class="review-text">"가족 4명이 패밀리 룸 이용했는데 공간이 넓어서 편했어요. 아이들이 케이블카 타러 가는 길이 아주 가까워서 좋았습니다. 다음 단풍 시즌에도 꼭 다시 올 거예요!"</p>
-        <div class="review-author">
-          <div class="review-avatar">👨‍👩‍👧‍👦</div>
-          <div>
-            <div class="review-name">이미영 님</div>
-            <div class="review-date">2025년 9월 · 패밀리 룸</div>
-          </div>
-        </div>
-      </div>
-      <div class="review-card">
-        <div class="review-stars">★★★★★</div>
-        <p class="review-text">"솔로 트레킹으로 혼자 왔는데 도미토리에서 새로운 여행 친구들을 만났어요. 가격도 합리적이고 시설도 깔끔합니다. 설악산 여행 시 무조건 추천하는 숙소!"</p>
-        <div class="review-author">
-          <div class="review-avatar">🎒</div>
-          <div>
-            <div class="review-name">박서준 님</div>
-            <div class="review-date">2025년 8월 · 도미토리</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- Seoraksan Guide -->
-<section class="section">
-  <div class="container">
-    <div class="section-header fade-up">
-      <span class="section-label">Explore</span>
-      <h2 class="section-title">설악산 <em>관광 가이드</em></h2>
-      <p class="section-desc">호스텔 주변에서 즐길 수 있는 설악산의 아름다운 명소들을 소개합니다.</p>
-      <div class="section-divider"></div>
-    </div>
-    <div class="grid-4 fade-up">
-      <div class="card">
-        <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a3d20, #0d2015);">
-          <span>🚡</span>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">케이블카</span>
-          <h4 class="card-title">설악산 케이블카</h4>
-          <p class="card-desc">권금성까지 이어지는 케이블카. 눈 아래 펼쳐지는 대청봉 전망이 압도적.</p>
-          <p class="text-gold mt-8" style="font-size:0.8rem;">🏨 차량 5분 거리</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img-placeholder" style="background: linear-gradient(135deg, #1a2840, #0a1020);">
-          <span>🌊</span>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">해수욕장</span>
-          <h4 class="card-title">속초 해수욕장</h4>
-          <p class="card-desc">청정한 동해 바다. 트레킹 후 시원한 바닷바람으로 마무리.</p>
-          <p class="text-gold mt-8" style="font-size:0.8rem;">🚗 차량 15분</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img-placeholder" style="background: linear-gradient(135deg, #2a1a0a, #15100a);">
-          <span>⛩</span>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">사찰</span>
-          <h4 class="card-title">백담사</h4>
-          <p class="card-desc">설악산 깊은 골짜기에 자리한 고즈넉한 사찰. 셔틀버스 이용 가능.</p>
-          <p class="text-gold mt-8" style="font-size:0.8rem;">🚌 셔틀 30분</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-img-placeholder" style="background: linear-gradient(135deg, #0f2030, #061018);">
-          <span>🦞</span>
-        </div>
-        <div class="card-body">
-          <span class="card-tag">미식</span>
-          <h4 class="card-title">속초 중앙시장</h4>
-          <p class="card-desc">닭강정·순대국밥·오징어튀김. 속초 대표 먹거리의 성지.</p>
-          <p class="text-gold mt-8" style="font-size:0.8rem;">🚗 차량 15분</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA Banner -->
-<section class="section-sm">
-  <div class="container">
-    <div class="cta-banner fade-up">
-      <h2>지금 바로 예약하세요</h2>
-      <p>홈페이지 직접 예약 시 OTA 대비 5% 추가 할인 · 무료 생수 2병 제공<br>HIKOREA 회원이시면 10% 할인까지 받으세요!</p>
-      <div class="cta-actions">
-        <a href="pages/reservation.html" class="btn btn-primary btn-lg">📅 예약 바로가기</a>
-        <a href="pages/pricing.html" class="btn btn-outline">요금 안내 보기</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Footer -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand-name">설악산유스호스텔</div>
-        <p class="footer-desc">강원특별자치도 속초시 설악동 청봉로 173<br>설악산 국립공원 C지구 소재<br>총 82개 객실 · HIKOREA 정식 회원</p>
-        <div class="footer-contact">
-          <div class="footer-contact-item"><span>📞</span> 033-636-7115</div>
-          <div class="footer-contact-item"><span>📧</span> info@seorakyhostel.kr</div>
-          <div class="footer-contact-item"><span>⏰</span> 체크인 14:00 / 체크아웃 10:00</div>
-        </div>
-      </div>
-      <div>
-        <div class="footer-col-title">안내</div>
-        <ul class="footer-links">
-          <li><a href="pages/about.html">호스텔 소개</a></li>
-          <li><a href="pages/rooms.html">객실 안내</a></li>
-          <li><a href="pages/facilities.html">시설 안내</a></li>
-          <li><a href="pages/pricing.html">요금 안내</a></li>
-          <li><a href="pages/gallery.html">갤러리</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">예약</div>
-        <ul class="footer-links">
-          <li><a href="pages/reservation.html">예약하기</a></li>
-          <li><a href="pages/reservation.html#check">예약 확인</a></li>
-          <li><a href="pages/reservation.html#faq">예약 FAQ</a></li>
-          <li><a href="pages/pricing.html#cancellation">취소·환불 정책</a></li>
-        </ul>
-      </div>
-      <div>
-        <div class="footer-col-title">주변 정보</div>
-        <ul class="footer-links">
-          <li><a href="#">설악산 케이블카</a></li>
-          <li><a href="#">국립공원 탐방로</a></li>
-          <li><a href="#">속초 관광 명소</a></li>
-          <li><a href="#">오시는 길</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2026 설악산유스호스텔. All rights reserved. | 사업자등록번호 XXX-XX-XXXXX</p>
-      <div class="footer-bottom-links">
-        <a href="#">개인정보처리방침</a>
-        <a href="#">이용약관</a>
-        <a href="#">사이트맵</a>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<!-- PWA Install Toast -->
-<div class="install-toast" id="installToast">
-  <div class="install-toast-text">
-    <strong>앱으로 설치하기</strong><br>
-    홈 화면에 추가하면 더 빠르게!
-  </div>
-  <button class="install-btn" onclick="installApp()">설치</button>
-  <button class="install-close" onclick="closeInstallToast()">✕</button>
-</div>
-
-<!-- Float Reserve Button (Mobile) -->
-<a href="pages/reservation.html" class="float-reserve">
-  <span>📅</span> 예약하기
-</a>
-
-<script src="js/app.js"></script>
+  <div id="footer-placeholder"></div>
+  <script src="js/components.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
