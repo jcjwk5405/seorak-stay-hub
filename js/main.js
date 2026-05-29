@@ -1,151 +1,49 @@
 /**
  * 설악산유스호스텔 - 공통 JavaScript
- * SYH-WEB-2026-001
+ * SYH-WEB-2026-002
  */
 
 'use strict';
 
 /* ============================================================
-   다국어 (KO / EN)
+   다국어 (KO / EN) — data-ko / data-en 방식
    ============================================================ */
-const i18n = {
-  ko: {
-    nav_home: '홈',
-    nav_rooms: '객실 안내',
-    nav_facilities: '시설 안내',
-    nav_pricing: '요금 안내',
-    nav_reservation: '예약 안내',
-    nav_gallery: '갤러리',
-    nav_about: '호스텔 소개',
-    nav_reserve_btn: '예약하기',
-    hero_badge: '설악산 국립공원 도보 5분',
-    hero_title: '자연 속으로,\n설악산의 품에서',
-    hero_subtitle: 'Into Nature, Embrace of Seoraksan',
-    hero_checkin: '체크인',
-    hero_checkout: '체크아웃',
-    hero_guests: '인원',
-    hero_btn: '예약 가능 확인',
-    trust_rooms: '82실 운영',
-    trust_walk: '설악산 도보 5분',
-    trust_rating: '아고다 7.9 / 위치 8.6',
-    trust_parking: '무료 주차 30대',
-    section_rooms: '다양한 객실 타입',
-    section_rooms_sub: '설악산 뷰와 함께하는 편안한 휴식',
-    section_facilities: '편의 시설 한눈에',
-    section_facilities_sub: '투숙객을 위한 다양한 편의시설',
-    section_seorak: '설악산이 바로 문 앞에',
-    section_seorak_sub: '국립공원, 케이블카, 워터피아 — 모두 가까이',
-    section_reviews: '투숙객 생생 후기',
-    section_reviews_sub: '실제 투숙객의 솔직한 이야기',
-    cta_banner_title: '홈페이지 직접 예약 시 특별 혜택',
-    cta_banner_text: 'OTA 대비 5% 추가 할인 + 무료 생수 2병 제공',
-    cta_btn: '지금 예약하기',
-    section_map: '오시는 길',
-    section_map_sub: '강원특별자치도 속초시 청봉로 173',
-    map_car: '자가용',
-    map_car_desc: '속초IC → 설악동 방면 → 청봉로 173',
-    map_bus: '고속버스',
-    map_bus_desc: '동서울/서울고속 → 속초터미널 → 버스/택시',
-    map_train: 'KTX',
-    map_train_desc: '강릉역 → 속초행 시외버스 → 설악동 하차',
-    map_walk: '버스정류장',
-    map_walk_desc: '도보 1분 거리',
-    map_kakao_btn: '카카오맵으로 보기',
-    view_detail: '자세히 보기',
-    reserve_now: '예약하기',
-    call_btn: '전화 예약',
-    email_btn: '이메일 문의',
-    footer_address: '강원특별자치도 속초시 청봉로 173 (설악동 246-77)',
-    footer_phone: '010-8249-3453',
-    footer_email: 'sorakyhotel@gmail.com',
-    footer_license: '허가번호: 제25-1호',
-    footer_copyright: '© 2026 설악산유스호스텔. All rights reserved.',
-    footer_privacy: '개인정보처리방침',
-    footer_sitemap: '사이트맵',
-    mobile_call: '전화 예약',
-    mobile_email: '이메일 문의',
-    checkin_time: '체크인 15:00 이후',
-    checkout_time: '체크아웃 11:00까지',
-    front_24h: '프런트 24시간 운영',
-  },
-  en: {
-    nav_home: 'Home',
-    nav_rooms: 'Rooms',
-    nav_facilities: 'Facilities',
-    nav_pricing: 'Pricing',
-    nav_reservation: 'Reservation',
-    nav_gallery: 'Gallery',
-    nav_about: 'About',
-    nav_reserve_btn: 'Book Now',
-    hero_badge: '5 min walk to Seoraksan National Park',
-    hero_title: 'Into Nature,\nEmbrace of Seoraksan',
-    hero_subtitle: '자연 속으로, 설악산의 품에서',
-    hero_checkin: 'Check-in',
-    hero_checkout: 'Check-out',
-    hero_guests: 'Guests',
-    hero_btn: 'Check Availability',
-    trust_rooms: '82 Rooms',
-    trust_walk: '5 min to Seoraksan',
-    trust_rating: 'Agoda 7.9 / Location 8.6',
-    trust_parking: 'Free Parking (30 cars)',
-    section_rooms: 'Room Types',
-    section_rooms_sub: 'Comfortable rest with Seoraksan views',
-    section_facilities: 'Facilities at a Glance',
-    section_facilities_sub: 'Various amenities for our guests',
-    section_seorak: 'Seoraksan Right at Your Door',
-    section_seorak_sub: 'National Park, Cable Car, Waterpia — all nearby',
-    section_reviews: 'Guest Reviews',
-    section_reviews_sub: 'Honest stories from our guests',
-    cta_banner_title: 'Special Benefits for Direct Booking',
-    cta_banner_text: '5% discount vs OTA + 2 free water bottles',
-    cta_btn: 'Book Now',
-    section_map: 'Getting Here',
-    section_map_sub: '173 Cheongbong-ro, Seorak-dong, Sokcho-si',
-    map_car: 'By Car',
-    map_car_desc: 'Sokcho IC → Seorak-dong → Cheongbong-ro 173',
-    map_bus: 'By Bus',
-    map_bus_desc: 'Seoul → Sokcho Terminal → Bus/Taxi',
-    map_train: 'By KTX',
-    map_train_desc: 'Gangneung Station → Sokcho Bus → Seorak-dong',
-    map_walk: 'Bus Stop',
-    map_walk_desc: '1 min walk',
-    map_kakao_btn: 'View on Kakao Map',
-    view_detail: 'View Details',
-    reserve_now: 'Book Now',
-    call_btn: 'Call Us',
-    email_btn: 'Email Us',
-    footer_address: '173 Cheongbong-ro, Seorak-dong, Sokcho-si, Gangwon-do',
-    footer_phone: '+82-10-8249-3453',
-    footer_email: 'sorakyhotel@gmail.com',
-    footer_license: 'License No. 25-1',
-    footer_copyright: '© 2026 Seorak Youth Hostel. All rights reserved.',
-    footer_privacy: 'Privacy Policy',
-    footer_sitemap: 'Sitemap',
-    mobile_call: 'Call',
-    mobile_email: 'Email',
-    checkin_time: 'Check-in: After 15:00',
-    checkout_time: 'Check-out: Before 11:00',
-    front_24h: '24h Front Desk',
-  }
-};
-
 let currentLang = localStorage.getItem('syh_lang') || 'ko';
 
+/**
+ * 언어 전환 함수
+ * - [data-ko] / [data-en] 속성을 가진 모든 요소의 textContent를 교체
+ * - img[data-alt-ko] / img[data-alt-en] 속성으로 alt 텍스트도 전환
+ * - input[data-placeholder-ko] / input[data-placeholder-en] 지원
+ */
 function applyLang(lang) {
   currentLang = lang;
   localStorage.setItem('syh_lang', lang);
   document.documentElement.lang = lang === 'ko' ? 'ko' : 'en';
 
-  // data-i18n 속성 처리
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (i18n[lang][key] !== undefined) {
-      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
-        el.placeholder = i18n[lang][key];
+  // 텍스트 요소 전환 (data-ko / data-en)
+  document.querySelectorAll('[data-ko]').forEach(el => {
+    const text = lang === 'ko' ? el.dataset.ko : el.dataset.en;
+    if (text !== undefined) {
+      // 줄바꿈 처리
+      if (text.includes('\n')) {
+        el.innerHTML = text.replace(/\n/g, '<br>');
       } else {
-        el.innerHTML = i18n[lang][key].replace(/\n/g, '<br>');
+        el.textContent = text;
       }
     }
+  });
+
+  // img alt 텍스트 전환 (data-alt-ko / data-alt-en)
+  document.querySelectorAll('img[data-alt-ko]').forEach(img => {
+    img.alt = lang === 'ko' ? img.dataset.altKo : (img.dataset.altEn || img.dataset.altKo);
+  });
+
+  // input placeholder 전환 (data-placeholder-ko / data-placeholder-en)
+  document.querySelectorAll('[data-placeholder-ko]').forEach(el => {
+    el.placeholder = lang === 'ko'
+      ? el.dataset.placeholderKo
+      : (el.dataset.placeholderEn || el.dataset.placeholderKo);
   });
 
   // 언어 버튼 active 상태
@@ -166,7 +64,6 @@ function initNavbar() {
       hamburger.classList.toggle('open');
       mobileNav.classList.toggle('open');
     });
-    // 메뉴 클릭 시 닫기
     mobileNav.querySelectorAll('a').forEach(a => {
       a.addEventListener('click', () => {
         hamburger.classList.remove('open');
@@ -183,7 +80,7 @@ function initNavbar() {
       a.classList.add('active');
     }
     if (currentPath.endsWith('/') || currentPath.endsWith('index.html')) {
-      if (href === 'index.html' || href === './') {
+      if (href === 'index.html' || href === './' || href === '../index.html') {
         a.classList.add('active');
       }
     }
@@ -194,23 +91,24 @@ function initNavbar() {
     const navbar = document.querySelector('.navbar');
     if (navbar) {
       navbar.style.boxShadow = window.scrollY > 10
-        ? '0 2px 16px rgba(0,0,0,0.1)'
+        ? '0 2px 20px rgba(0,0,0,0.5)'
         : 'none';
     }
   });
 
-  // 언어 토글
+  // 언어 토글 버튼 이벤트
   document.querySelectorAll('[data-lang]').forEach(btn => {
     btn.addEventListener('click', () => {
       applyLang(btn.getAttribute('data-lang'));
     });
   });
 
+  // 저장된 언어 적용
   applyLang(currentLang);
 }
 
 /* ============================================================
-   히어로 슬라이더
+   히어로 슬라이더 (fade, 5초 간격)
    ============================================================ */
 function initHeroSlider() {
   const slides = document.querySelectorAll('.hero__slide');
@@ -435,7 +333,6 @@ function initFAQ() {
     q.addEventListener('click', () => {
       const answer = q.nextElementSibling;
       const isOpen = q.classList.contains('open');
-      // 모두 닫기
       document.querySelectorAll('.faq-question.open').forEach(oq => {
         oq.classList.remove('open');
         oq.nextElementSibling.classList.remove('open');
