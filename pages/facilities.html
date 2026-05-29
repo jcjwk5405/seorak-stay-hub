@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <meta name="description" content="설악산유스호스텔 시설 안내 — 공용 주방, 식당, 연회장, 세탁실, 주차장 등">
+  <title>시설 안내 | 설악산유스호스텔</title>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="../images/icon-192.svg">
+</head>
+<body>
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-main">설악산유스호스텔</span>
+      <span class="nav-logo-sub">Seoraksan Youth Hostel</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">호스텔 소개</a></li>
+      <li><a href="rooms.html">객실 안내</a></li>
+      <li><a href="facilities.html" class="active">시설 안내</a></li>
+      <li><a href="pricing.html">요금 안내</a></li>
+      <li><a href="gallery.html">갤러리</a></li>
+      <li><a href="reservation.html" class="nav-reserve-btn">예약하기</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="about.html">🏔 호스텔 소개</a>
+  <a href="rooms.html">🛏 객실 안내</a>
+  <a href="facilities.html">🏊 시설 안내</a>
+  <a href="pricing.html">💰 요금 안내</a>
+  <a href="gallery.html">📸 갤러리</a>
+  <a href="reservation.html" class="mobile-reserve">📅 예약하기</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb"><a href="../index.html">홈</a> <span>›</span> <span>시설 안내</span></div>
+    <h1 class="page-hero-title">시설 안내</h1>
+    <p class="page-hero-subtitle">트레킹 전후 필요한 모든 편의 시설을 갖추고 있습니다</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Facilities</span>
+      <h2 class="section-title">편의 <em>시설</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid-3 fade-up">
+      <div class="facility-card">
+        <div class="facility-card-icon">🍳</div>
+        <h4 class="facility-card-title">공용 주방</h4>
+        <p class="facility-card-desc">전기레인지, 전자레인지, 냉장고, 싱크대 완비. 셀프 취사 가능하며 식기 대여 서비스도 운영합니다. 버너·가스 사용은 안전상 객실 외 불가입니다.</p>
+        <span class="facility-hours">⏰ 07:00 ~ 22:00</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🍽</div>
+        <h4 class="facility-card-title">식당 / 레스토랑</h4>
+        <p class="facility-card-desc">한식 중심의 맛있는 식사를 제공합니다. 조식과 석식을 운영하며, 단체 식사는 사전 예약이 필수입니다.</p>
+        <span class="facility-hours">⏰ 조식 07~09시 / 석식 18~20시</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🅿️</div>
+        <h4 class="facility-card-title">무료 주차장</h4>
+        <p class="facility-card-desc">투숙 고객 무료 셀프 주차 가능. 대형 버스 주차는 사전 문의 바랍니다. 선착순으로 운영됩니다.</p>
+        <span class="facility-hours">🆓 투숙 시 무료</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">☕</div>
+        <h4 class="facility-card-title">카페 라운지</h4>
+        <p class="facility-card-desc">공용 구역의 편안한 휴게 공간. 소파와 테이블이 마련되어 있으며, 커피·차 자판기가 24시간 운영됩니다.</p>
+        <span class="facility-hours">⏰ 24시간</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🧺</div>
+        <h4 class="facility-card-title">세탁실</h4>
+        <p class="facility-card-desc">코인 세탁기와 건조기를 운영합니다. 장기 여행자나 트레킹 후 세탁이 필요한 투숙객을 위한 서비스입니다.</p>
+        <span class="facility-hours">🪙 세탁 3,000원 / 건조 2,000원</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🏢</div>
+        <h4 class="facility-card-title">연회장 · 세미나실</h4>
+        <p class="facility-card-desc">단체 행사, 수련회, 기업 워크숍에 최적화된 공간. 프로젝터, 화이트보드, 음향 장비 완비. 최대 100인 수용 가능.</p>
+        <span class="facility-hours">📞 사전 예약 필수</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🛒</div>
+        <h4 class="facility-card-title">편의점 · 자판기</h4>
+        <p class="facility-card-desc">음료, 과자, 라면, 기본 여행 용품을 24시간 구매할 수 있는 자판기가 로비에 설치되어 있습니다.</p>
+        <span class="facility-hours">⏰ 24시간</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🚿</div>
+        <h4 class="facility-card-title">공용 샤워실</h4>
+        <p class="facility-card-desc">도미토리 투숙객 및 트레킹 후 간편 샤워를 위한 공용 샤워 시설. 24시간 온수 공급. 여성/남성 분리 운영.</p>
+        <span class="facility-hours">⏰ 24시간 온수</span>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🐾</div>
+        <h4 class="facility-card-title">반려동물 동반 가능</h4>
+        <p class="facility-card-desc">반려동물 동반 투숙이 가능합니다. 단, 사전 전화 문의 필수이며 일부 지정 객실에서만 허용됩니다.</p>
+        <span class="facility-hours">📞 사전 문의 필수</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Seoraksan Guide -->
+    <div class="section-header fade-up">
+      <span class="section-label">Seoraksan Guide</span>
+      <h2 class="section-title">설악산 <em>연계 서비스</em></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-2 fade-up">
+      <div class="facility-card">
+        <div class="facility-card-icon">🗺</div>
+        <h4 class="facility-card-title">트레킹 코스 안내</h4>
+        <p class="facility-card-desc">설악산 국립공원 주요 탐방 코스를 난이도별로 안내합니다. 백담사 코스(중), 울산바위 코스(중상), 공룡능선(고급) 등 프론트에서 무료 지도를 제공합니다.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🚡</div>
+        <h4 class="facility-card-title">케이블카 정보</h4>
+        <p class="facility-card-desc">설악산 케이블카 승강장까지 차량 5분 거리. 운행 시간 및 요금 정보는 프론트에서 안내드립니다. (성수기 조기 마감 주의)</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🎒</div>
+        <h4 class="facility-card-title">짐 보관 서비스</h4>
+        <p class="facility-card-desc">트레킹 출발 전 짐 보관 서비스를 제공합니다. 체크아웃 후 당일 트레킹을 계획하시는 분들께 편리합니다. 무료 제공.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🚌</div>
+        <h4 class="facility-card-title">교통 정보 안내</h4>
+        <p class="facility-card-desc">속초 시내버스, 고속버스터미널, KTX 강릉역 연결 교통편 정보를 프론트에서 상세히 안내드립니다. 택시 호출 서비스도 지원.</p>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class="divider"></div>
+    <div class="section-header fade-up">
+      <span class="section-label">Location</span>
+      <h2 class="section-title">오시는 <em>길</em></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="map-box fade-up">
+      <div class="map-placeholder">
+        <span>🗺</span>
+        <p style="font-size:0.9rem; color:rgba(255,255,255,0.6);">강원특별자치도 속초시 청봉로 173</p>
+        <a href="https://map.kakao.com" target="_blank" class="btn btn-outline btn-sm">카카오맵으로 보기</a>
+      </div>
+      <div class="map-info">
+        <h3>교통 안내</h3>
+        <ul class="transport-list">
+          <li class="transport-item">
+            <span class="transport-icon">🚗</span>
+            <span><strong>자가용</strong> — 서울 동서울IC → 속초IC → 설악동 방면, 무료 셀프 주차</span>
+          </li>
+          <li class="transport-item">
+            <span class="transport-icon">🚌</span>
+            <span><strong>고속버스</strong> — 동서울·서울고속 → 속초터미널 하차 → 7번 버스 또는 택시 10분</span>
+          </li>
+          <li class="transport-item">
+            <span class="transport-icon">🚄</span>
+            <span><strong>기차+버스</strong> — KTX 강릉역 → 속초행 시외버스 50분 → 설악동 하차</span>
+          </li>
+          <li class="transport-item">
+            <span class="transport-icon">🏔</span>
+            <span><strong>주변 랜드마크</strong> — 설악산 케이블카(5분), 설악워터피아(10분), 속초해수욕장(15분)</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <p class="footer-copy">© 2026 설악산유스호스텔 | 강원특별자치도 속초시 청봉로 173 | 📞 033-636-XXXX</p>
+      <div class="footer-bottom-links">
+        <a href="../index.html">홈으로</a>
+        <a href="reservation.html">예약하기</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="reservation.html" class="float-reserve"><span>📅</span> 예약하기</a>
+<script src="../js/app.js"></script>
+</body>
+</html>

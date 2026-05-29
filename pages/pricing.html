@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <title>요금 안내 | 설악산유스호스텔</title>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="../images/icon-192.svg">
+</head>
+<body>
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-main">설악산유스호스텔</span>
+      <span class="nav-logo-sub">Seoraksan Youth Hostel</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">호스텔 소개</a></li>
+      <li><a href="rooms.html">객실 안내</a></li>
+      <li><a href="facilities.html">시설 안내</a></li>
+      <li><a href="pricing.html" class="active">요금 안내</a></li>
+      <li><a href="gallery.html">갤러리</a></li>
+      <li><a href="reservation.html" class="nav-reserve-btn">예약하기</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="about.html">🏔 호스텔 소개</a>
+  <a href="rooms.html">🛏 객실 안내</a>
+  <a href="facilities.html">🏊 시설 안내</a>
+  <a href="pricing.html">💰 요금 안내</a>
+  <a href="gallery.html">📸 갤러리</a>
+  <a href="reservation.html" class="mobile-reserve">📅 예약하기</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb"><a href="../index.html">홈</a> <span>›</span> <span>요금 안내</span></div>
+    <h1 class="page-hero-title">요금 안내</h1>
+    <p class="page-hero-subtitle">합리적인 가격으로 설악산의 자연을 즐기세요</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Direct Booking Benefit -->
+    <div style="background: linear-gradient(135deg, rgba(200,168,75,0.15), rgba(200,168,75,0.05)); border: 2px solid var(--gold); border-radius: var(--radius-lg); padding: 28px 36px; margin-bottom: 48px; text-align:center;" class="fade-up">
+      <p style="font-size:0.8rem; color:var(--gold); font-weight:800; letter-spacing:0.15em; text-transform:uppercase; margin-bottom:8px;">🎁 홈페이지 직접 예약 특별 혜택</p>
+      <h3 style="font-family:'Noto Serif KR',serif; color:var(--cream); font-size:1.4rem; margin-bottom:8px;">OTA 대비 5% 추가 할인 + 무료 생수 2병</h3>
+      <p style="color:rgba(255,255,255,0.65); font-size:0.88rem;">야놀자·여기어때·부킹닷컴보다 항상 저렴합니다. 이 페이지에서 바로 예약하세요.</p>
+    </div>
+
+    <!-- Room Pricing Table -->
+    <div class="section-header fade-up">
+      <span class="section-label">Room Rates</span>
+      <h2 class="section-title">객실 <em>요금표</em></h2>
+      <p class="section-desc">요금은 2인 기준이며, 성수기(7~8월, 설·추석 연휴) 요금이 별도 적용됩니다.</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div style="overflow-x: auto;" class="fade-up">
+      <table class="pricing-table">
+        <thead>
+          <tr>
+            <th>객실 타입</th>
+            <th>평일 (비수기)</th>
+            <th>주말 (비수기)</th>
+            <th>성수기</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>스탠다드 온돌룸</td>
+            <td class="price-val">50,000~60,000</td>
+            <td class="price-val">70,000~80,000</td>
+            <td class="price-val">90,000~110,000</td>
+            <td>2인 기준</td>
+          </tr>
+          <tr>
+            <td>스탠다드 침대룸</td>
+            <td class="price-val">55,000~65,000</td>
+            <td class="price-val">75,000~85,000</td>
+            <td class="price-val">95,000~115,000</td>
+            <td>2인 기준</td>
+          </tr>
+          <tr>
+            <td>패밀리 룸</td>
+            <td class="price-val">90,000~110,000</td>
+            <td class="price-val">120,000~140,000</td>
+            <td class="price-val">150,000~180,000</td>
+            <td>4인 기준</td>
+          </tr>
+          <tr>
+            <td>트리플 룸</td>
+            <td class="price-val">70,000~85,000</td>
+            <td class="price-val">95,000~110,000</td>
+            <td class="price-val">120,000~140,000</td>
+            <td>3인 기준</td>
+          </tr>
+          <tr>
+            <td>도미토리 룸</td>
+            <td class="price-val">20,000~25,000</td>
+            <td class="price-val">25,000~30,000</td>
+            <td class="price-val">35,000~45,000</td>
+            <td>1인 기준</td>
+          </tr>
+          <tr>
+            <td>단체 연결 객실</td>
+            <td class="price-val">별도 협의</td>
+            <td class="price-val">별도 협의</td>
+            <td class="price-val">별도 협의</td>
+            <td>10인 이상</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="pricing-note">⚠️ 위 요금은 참고 기준입니다. 실제 요금은 예약 날짜 및 조건에 따라 다를 수 있으며, 예약 시스템에서 정확한 금액을 확인해 주세요.</div>
+
+    <div class="divider"></div>
+
+    <!-- Discount Policy -->
+    <div class="section-header fade-up">
+      <span class="section-label">Discount & Policy</span>
+      <h2 class="section-title">할인 <em>제도</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="facility-card">
+        <div class="facility-card-icon">💻</div>
+        <h4 class="facility-card-title">홈페이지 직접 예약</h4>
+        <p class="facility-card-desc">공식 홈페이지에서 직접 예약하시면 OTA 대비 5% 추가 할인과 무료 생수 2병을 드립니다. 항상 최저가를 보장합니다.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🏅</div>
+        <h4 class="facility-card-title">HIKOREA 회원 할인</h4>
+        <p class="facility-card-desc">한국유스호스텔연맹(HIKOREA) 회원증 제시 시 10% 할인. 체크인 시 회원증을 반드시 제시해 주세요.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🌙</div>
+        <h4 class="facility-card-title">장기 투숙 할인</h4>
+        <p class="facility-card-desc">3박 이상 연속 투숙 시 5% 추가 할인. 성수기 기간은 제외됩니다. 홈페이지 직접 예약 할인과 중복 적용 가능.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">👥</div>
+        <h4 class="facility-card-title">단체 할인</h4>
+        <p class="facility-card-desc">10인 이상 단체 예약 시 별도 협의 (최대 15% 할인). 수련회·기업 워크숍·동아리 모임 등 단체 예약 환영합니다.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">📅</div>
+        <h4 class="facility-card-title">조기 예약 혜택</h4>
+        <p class="facility-card-desc">체크인 30일 이전 사전 예약 시 조식 1회 무료 제공 또는 5% 할인 중 선택 가능.</p>
+      </div>
+      <div class="facility-card">
+        <div class="facility-card-icon">🔒</div>
+        <h4 class="facility-card-title">비환불 요금제</h4>
+        <p class="facility-card-desc">취소 불가 조건의 요금제로, 일반 요금 대비 10~15% 더 저렴하게 이용할 수 있습니다. 예약 시 조건을 반드시 확인해 주세요.</p>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Additional Fees -->
+    <div class="section-header fade-up">
+      <span class="section-label">Additional Services</span>
+      <h2 class="section-title">부대시설 <em>이용 요금</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div style="overflow-x:auto;" class="fade-up">
+      <table class="pricing-table">
+        <thead>
+          <tr><th>시설/서비스</th><th>이용 요금</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>연회장·세미나실 (4시간)</td><td class="price-val">100,000원~</td><td>장비 포함</td></tr>
+          <tr><td>연회장·세미나실 (종일)</td><td class="price-val">180,000원~</td><td>장비 포함</td></tr>
+          <tr><td>조식</td><td class="price-val">10,000원/인</td><td>사전 예약 필수</td></tr>
+          <tr><td>석식</td><td class="price-val">15,000원/인</td><td>20인↑ 단체 사전 예약</td></tr>
+          <tr><td>추가 인원</td><td class="price-val">10,000원/인</td><td>침구 추가 제공</td></tr>
+          <tr><td>세탁기 이용</td><td class="price-val">3,000원/회</td><td></td></tr>
+          <tr><td>건조기 이용</td><td class="price-val">2,000원/회</td><td></td></tr>
+          <tr><td>짐 보관</td><td class="price-val">무료</td><td>체크아웃 당일</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Cancellation Policy -->
+    <div id="cancellation" class="section-header fade-up">
+      <span class="section-label">Cancellation Policy</span>
+      <h2 class="section-title">취소 · 환불 <em>정책</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div style="overflow-x:auto;" class="fade-up">
+      <table class="pricing-table">
+        <thead>
+          <tr><th>취소 시점</th><th>환불 규정</th><th>비고</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>체크인 7일 전까지</td><td class="price-val" style="color:var(--sage);">100% 전액 환불</td><td></td></tr>
+          <tr><td>체크인 3~6일 전</td><td class="price-val" style="color:var(--gold);">50% 환불</td><td></td></tr>
+          <tr><td>체크인 1~2일 전</td><td class="price-val" style="color:#e8724a;">30% 환불</td><td></td></tr>
+          <tr><td>체크인 당일 / No-show</td><td class="price-val" style="color:var(--rust);">환불 불가</td><td></td></tr>
+          <tr><td>비환불 요금제</td><td class="price-val" style="color:var(--rust);">환불 불가</td><td>예약 시 고지</td></tr>
+          <tr><td>단체 예약 (10인↑)</td><td>14일 전: 100% / 7일 전: 50% / 이후: 불가</td><td>별도 기준 적용</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="mt-48 fade-up" style="text-align:center;">
+      <a href="reservation.html" class="btn btn-primary btn-lg">📅 지금 예약하기</a>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <p class="footer-copy">© 2026 설악산유스호스텔 | 강원특별자치도 속초시 청봉로 173 | 📞 033-636-XXXX</p>
+      <div class="footer-bottom-links"><a href="../index.html">홈으로</a><a href="reservation.html">예약하기</a></div>
+    </div>
+  </div>
+</footer>
+<a href="reservation.html" class="float-reserve"><span>📅</span> 예약하기</a>
+<script src="../js/app.js"></script>
+</body>
+</html>

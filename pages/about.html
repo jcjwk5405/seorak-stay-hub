@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <title>호스텔 소개 | 설악산유스호스텔</title>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="../images/icon-192.svg">
+</head>
+<body>
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-main">설악산유스호스텔</span>
+      <span class="nav-logo-sub">Seoraksan Youth Hostel</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html" class="active">호스텔 소개</a></li>
+      <li><a href="rooms.html">객실 안내</a></li>
+      <li><a href="facilities.html">시설 안내</a></li>
+      <li><a href="pricing.html">요금 안내</a></li>
+      <li><a href="gallery.html">갤러리</a></li>
+      <li><a href="reservation.html" class="nav-reserve-btn">예약하기</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="about.html">🏔 호스텔 소개</a>
+  <a href="rooms.html">🛏 객실 안내</a>
+  <a href="facilities.html">🏊 시설 안내</a>
+  <a href="pricing.html">💰 요금 안내</a>
+  <a href="gallery.html">📸 갤러리</a>
+  <a href="reservation.html" class="mobile-reserve">📅 예약하기</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb"><a href="../index.html">홈</a> <span>›</span> <span>호스텔 소개</span></div>
+    <h1 class="page-hero-title">호스텔 소개</h1>
+    <p class="page-hero-subtitle">설악산의 품에서 30년, 자연과 함께하는 쉼의 공간</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Welcome Message -->
+    <div style="display:grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items:center; margin-bottom:80px;" class="fade-up">
+      <div>
+        <span class="section-label">Welcome</span>
+        <h2 style="font-family:'Noto Serif KR',serif; color:var(--cream); font-size:clamp(1.6rem,3vw,2.4rem); margin:12px 0 20px; line-height:1.3;">
+          자연 속으로,<br><em style="color:var(--gold); font-style:normal;">설악산의 품에서</em>
+        </h2>
+        <p style="color:rgba(255,255,255,0.75); line-height:1.9; margin-bottom:16px;">
+          설악산유스호스텔에 오신 것을 환영합니다. 저희 호스텔은 강원특별자치도 속초시 설악동, 설악산 국립공원 C지구에 위치하여 대한민국 최고의 산악 자연환경을 품 안에 두고 있습니다.
+        </p>
+        <p style="color:rgba(255,255,255,0.65); line-height:1.9; margin-bottom:24px;">
+          30년 이상의 운영 역사를 바탕으로, 젊은 배낭여행객부터 가족 단위 여행자, 기업 연수팀까지 모든 여행자의 편안한 베이스캠프가 되어왔습니다. 한국유스호스텔연맹(HIKOREA) 정식 회원으로, 글로벌 유스호스텔 네트워크와 연결되어 있습니다.
+        </p>
+        <div style="display:flex; gap:16px; flex-wrap:wrap;">
+          <div style="text-align:center; padding:16px 24px; background:rgba(200,168,75,0.1); border:1px solid rgba(200,168,75,0.2); border-radius:var(--radius);">
+            <div style="font-family:'Noto Serif KR',serif; font-size:2rem; font-weight:900; color:var(--gold);">82</div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">개 객실</div>
+          </div>
+          <div style="text-align:center; padding:16px 24px; background:rgba(200,168,75,0.1); border:1px solid rgba(200,168,75,0.2); border-radius:var(--radius);">
+            <div style="font-family:'Noto Serif KR',serif; font-size:2rem; font-weight:900; color:var(--gold);">30+</div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">년 운영</div>
+          </div>
+          <div style="text-align:center; padding:16px 24px; background:rgba(200,168,75,0.1); border:1px solid rgba(200,168,75,0.2); border-radius:var(--radius);">
+            <div style="font-family:'Noto Serif KR',serif; font-size:2rem; font-weight:900; color:var(--gold);">4.3</div>
+            <div style="font-size:0.75rem; color:rgba(255,255,255,0.5);">평균 평점</div>
+          </div>
+        </div>
+      </div>
+      <div style="background:rgba(20,40,70,0.6); border:1px solid rgba(200,168,75,0.15); border-radius:var(--radius-lg); overflow:hidden; height:380px; display:flex; align-items:center; justify-content:center; font-size:6rem; position:relative;">
+        <span>🏔</span>
+        <div style="position:absolute; bottom:20px; left:20px; right:20px; background:rgba(10,22,40,0.85); border-radius:10px; padding:14px;">
+          <p style="font-size:0.78rem; color:var(--gold); font-weight:700; margin-bottom:4px;">📍 위치</p>
+          <p style="font-size:0.82rem; color:rgba(255,255,255,0.85);">강원특별자치도 속초시 청봉로 173<br>설악산 국립공원 C지구</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Mission & Vision -->
+    <div class="section-header fade-up">
+      <span class="section-label">Mission & Vision</span>
+      <h2 class="section-title">미션 & <em>비전</em></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-2 fade-up" style="margin-bottom:64px;">
+      <div class="facility-card" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:16px;">🎯</div>
+        <h4 class="facility-card-title">미션</h4>
+        <p class="facility-card-desc" style="line-height:1.9;">"모든 여행자에게 설악산의 자연 속에서 진정한 쉼과 도전의 경험을 제공하여, 자연과 사람이 하나 되는 공간을 만듭니다."</p>
+      </div>
+      <div class="facility-card" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:16px;">🌟</div>
+        <h4 class="facility-card-title">비전</h4>
+        <p class="facility-card-desc" style="line-height:1.9;">"설악산을 찾는 모든 여행자들의 첫 번째 선택이 되는 대한민국 대표 자연친화적 유스호스텔로 성장합니다."</p>
+      </div>
+    </div>
+
+    <!-- History Timeline -->
+    <div class="divider"></div>
+    <div class="section-header fade-up">
+      <span class="section-label">History</span>
+      <h2 class="section-title">주요 <em>연혁</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div style="position:relative; padding-left:40px; margin-bottom:64px;" class="fade-up">
+      <div style="position:absolute; left:8px; top:0; bottom:0; width:2px; background:linear-gradient(to bottom, var(--gold), transparent);"></div>
+      <div style="display:flex; flex-direction:column; gap:32px;">
+        <div style="display:flex; gap:20px; align-items:flex-start; position:relative;">
+          <div style="position:absolute; left:-36px; width:16px; height:16px; background:var(--gold); border-radius:50%; top:4px; border:3px solid var(--navy-deep);"></div>
+          <div>
+            <span style="color:var(--gold); font-weight:800; font-size:0.85rem; letter-spacing:0.1em;">1990년대 초</span>
+            <h4 style="color:var(--cream); margin:6px 0 4px; font-family:'Noto Serif KR',serif;">설악산유스호스텔 개관</h4>
+            <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">설악산 C지구에 한국유스호스텔연맹 가입 시설로 공식 개관. 초기 40여 개 객실로 운영 시작.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:20px; align-items:flex-start; position:relative;">
+          <div style="position:absolute; left:-36px; width:16px; height:16px; background:var(--gold); border-radius:50%; top:4px; border:3px solid var(--navy-deep);"></div>
+          <div>
+            <span style="color:var(--gold); font-weight:800; font-size:0.85rem; letter-spacing:0.1em;">2000년대</span>
+            <h4 style="color:var(--cream); margin:6px 0 4px; font-family:'Noto Serif KR',serif;">1차 증축 · 시설 현대화</h4>
+            <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">객실 82실로 증축 완료. 식당, 연회장, 공용 주방 등 부대시설 현대화. 에어컨 전 객실 설치.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:20px; align-items:flex-start; position:relative;">
+          <div style="position:absolute; left:-36px; width:16px; height:16px; background:var(--gold); border-radius:50%; top:4px; border:3px solid var(--navy-deep);"></div>
+          <div>
+            <span style="color:var(--gold); font-weight:800; font-size:0.85rem; letter-spacing:0.1em;">2010년대</span>
+            <h4 style="color:var(--cream); margin:6px 0 4px; font-family:'Noto Serif KR',serif;">도미토리 신설 · 리뉴얼</h4>
+            <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">배낭여행객 특화 도미토리 6실 신설. 인테리어 전면 리뉴얼. 무료 Wi-Fi 전 객실 설치.</p>
+          </div>
+        </div>
+        <div style="display:flex; gap:20px; align-items:flex-start; position:relative;">
+          <div style="position:absolute; left:-36px; width:16px; height:16px; background:var(--gold); border-radius:50%; top:4px; border:3px solid var(--navy-deep);"></div>
+          <div>
+            <span style="color:var(--gold); font-weight:800; font-size:0.85rem; letter-spacing:0.1em;">2026년</span>
+            <h4 style="color:var(--cream); margin:6px 0 4px; font-family:'Noto Serif KR',serif;">공식 홈페이지 & 온라인 예약 시스템 구축</h4>
+            <p style="color:rgba(255,255,255,0.6); font-size:0.85rem;">PWA 기반 공식 홈페이지 오픈. 온라인 직접 예약 시스템 도입. 디지털 전환으로 서비스 혁신.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Certifications -->
+    <div class="divider"></div>
+    <div class="section-header fade-up">
+      <span class="section-label">Certifications</span>
+      <h2 class="section-title">인증 · <em>제휴</em></h2>
+      <div class="section-divider"></div>
+    </div>
+    <div class="grid-4 fade-up">
+      <div class="feature-item">
+        <div class="feature-icon">🏅</div>
+        <div class="feature-name">HIKOREA 정식 회원</div>
+        <div class="feature-desc">한국유스호스텔연맹 공식 가입 시설</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌿</div>
+        <div class="feature-name">국립공원 협력기관</div>
+        <div class="feature-desc">설악산 국립공원 공식 협력 숙소</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">🌐</div>
+        <div class="feature-name">HI 글로벌 네트워크</div>
+        <div class="feature-desc">전 세계 75개국 연맹 연계</div>
+      </div>
+      <div class="feature-item">
+        <div class="feature-icon">⭐</div>
+        <div class="feature-name">여행객 신뢰 숙소</div>
+        <div class="feature-desc">30년 운영 신뢰와 품질 보증</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="section-sm">
+  <div class="container">
+    <div class="cta-banner fade-up">
+      <h2>설악산유스호스텔에서 특별한 추억을 만드세요</h2>
+      <p>자연 속의 쉼, 도전, 그리고 새로운 만남이 기다립니다.</p>
+      <div class="cta-actions">
+        <a href="reservation.html" class="btn btn-primary btn-lg">📅 예약하기</a>
+        <a href="facilities.html" class="btn btn-outline">시설 안내 보기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand-name">설악산유스호스텔</div>
+        <p class="footer-desc">강원특별자치도 속초시 청봉로 173<br>설악산 국립공원 C지구 소재<br>총 82개 객실 · HIKOREA 정식 회원</p>
+        <div class="footer-contact">
+          <div class="footer-contact-item"><span>📞</span> 033-636-XXXX</div>
+          <div class="footer-contact-item"><span>📧</span> info@seorakyhostel.kr</div>
+          <div class="footer-contact-item"><span>⏰</span> 체크인 15:00 / 체크아웃 11:00</div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">안내</div>
+        <ul class="footer-links">
+          <li><a href="about.html">호스텔 소개</a></li>
+          <li><a href="rooms.html">객실 안내</a></li>
+          <li><a href="facilities.html">시설 안내</a></li>
+          <li><a href="pricing.html">요금 안내</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">예약</div>
+        <ul class="footer-links">
+          <li><a href="reservation.html">예약하기</a></li>
+          <li><a href="reservation.html#faq">예약 FAQ</a></li>
+          <li><a href="pricing.html#cancellation">취소·환불</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">SNS</div>
+        <ul class="footer-links">
+          <li><a href="#">인스타그램</a></li>
+          <li><a href="#">네이버 블로그</a></li>
+          <li><a href="#">페이스북</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 설악산유스호스텔. All rights reserved.</p>
+      <div class="footer-bottom-links">
+        <a href="#">개인정보처리방침</a>
+        <a href="#">이용약관</a>
+        <a href="../index.html">홈으로</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<a href="reservation.html" class="float-reserve"><span>📅</span> 예약하기</a>
+<script src="../js/app.js"></script>
+</body>
+</html>

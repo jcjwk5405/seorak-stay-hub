@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <title>갤러리 | 설악산유스호스텔</title>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="../images/icon-192.svg">
+</head>
+<body>
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-main">설악산유스호스텔</span>
+      <span class="nav-logo-sub">Seoraksan Youth Hostel</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">호스텔 소개</a></li>
+      <li><a href="rooms.html">객실 안내</a></li>
+      <li><a href="facilities.html">시설 안내</a></li>
+      <li><a href="pricing.html">요금 안내</a></li>
+      <li><a href="gallery.html" class="active">갤러리</a></li>
+      <li><a href="reservation.html" class="nav-reserve-btn">예약하기</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="about.html">🏔 호스텔 소개</a>
+  <a href="rooms.html">🛏 객실 안내</a>
+  <a href="facilities.html">🏊 시설 안내</a>
+  <a href="pricing.html">💰 요금 안내</a>
+  <a href="gallery.html">📸 갤러리</a>
+  <a href="reservation.html" class="mobile-reserve">📅 예약하기</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb"><a href="../index.html">홈</a> <span>›</span> <span>갤러리</span></div>
+    <h1 class="page-hero-title">갤러리</h1>
+    <p class="page-hero-subtitle">사계절 아름다운 설악산유스호스텔의 모습을 담았습니다</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <!-- Filter Tabs -->
+    <div class="tabs fade-up" style="justify-content:center; margin-bottom:40px;">
+      <button class="tab-btn active" onclick="filterGallery('all', this)">전체</button>
+      <button class="tab-btn" onclick="filterGallery('room', this)">객실</button>
+      <button class="tab-btn" onclick="filterGallery('facility', this)">시설</button>
+      <button class="tab-btn" onclick="filterGallery('nature', this)">설악산 자연</button>
+      <button class="tab-btn" onclick="filterGallery('season', this)">계절별</button>
+    </div>
+
+    <div class="gallery-grid fade-up" id="galleryGrid">
+      <div class="gallery-item large" data-cat="room">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#1a3358,#0d1e3a); min-height:400px;">🛏</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:16px;left:16px; background:rgba(10,22,40,0.8); padding:6px 14px; border-radius:20px; font-size:0.78rem; color:rgba(255,255,255,0.9); border:1px solid rgba(200,168,75,0.3);">스탠다드 온돌룸</div>
+      </div>
+      <div class="gallery-item" data-cat="nature">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#1a3820,#0d1e10);">🏔</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">울산바위 전망</div>
+      </div>
+      <div class="gallery-item" data-cat="season">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#38280a,#1e1408);">🍂</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">가을 단풍</div>
+      </div>
+      <div class="gallery-item" data-cat="facility">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#1a2840,#0a1420);">🍳</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">공용 주방</div>
+      </div>
+      <div class="gallery-item" data-cat="room">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#203840,#101e25);">👨‍👩‍👧‍👦</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">패밀리 룸</div>
+      </div>
+      <div class="gallery-item" data-cat="season">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#1a2a3a,#0a1520);">❄️</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">겨울 설경</div>
+      </div>
+      <div class="gallery-item" data-cat="nature">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#0a2010,#050f08);">🚡</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">케이블카 전망</div>
+      </div>
+      <div class="gallery-item" data-cat="facility">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#182838,#0c1820);">🏢</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">연회장</div>
+      </div>
+      <div class="gallery-item" data-cat="season">
+        <div class="gallery-illustration" style="background:linear-gradient(135deg,#1a2810,#0c1808);">🌸</div>
+        <div class="gallery-overlay"><span class="gallery-zoom">🔍</span></div>
+        <div style="position:absolute;bottom:10px;left:12px; background:rgba(10,22,40,0.8); padding:5px 12px; border-radius:20px; font-size:0.75rem; color:rgba(255,255,255,0.9);">봄 신록</div>
+      </div>
+    </div>
+
+    <div class="mt-32 text-center fade-up">
+      <p style="color:rgba(255,255,255,0.5); font-size:0.85rem; margin-bottom:16px;">
+        📸 더 많은 사진은 SNS에서 확인하세요 — <strong style="color:var(--gold);">#설악산유스호스텔</strong>
+      </p>
+      <div style="display:flex; gap:12px; justify-content:center;">
+        <a href="#" class="btn btn-ghost btn-sm">📷 인스타그램</a>
+        <a href="#" class="btn btn-ghost btn-sm">📘 페이스북</a>
+        <a href="#" class="btn btn-ghost btn-sm">📌 네이버 블로그</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <p class="footer-copy">© 2026 설악산유스호스텔 | 강원특별자치도 속초시 청봉로 173 | 📞 033-636-XXXX</p>
+      <div class="footer-bottom-links"><a href="../index.html">홈으로</a><a href="reservation.html">예약하기</a></div>
+    </div>
+  </div>
+</footer>
+
+<a href="reservation.html" class="float-reserve"><span>📅</span> 예약하기</a>
+<script src="../js/app.js"></script>
+<script>
+function filterGallery(cat, btn) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.gallery-item').forEach(item => {
+    const show = cat === 'all' || item.dataset.cat === cat;
+    item.style.display = show ? '' : 'none';
+  });
+}
+</script>
+</body>
+</html>

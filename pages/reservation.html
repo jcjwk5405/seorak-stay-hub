@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1e3a5f">
+  <title>예약하기 | 설악산유스호스텔</title>
+  <link rel="manifest" href="../manifest.json">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="icon" type="image/svg+xml" href="../images/icon-192.svg">
+</head>
+<body>
+<nav class="nav scrolled" id="mainNav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <span class="nav-logo-main">설악산유스호스텔</span>
+      <span class="nav-logo-sub">Seoraksan Youth Hostel</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="about.html">호스텔 소개</a></li>
+      <li><a href="rooms.html">객실 안내</a></li>
+      <li><a href="facilities.html">시설 안내</a></li>
+      <li><a href="pricing.html">요금 안내</a></li>
+      <li><a href="gallery.html">갤러리</a></li>
+      <li><a href="reservation.html" class="nav-reserve-btn active">예약하기</a></li>
+    </ul>
+    <button class="nav-toggle" onclick="toggleNav()"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="mobileMenu">
+  <a href="about.html">🏔 호스텔 소개</a>
+  <a href="rooms.html">🛏 객실 안내</a>
+  <a href="facilities.html">🏊 시설 안내</a>
+  <a href="pricing.html">💰 요금 안내</a>
+  <a href="gallery.html">📸 갤러리</a>
+  <a href="reservation.html" class="mobile-reserve">📅 예약하기</a>
+</div>
+
+<div class="page-hero">
+  <div class="container">
+    <div class="page-hero-breadcrumb"><a href="../index.html">홈</a> <span>›</span> <span>예약하기</span></div>
+    <h1 class="page-hero-title">예약하기</h1>
+    <p class="page-hero-subtitle">홈페이지 직접 예약 시 최저가 보장 + 5% 추가 할인</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+
+    <!-- Booking Steps -->
+    <div class="booking-steps fade-up">
+      <div class="step active" id="step1"><div class="step-num">1</div> 날짜·인원</div>
+      <div class="step" id="step2"><div class="step-num">2</div> 객실 선택</div>
+      <div class="step" id="step3"><div class="step-num">3</div> 투숙객 정보</div>
+      <div class="step" id="step4"><div class="step-num">4</div> 결제</div>
+      <div class="step" id="step5"><div class="step-num">5</div> 예약 확정</div>
+    </div>
+
+    <div style="display:grid; grid-template-columns: 1fr 360px; gap: 32px; align-items: start;" class="fade-up">
+
+      <!-- Reservation Form -->
+      <div>
+        <div class="reservation-section" id="tabs1" data-tabs>
+          <!-- Tabs -->
+          <div class="tabs">
+            <button class="tab-btn active" onclick="switchTab(0)">새 예약</button>
+            <button class="tab-btn" onclick="switchTab(1)" id="checkTab">예약 확인·취소</button>
+          </div>
+
+          <!-- Tab 1: New Reservation -->
+          <div class="tab-panel active" id="newReservationPanel">
+            <form onsubmit="handleReservation(event)">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label class="form-label">체크인 날짜 *</label>
+                  <input type="date" id="resCheckin" class="form-input" required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">체크아웃 날짜 *</label>
+                  <input type="date" id="resCheckout" class="form-input" required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">객실 타입 *</label>
+                  <select id="resRoom" class="form-select" required>
+                    <option value="">— 객실을 선택해주세요 —</option>
+                    <option value="ondol">스탠다드 온돌룸 (2인 기준, 50,000원~)</option>
+                    <option value="bed">스탠다드 침대룸 (2인 기준, 55,000원~)</option>
+                    <option value="family">패밀리 룸 (4인 기준, 90,000원~)</option>
+                    <option value="triple">트리플 룸 (3인 기준, 70,000원~)</option>
+                    <option value="dormitory">도미토리 룸 (1인, 20,000원~)</option>
+                    <option value="group">단체 연결 객실 (10인↑, 별도 협의)</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">투숙 인원 *</label>
+                  <select id="resGuests" class="form-select" required>
+                    <option value="1">1인</option>
+                    <option value="2" selected>2인</option>
+                    <option value="3">3인</option>
+                    <option value="4">4인</option>
+                    <option value="5">5인 이상</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">성함 (대표 투숙자) *</label>
+                  <input type="text" id="resName" class="form-input" placeholder="홍길동" required>
+                </div>
+                <div class="form-field">
+                  <label class="form-label">연락처 *</label>
+                  <input type="tel" id="resPhone" class="form-input" placeholder="010-0000-0000" required>
+                </div>
+                <div class="form-field full">
+                  <label class="form-label">이메일 *</label>
+                  <input type="email" id="resEmail" class="form-input" placeholder="email@example.com" required>
+                  <p class="form-helper">예약 확인서가 이 이메일로 발송됩니다.</p>
+                </div>
+                <div class="form-field full">
+                  <label class="form-label">할인 코드 (선택)</label>
+                  <input type="text" id="resDiscount" class="form-input" placeholder="HIKOREA 회원번호 또는 할인 코드">
+                </div>
+                <div class="form-field full">
+                  <label class="form-label">특별 요청 사항 (선택)</label>
+                  <textarea id="resRequest" class="form-textarea" placeholder="예) 금연 객실 요청, 늦은 체크인 예정, 유아 동반 등 요청 사항을 자유롭게 입력해 주세요."></textarea>
+                  <p class="form-helper">요청 사항은 최대한 반영하겠으나 보장되지 않을 수 있습니다.</p>
+                </div>
+              </div>
+
+              <!-- Price Preview -->
+              <div id="pricePreview" style="display:none; background: rgba(200,168,75,0.08); border: 1px solid rgba(200,168,75,0.25); border-radius: var(--radius); padding: 20px; margin: 24px 0;">
+                <p style="font-size:0.8rem; color:var(--gold); font-weight:700; margin-bottom:12px; letter-spacing:0.1em;">💰 예상 요금</p>
+                <div id="priceDetails" style="font-size:0.88rem; color:rgba(255,255,255,0.8); line-height:2;">
+                </div>
+              </div>
+
+              <div style="margin-top: 24px;">
+                <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; margin-bottom:16px;">
+                  <input type="checkbox" required style="margin-top:4px; accent-color:var(--gold);">
+                  <span style="font-size:0.83rem; color:rgba(255,255,255,0.7);">
+                    <a href="#" style="color:var(--gold); text-decoration:underline;">개인정보처리방침</a> 및 
+                    <a href="#" style="color:var(--gold); text-decoration:underline;">이용약관</a>에 동의합니다. (필수)
+                  </span>
+                </label>
+                <label style="display:flex; align-items:flex-start; gap:12px; cursor:pointer; margin-bottom:24px;">
+                  <input type="checkbox" style="margin-top:4px; accent-color:var(--gold);">
+                  <span style="font-size:0.83rem; color:rgba(255,255,255,0.5);">이벤트 및 할인 정보 수신에 동의합니다. (선택)</span>
+                </label>
+                <button type="submit" class="btn btn-primary btn-lg" style="width:100%; justify-content:center;">
+                  📅 예약 신청하기
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <!-- Tab 2: Check Reservation -->
+          <div class="tab-panel" id="checkReservationPanel">
+            <div style="padding: 20px 0;">
+              <p style="color:rgba(255,255,255,0.7); margin-bottom:24px; font-size:0.9rem;">예약번호와 이름으로 예약 내역을 조회하실 수 있습니다.</p>
+              <div style="display:flex; flex-direction:column; gap:16px;">
+                <div class="form-field">
+                  <label class="form-label">예약 번호</label>
+                  <input type="text" class="form-input" placeholder="예) SYH-2026-XXXXXX">
+                </div>
+                <div class="form-field">
+                  <label class="form-label">예약자 성함</label>
+                  <input type="text" class="form-input" placeholder="홍길동">
+                </div>
+                <button class="btn btn-primary" onclick="showModal('<div style=\'text-align:center;padding:12px 0\'><div style=\'font-size:3rem;margin-bottom:16px\'>🔍</div><h3 style=\'color:var(--gold);margin-bottom:12px;font-family:Noto Serif KR,serif\'>조회 결과</h3><p style=\'color:rgba(255,255,255,0.75);font-size:0.9rem;line-height:1.7\'>입력하신 정보로 예약 내역을 찾을 수 없습니다.<br><br>예약번호는 예약 확인 이메일/SMS에서<br>확인하실 수 있습니다.<br><br>문의: 📞 033-636-XXXX</p></div>')">예약 조회</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div>
+        <!-- Benefits -->
+        <div style="background: rgba(200,168,75,0.1); border: 1px solid rgba(200,168,75,0.3); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 20px;">
+          <h4 style="color:var(--gold); font-family:'Noto Serif KR',serif; margin-bottom:16px; font-size:1rem;">🎁 직접 예약 혜택</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex; gap:10px; font-size:0.85rem; color:rgba(255,255,255,0.8);">
+              <span style="color:var(--sage);">✓</span> OTA 대비 5% 추가 할인
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.85rem; color:rgba(255,255,255,0.8);">
+              <span style="color:var(--sage);">✓</span> 무료 생수 2병 제공
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.85rem; color:rgba(255,255,255,0.8);">
+              <span style="color:var(--sage);">✓</span> HIKOREA 회원 추가 10% 할인
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.85rem; color:rgba(255,255,255,0.8);">
+              <span style="color:var(--sage);">✓</span> 최저가 보장
+            </li>
+          </ul>
+        </div>
+
+        <!-- Policy Summary -->
+        <div style="background: rgba(30,58,95,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 24px; margin-bottom: 20px;">
+          <h4 style="color:var(--cream); font-family:'Noto Serif KR',serif; margin-bottom:16px; font-size:1rem;">📋 예약 안내</h4>
+          <ul style="list-style:none; display:flex; flex-direction:column; gap:10px;">
+            <li style="display:flex; gap:10px; font-size:0.82rem; color:rgba(255,255,255,0.7);">
+              <span>🕐</span> 체크인 15:00 / 체크아웃 11:00
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.82rem; color:rgba(255,255,255,0.7);">
+              <span>💳</span> 신용카드·간편결제·계좌이체
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.82rem; color:rgba(255,255,255,0.7);">
+              <span>📧</span> 예약 완료 즉시 이메일·SMS 발송
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.82rem; color:rgba(255,255,255,0.7);">
+              <span>❌</span> 7일 전 취소: 100% 환불
+            </li>
+            <li style="display:flex; gap:10px; font-size:0.82rem; color:rgba(255,255,255,0.7);">
+              <span>❌</span> 3~6일 전 취소: 50% 환불
+            </li>
+          </ul>
+          <a href="pricing.html#cancellation" style="font-size:0.78rem; color:var(--gold); text-decoration:none; display:block; margin-top:12px;">전체 취소 정책 보기 →</a>
+        </div>
+
+        <!-- Contact -->
+        <div style="background: rgba(30,58,95,0.5); border: 1px solid rgba(255,255,255,0.1); border-radius: var(--radius-lg); padding: 24px;">
+          <h4 style="color:var(--cream); font-family:'Noto Serif KR',serif; margin-bottom:16px; font-size:1rem;">📞 문의하기</h4>
+          <p style="font-size:0.85rem; color:rgba(255,255,255,0.7); margin-bottom:12px;">단체 예약 또는 특별 문의는 직접 연락 주세요.</p>
+          <a href="tel:033-636-XXXX" style="display:flex; align-items:center; gap:10px; background:var(--gold); color:var(--navy-deep); border-radius:10px; padding:12px 16px; text-decoration:none; font-weight:700; font-size:0.9rem; margin-bottom:10px;">
+            📞 033-636-XXXX
+          </a>
+          <a href="mailto:info@seorakyhostel.kr" style="display:flex; align-items:center; gap:10px; background:rgba(255,255,255,0.08); color:rgba(255,255,255,0.8); border:1px solid rgba(255,255,255,0.15); border-radius:10px; padding:12px 16px; text-decoration:none; font-size:0.88rem;">
+            📧 이메일 문의
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="divider"></div>
+    <div id="faq" class="section-header fade-up">
+      <span class="section-label">FAQ</span>
+      <h2 class="section-title">자주 묻는 <em>질문</em></h2>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="grid-2 fade-up">
+      <div class="info-box"><p><strong style="color:var(--gold);">Q. 체크인·체크아웃 시간은 언제인가요?</strong><br>체크인은 오후 3시(15:00) 이후, 체크아웃은 오전 11시(11:00)까지입니다. 얼리 체크인·레이트 체크아웃은 사전 요청 시 가능하며 별도 요금이 발생할 수 있습니다.</p></div>
+      <div class="info-box"><p><strong style="color:var(--gold);">Q. 반려동물 동반이 가능한가요?</strong><br>반려동물 동반 가능합니다. 단, 사전 전화 문의가 필수이며 일부 지정 객실에서만 허용됩니다. 다른 투숙객에게 불편을 주는 경우 퇴실 조치가 가능합니다.</p></div>
+      <div class="info-box"><p><strong style="color:var(--gold);">Q. 주차가 가능한가요?</strong><br>무료 셀프 주차가 가능합니다. 선착순 운영이며, 대형 버스 주차는 별도 문의 바랍니다. 성수기에는 주차 공간이 부족할 수 있으니 대중교통 이용을 권장합니다.</p></div>
+      <div class="info-box"><p><strong style="color:var(--gold);">Q. 조식은 어떻게 이용하나요?</strong><br>레스토랑에서 유료 조식(1인 10,000원)을 운영합니다. 전날까지 사전 예약이 필수이며, 조기 예약 할인 적용 시 무료 조식 혜택을 받을 수 있습니다.</p></div>
+      <div class="info-box"><p><strong style="color:var(--gold);">Q. 단체 예약은 어떻게 하나요?</strong><br>10인 이상 단체 예약은 온라인 문의폼 또는 전화(033-636-XXXX)로 문의해 주세요. 담당자 확인 후 확정되며, 최대 15% 단체 할인이 가능합니다.</p></div>
+      <div class="info-box"><p><strong style="color:var(--gold);">Q. HIKOREA 회원 할인은 어떻게 받나요?</strong><br>체크인 시 한국유스호스텔연맹(HIKOREA) 회원증(카드 또는 이멤버십)을 제시하시면 10% 할인이 적용됩니다. 예약 시 할인 코드란에 회원번호를 입력해 주세요.</p></div>
+    </div>
+
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none; padding-top:0;">
+      <p class="footer-copy">© 2026 설악산유스호스텔 | 강원특별자치도 속초시 청봉로 173 | 📞 033-636-XXXX</p>
+      <div class="footer-bottom-links"><a href="../index.html">홈으로</a><a href="pricing.html">요금 안내</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/app.js"></script>
+<script>
+let currentTab = 0;
+function switchTab(idx) {
+  document.querySelectorAll('.tab-btn').forEach((b,i) => b.classList.toggle('active', i===idx));
+  document.getElementById('newReservationPanel').classList.toggle('active', idx===0);
+  document.getElementById('checkReservationPanel').classList.toggle('active', idx===1);
+  currentTab = idx;
+}
+
+// Pre-fill from URL params
+const params = new URLSearchParams(window.location.search);
+if (params.get('checkin')) document.getElementById('resCheckin').value = params.get('checkin');
+if (params.get('checkout')) document.getElementById('resCheckout').value = params.get('checkout');
+if (params.get('room')) {
+  const sel = document.getElementById('resRoom');
+  if (sel) for (let o of sel.options) { if (o.value === params.get('room')) { sel.value = o.value; break; } }
+}
+
+// Price preview on room+date change
+function updatePricePreview() {
+  const room = document.getElementById('resRoom')?.value;
+  const cin = document.getElementById('resCheckin')?.value;
+  const cout = document.getElementById('resCheckout')?.value;
+  const preview = document.getElementById('pricePreview');
+  const details = document.getElementById('priceDetails');
+  if (!room || !cin || !cout || !preview) return;
+  const nights = Math.max(1, (new Date(cout) - new Date(cin)) / 86400000);
+  const prices = { ondol: 50000, bed: 55000, family: 90000, triple: 70000, dormitory: 20000, group: 0 };
+  const names = { ondol: '스탠다드 온돌룸', bed: '스탠다드 침대룸', family: '패밀리 룸', triple: '트리플 룸', dormitory: '도미토리', group: '단체 객실(협의)' };
+  if (room === 'group') { preview.style.display='none'; return; }
+  const base = (prices[room] || 0) * nights;
+  const disc = Math.floor(base * 0.05);
+  preview.style.display = 'block';
+  details.innerHTML = `
+    <div style="display:flex;justify-content:space-between;"><span>${names[room]}</span><span>${prices[room].toLocaleString()}원 × ${nights}박</span></div>
+    <div style="display:flex;justify-content:space-between; color:var(--sage);"><span>직접예약 할인 (5%)</span><span>- ${disc.toLocaleString()}원</span></div>
+    <div style="height:1px;background:rgba(255,255,255,0.1);margin:6px 0;"></div>
+    <div style="display:flex;justify-content:space-between; font-weight:700; color:var(--gold); font-size:1rem;"><span>합계</span><span>${(base-disc).toLocaleString()}원</span></div>
+  `;
+}
+document.getElementById('resRoom')?.addEventListener('change', updatePricePreview);
+document.getElementById('resCheckin')?.addEventListener('change', updatePricePreview);
+document.getElementById('resCheckout')?.addEventListener('change', updatePricePreview);
+
+// Init dates
+document.addEventListener('DOMContentLoaded', () => {
+  const today = new Date();
+  const tmr = new Date(today); tmr.setDate(tmr.getDate()+1);
+  const dat2 = new Date(today); dat2.setDate(dat2.getDate()+2);
+  const ci = document.getElementById('resCheckin');
+  const co = document.getElementById('resCheckout');
+  if (ci && !ci.value) { ci.min = today.toISOString().split('T')[0]; ci.value = tmr.toISOString().split('T')[0]; }
+  if (co && !co.value) { co.min = dat2.toISOString().split('T')[0]; co.value = dat2.toISOString().split('T')[0]; }
+  updatePricePreview();
+});
+</script>
+</body>
+</html>
