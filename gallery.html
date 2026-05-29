@@ -12,7 +12,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <style>
-    /* 이미지 없는 갤러리 플레이스홀더 */
     .gallery-ph {
       width: 100%;
       aspect-ratio: 4/3;
@@ -35,141 +34,218 @@
 
   <div class="page-hero">
     <div class="page-hero__breadcrumb">
-      <a href="index.html">홈</a> <span>›</span> <span>갤러리</span>
+      <a href="index.html" data-ko="홈" data-en="Home">홈</a>
+      <span>›</span>
+      <span data-ko="갤러리" data-en="Gallery">갤러리</span>
     </div>
-    <h1 class="page-hero__title">갤러리</h1>
-    <p class="page-hero__subtitle">설악산유스호스텔의 아름다운 공간을 사진으로 만나보세요</p>
+    <h1 class="page-hero__title"
+      data-ko="갤러리" data-en="Gallery">갤러리</h1>
+    <p class="page-hero__subtitle"
+      data-ko="설악산유스호스텔의 아름다운 공간을 사진으로 만나보세요"
+      data-en="Explore our beautiful spaces through photos">설악산유스호스텔의 아름다운 공간을 사진으로 만나보세요</p>
   </div>
 
   <section class="section">
     <div class="container">
-      <!-- 필터 탭 -->
       <div class="room-filter" style="margin-bottom:32px;">
-        <button class="gallery-filter-btn filter-btn active" data-filter="all">전체</button>
-        <button class="gallery-filter-btn filter-btn" data-filter="exterior">외관</button>
-        <button class="gallery-filter-btn filter-btn" data-filter="lobby">로비·프런트</button>
-        <button class="gallery-filter-btn filter-btn" data-filter="bed">침대룸</button>
-        <button class="gallery-filter-btn filter-btn" data-filter="ondol">온돌룸</button>
-        <button class="gallery-filter-btn filter-btn" data-filter="facility">시설</button>
-        <button class="gallery-filter-btn filter-btn" data-filter="outdoor">야외</button>
+        <button class="gallery-filter-btn filter-btn active" data-filter="all"
+          data-ko="전체" data-en="All">전체</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="exterior"
+          data-ko="외관" data-en="Exterior">외관</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="lobby"
+          data-ko="로비·프런트" data-en="Lobby &amp; Front">로비·프런트</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="bed"
+          data-ko="침대룸" data-en="Bed Room">침대룸</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="ondol"
+          data-ko="온돌룸" data-en="Ondol Room">온돌룸</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="facility"
+          data-ko="시설" data-en="Facilities">시설</button>
+        <button class="gallery-filter-btn filter-btn" data-filter="outdoor"
+          data-ko="야외" data-en="Outdoor">야외</button>
       </div>
 
-      <!-- 갤러리 그리드 -->
       <div class="gallery-grid">
 
         <!-- 외관 -->
-        <div class="gallery-item" data-category="exterior" data-src="images/exterior-01.png" data-caption="설악산유스호스텔 전경">
-          <img src="images/exterior-01.png" alt="설악산유스호스텔 전경" loading="lazy">
+        <div class="gallery-item" data-category="exterior"
+          data-src="images/exterior-01.png"
+          data-caption-ko="설악산유스호스텔 전경" data-caption-en="Seoraksan Youth Hostel Exterior">
+          <img src="images/exterior-01.png"
+            data-alt-ko="설악산유스호스텔 전경" data-alt-en="Seoraksan Youth Hostel Exterior"
+            alt="설악산유스호스텔 전경" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="exterior" data-src="images/exterior-05.png" data-caption="설악산을 배경으로 한 입구">
-          <img src="images/exterior-05.png" alt="설악산을 배경으로 한 입구" loading="lazy">
+        <div class="gallery-item" data-category="exterior"
+          data-src="images/exterior-05.png"
+          data-caption-ko="설악산을 배경으로 한 입구" data-caption-en="Entrance with Seoraksan backdrop">
+          <img src="images/exterior-05.png"
+            data-alt-ko="설악산을 배경으로 한 입구" data-alt-en="Entrance with Seoraksan backdrop"
+            alt="설악산을 배경으로 한 입구" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
 
         <!-- 로비·프런트 -->
-        <div class="gallery-item" data-category="lobby" data-src="images/lobby-01.jpeg" data-caption="넓고 따뜻한 로비">
-          <img src="images/lobby-01.jpeg" alt="넓고 따뜻한 로비" loading="lazy">
+        <div class="gallery-item" data-category="lobby"
+          data-src="images/lobby-01.jpeg"
+          data-caption-ko="넓고 따뜻한 로비" data-caption-en="Spacious and Warm Lobby">
+          <img src="images/lobby-01.jpeg"
+            data-alt-ko="넓고 따뜻한 로비" data-alt-en="Spacious and Warm Lobby"
+            alt="넓고 따뜻한 로비" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="lobby" data-src="images/front-desk-01.jpeg" data-caption="24시간 프런트 데스크">
-          <img src="images/front-desk-01.jpeg" alt="24시간 프런트 데스크" loading="lazy">
+        <div class="gallery-item" data-category="lobby"
+          data-src="images/front-desk-01.jpeg"
+          data-caption-ko="24시간 프런트 데스크" data-caption-en="24-Hour Front Desk">
+          <img src="images/front-desk-01.jpeg"
+            data-alt-ko="24시간 프런트 데스크" data-alt-en="24-Hour Front Desk"
+            alt="24시간 프런트 데스크" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
 
         <!-- 침대룸 -->
-        <div class="gallery-item" data-category="bed" data-src="images/room-bed-01.png" data-caption="스탠다드 침대룸">
-          <img src="images/room-bed-01.png" alt="스탠다드 침대룸" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-bed-01.png"
+          data-caption-ko="스탠다드 침대룸" data-caption-en="Standard Bed Room">
+          <img src="images/room-bed-01.png"
+            data-alt-ko="스탠다드 침대룸" data-alt-en="Standard Bed Room"
+            alt="스탠다드 침대룸" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="bed" data-src="images/room-bed-04.jpg" data-caption="밝은 자연광의 더블룸">
-          <img src="images/room-bed-04.jpg" alt="밝은 자연광의 더블룸" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-bed-04.jpg"
+          data-caption-ko="밝은 자연광의 더블룸" data-caption-en="Double Room with Natural Light">
+          <img src="images/room-bed-04.jpg"
+            data-alt-ko="밝은 자연광의 더블룸" data-alt-en="Double Room with Natural Light"
+            alt="밝은 자연광의 더블룸" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="bed" data-src="images/room-bed-05.jpg" data-caption="스탠다드 침대룸 측면">
-          <img src="images/room-bed-05.jpg" alt="스탠다드 침대룸 측면" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-bed-05.jpg"
+          data-caption-ko="스탠다드 침대룸 측면" data-caption-en="Standard Bed Room Side View">
+          <img src="images/room-bed-05.jpg"
+            data-alt-ko="스탠다드 침대룸 측면" data-alt-en="Standard Bed Room Side View"
+            alt="스탠다드 침대룸 측면" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="bed" data-src="images/room-bed-06.jpeg" data-caption="트윈 침대룸">
-          <img src="images/room-bed-06.jpeg" alt="트윈 침대룸" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-bed-06.jpeg"
+          data-caption-ko="트윈 침대룸" data-caption-en="Twin Bed Room">
+          <img src="images/room-bed-06.jpeg"
+            data-alt-ko="트윈 침대룸" data-alt-en="Twin Bed Room"
+            alt="트윈 침대룸" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="bed" data-src="images/room-bed-02.png" data-caption="트윈룸 — 에어컨·드레서">
-          <img src="images/room-bed-02.png" alt="트윈룸 에어컨·드레서" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-bed-02.png"
+          data-caption-ko="트윈룸 — 에어컨·드레서" data-caption-en="Twin Room — A/C &amp; Dresser">
+          <img src="images/room-bed-02.png"
+            data-alt-ko="트윈룸 에어컨·드레서" data-alt-en="Twin Room A/C and Dresser"
+            alt="트윈룸 에어컨·드레서" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="bed" data-src="images/room-bed-03.png" data-caption="넓은 스탠다드 침대룸">
-          <img src="images/room-bed-03.png" alt="넓은 스탠다드 침대룸" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-bed-03.png"
+          data-caption-ko="넓은 스탠다드 침대룸" data-caption-en="Spacious Standard Bed Room">
+          <img src="images/room-bed-03.png"
+            data-alt-ko="넓은 스탠다드 침대룸" data-alt-en="Spacious Standard Bed Room"
+            alt="넓은 스탠다드 침대룸" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="bed" data-src="images/room-interior-18.png" data-caption="우드 인테리어 리모델링 객실">
-          <img src="images/room-interior-18.png" alt="우드 인테리어 리모델링 객실" loading="lazy">
+        <div class="gallery-item" data-category="bed"
+          data-src="images/room-interior-18.png"
+          data-caption-ko="우드 인테리어 리모델링 객실" data-caption-en="Wood Interior Remodeled Room">
+          <img src="images/room-interior-18.png"
+            data-alt-ko="우드 인테리어 리모델링 객실" data-alt-en="Wood Interior Remodeled Room"
+            alt="우드 인테리어 리모델링 객실" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
 
         <!-- 온돌룸 -->
-        <div class="gallery-item" data-category="ondol" data-src="images/ondol-05.png" data-caption="VIP 온돌+거실 — 슬라이딩 도어">
-          <img src="images/ondol-05.png" alt="VIP 온돌+거실" loading="lazy">
+        <div class="gallery-item" data-category="ondol"
+          data-src="images/ondol-05.png"
+          data-caption-ko="VIP 온돌+거실 — 슬라이딩 도어" data-caption-en="VIP Ondol Suite — Sliding Door">
+          <img src="images/ondol-05.png"
+            data-alt-ko="VIP 온돌+거실" data-alt-en="VIP Ondol Suite"
+            alt="VIP 온돌+거실" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="ondol" data-src="images/ondol-01.jpeg" data-caption="스탠다드 온돌룸">
-          <img src="images/ondol-01.jpeg" alt="스탠다드 온돌룸" loading="lazy">
+        <div class="gallery-item" data-category="ondol"
+          data-src="images/ondol-01.jpeg"
+          data-caption-ko="스탠다드 온돌룸" data-caption-en="Standard Ondol Room">
+          <img src="images/ondol-01.jpeg"
+            data-alt-ko="스탠다드 온돌룸" data-alt-en="Standard Ondol Room"
+            alt="스탠다드 온돌룸" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="ondol" data-src="images/ondol-03.jpg" data-caption="VIP 온돌+거실 전체 뷰">
-          <img src="images/ondol-03.jpg" alt="VIP 온돌+거실 전체 뷰" loading="lazy">
+        <div class="gallery-item" data-category="ondol"
+          data-src="images/ondol-03.jpg"
+          data-caption-ko="VIP 온돌+거실 전체 뷰" data-caption-en="VIP Ondol Suite Full View">
+          <img src="images/ondol-03.jpg"
+            data-alt-ko="VIP 온돌+거실 전체 뷰" data-alt-en="VIP Ondol Suite Full View"
+            alt="VIP 온돌+거실 전체 뷰" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <div class="gallery-item" data-category="ondol" data-src="images/ondol-04.png" data-caption="온돌 바닥 침구">
-          <img src="images/ondol-04.png" alt="온돌 바닥 침구" loading="lazy">
+        <div class="gallery-item" data-category="ondol"
+          data-src="images/ondol-04.png"
+          data-caption-ko="온돌 바닥 침구" data-caption-en="Ondol Floor Bedding">
+          <img src="images/ondol-04.png"
+            data-alt-ko="온돌 바닥 침구" data-alt-en="Ondol Floor Bedding"
+            alt="온돌 바닥 침구" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
 
         <!-- 시설 -->
-        <div class="gallery-item" data-category="facility" data-src="images/hall-03.jpeg" data-caption="강당·연회장 — 단체 행사 가능">
-          <img src="images/hall-03.jpeg" alt="강당·연회장" loading="lazy">
+        <div class="gallery-item" data-category="facility"
+          data-src="images/hall-03.jpeg"
+          data-caption-ko="강당·연회장 — 단체 행사 가능" data-caption-en="Hall &amp; Banquet Room — Group Events">
+          <img src="images/hall-03.jpeg"
+            data-alt-ko="강당·연회장" data-alt-en="Hall and Banquet Room"
+            alt="강당·연회장" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <!-- 공용주방 (이미지 없음 → 딥그린 플레이스홀더) -->
-        <div class="gallery-item" data-category="facility" data-src="" data-caption="공용 주방">
+        <div class="gallery-item" data-category="facility" data-src="" data-caption-ko="공용 주방" data-caption-en="Shared Kitchen">
           <div class="gallery-ph">
             <span class="ph-icon">📷</span>
-            사진 준비 중
+            <span data-ko="사진 준비 중" data-en="Photo Coming Soon">사진 준비 중</span>
           </div>
           <div class="gallery-item__overlay"></div>
         </div>
 
         <!-- 야외 -->
-        <div class="gallery-item" data-category="outdoor" data-src="images/outdoor-06.jpeg" data-caption="야외 데크 야경">
-          <img src="images/outdoor-06.jpeg" alt="야외 데크 야경" loading="lazy">
+        <div class="gallery-item" data-category="outdoor"
+          data-src="images/outdoor-06.jpeg"
+          data-caption-ko="야외 데크 야경" data-caption-en="Outdoor Deck Night View">
+          <img src="images/outdoor-06.jpeg"
+            data-alt-ko="야외 데크 야경" data-alt-en="Outdoor Deck Night View"
+            alt="야외 데크 야경" loading="lazy">
           <div class="gallery-item__overlay"><span>🔍</span></div>
         </div>
-        <!-- 겨울설경·케이블카·봄신록 (이미지 없음 → 딥그린 플레이스홀더) -->
-        <div class="gallery-item" data-category="outdoor" data-src="" data-caption="설악산 겨울 설경">
+        <div class="gallery-item" data-category="outdoor" data-src="" data-caption-ko="설악산 겨울 설경" data-caption-en="Seoraksan Winter Snow">
           <div class="gallery-ph">
             <span class="ph-icon">📷</span>
-            사진 준비 중
+            <span data-ko="사진 준비 중" data-en="Photo Coming Soon">사진 준비 중</span>
           </div>
           <div class="gallery-item__overlay"></div>
         </div>
-        <div class="gallery-item" data-category="outdoor" data-src="" data-caption="설악산 케이블카">
+        <div class="gallery-item" data-category="outdoor" data-src="" data-caption-ko="설악산 케이블카" data-caption-en="Seoraksan Cable Car">
           <div class="gallery-ph">
             <span class="ph-icon">📷</span>
-            사진 준비 중
+            <span data-ko="사진 준비 중" data-en="Photo Coming Soon">사진 준비 중</span>
           </div>
           <div class="gallery-item__overlay"></div>
         </div>
-        <div class="gallery-item" data-category="outdoor" data-src="" data-caption="설악산 봄 신록">
+        <div class="gallery-item" data-category="outdoor" data-src="" data-caption-ko="설악산 봄 신록" data-caption-en="Seoraksan Spring Greenery">
           <div class="gallery-ph">
             <span class="ph-icon">📷</span>
-            사진 준비 중
+            <span data-ko="사진 준비 중" data-en="Photo Coming Soon">사진 준비 중</span>
           </div>
           <div class="gallery-item__overlay"></div>
         </div>
       </div>
 
-      <!-- 갤러리 카운트 -->
-      <p style="text-align:center;color:var(--color-text-sub);margin-top:24px;font-size:0.9rem;">실제 사진 17장 · 사진 준비 중 4장</p>
+      <p style="text-align:center;color:var(--color-text-sub);margin-top:24px;font-size:0.9rem;"
+        data-ko="실제 사진 17장 · 사진 준비 중 4장"
+        data-en="17 actual photos · 4 photos coming soon">실제 사진 17장 · 사진 준비 중 4장</p>
     </div>
   </section>
 
@@ -186,12 +262,15 @@
     </div>
   </div>
 
-  <!-- CTA -->
   <section class="cta-banner">
     <div class="container">
-      <h2 class="cta-banner__title">직접 눈으로 확인하세요</h2>
-      <p class="cta-banner__text">설악산유스호스텔에서 특별한 추억을 만들어 보세요</p>
-      <a href="reservation.html" class="btn btn--primary">지금 예약하기</a>
+      <h2 class="cta-banner__title"
+        data-ko="직접 눈으로 확인하세요" data-en="See It for Yourself">직접 눈으로 확인하세요</h2>
+      <p class="cta-banner__text"
+        data-ko="설악산유스호스텔에서 특별한 추억을 만들어 보세요"
+        data-en="Create special memories at Seoraksan Youth Hostel">설악산유스호스텔에서 특별한 추억을 만들어 보세요</p>
+      <a href="reservation.html" class="btn btn--primary"
+        data-ko="지금 예약하기" data-en="Book Now">지금 예약하기</a>
     </div>
   </section>
 

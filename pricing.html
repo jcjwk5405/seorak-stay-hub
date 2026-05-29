@@ -19,15 +19,15 @@
       font-size: 0.95rem;
       font-weight: 600;
       color: var(--color-text-sub);
-      background: #fff;
+      background: transparent;
       cursor: pointer;
       transition: all 0.2s ease;
       min-height: 44px;
     }
     .pricing-tab-btn.active {
       border-color: var(--color-primary);
-      color: var(--color-primary);
-      background: var(--color-primary-light);
+      color: #fff;
+      background: var(--color-primary);
     }
     .pricing-panel { display: none; }
     .pricing-panel.active { display: block; }
@@ -45,6 +45,7 @@
       padding: 8px 0;
       border-bottom: 1px solid var(--color-border);
       font-size: 0.9rem;
+      color: var(--color-text);
     }
     .extra-fee-item:last-child { border-bottom: none; }
   </style>
@@ -54,145 +55,156 @@
 
   <div class="page-hero">
     <div class="page-hero__breadcrumb">
-      <a href="index.html">홈</a> <span>›</span> <span>요금 안내</span>
+      <a href="index.html" data-ko="홈" data-en="Home">홈</a>
+      <span>›</span>
+      <span data-ko="요금 안내" data-en="Pricing">요금 안내</span>
     </div>
-    <h1 class="page-hero__title">요금 안내</h1>
-    <p class="page-hero__subtitle">합리적인 가격으로 설악산의 자연을 즐기세요</p>
+    <h1 class="page-hero__title"
+      data-ko="요금 안내" data-en="Pricing">요금 안내</h1>
+    <p class="page-hero__subtitle"
+      data-ko="합리적인 가격으로 설악산의 자연을 즐기세요"
+      data-en="Enjoy Seoraksan nature at reasonable prices">합리적인 가격으로 설악산의 자연을 즐기세요</p>
   </div>
 
   <section class="section">
     <div class="container">
 
-      <!-- 안내 문구 -->
-      <div class="pricing-notice">
-        ⚠️ 아래 요금은 기준 요금이며, 예약 채널 및 시즌에 따라 변동될 수 있습니다. 정확한 요금은 예약 시 확인하세요.
-      </div>
+      <div class="pricing-notice"
+        data-ko="⚠️ 아래 요금은 기준 요금이며, 예약 채널 및 시즌에 따라 변동될 수 있습니다. 정확한 요금은 예약 시 확인하세요."
+        data-en="⚠️ Rates listed are base rates and may vary by booking channel and season. Please confirm exact rates at time of booking.">⚠️ 아래 요금은 기준 요금이며, 예약 채널 및 시즌에 따라 변동될 수 있습니다. 정확한 요금은 예약 시 확인하세요.</div>
 
-      <!-- 시즌 탭 -->
       <div style="display:flex;gap:12px;margin-bottom:32px;flex-wrap:wrap;">
-        <button class="pricing-tab-btn active" data-pricing="offpeak">비수기 요금</button>
-        <button class="pricing-tab-btn" data-pricing="peak">성수기 요금</button>
+        <button class="pricing-tab-btn active" data-pricing="offpeak"
+          data-ko="비수기 요금" data-en="Off-peak Rates">비수기 요금</button>
+        <button class="pricing-tab-btn" data-pricing="peak"
+          data-ko="성수기 요금" data-en="Peak Season Rates">성수기 요금</button>
       </div>
 
-      <!-- 비수기 요금 테이블 -->
+      <!-- 비수기 요금 -->
       <div class="pricing-panel active" data-pricing-panel="offpeak">
-        <h3 style="color:var(--color-primary);margin-bottom:16px;">비수기 객실 요금</h3>
+        <h3 style="color:var(--color-primary);margin-bottom:16px;"
+          data-ko="비수기 객실 요금" data-en="Off-peak Room Rates">비수기 객실 요금</h3>
         <div style="overflow-x:auto;">
           <table class="pricing-table">
             <thead>
               <tr>
-                <th>객실 타입</th>
-                <th>평일</th>
-                <th>주말·공휴일</th>
-                <th>비고</th>
+                <th data-ko="객실 타입" data-en="Room Type">객실 타입</th>
+                <th data-ko="평일" data-en="Weekday">평일</th>
+                <th data-ko="주말·공휴일" data-en="Weekend / Holiday">주말·공휴일</th>
+                <th data-ko="비고" data-en="Note">비고</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>스탠다드 온돌룸</strong></td>
+                <td><strong data-ko="스탠다드 온돌룸" data-en="Standard Ondol Room">스탠다드 온돌룸</strong></td>
                 <td class="price-value">50,000 ~ 60,000원</td>
                 <td class="price-value">70,000 ~ 80,000원</td>
-                <td>2인 기준</td>
+                <td data-ko="2인 기준" data-en="2 Guests">2인 기준</td>
               </tr>
               <tr>
-                <td><strong>스탠다드 침대룸</strong></td>
+                <td><strong data-ko="스탠다드 침대룸" data-en="Standard Bed Room">스탠다드 침대룸</strong></td>
                 <td class="price-value">55,000 ~ 65,000원</td>
                 <td class="price-value">75,000 ~ 85,000원</td>
-                <td>2인 기준</td>
+                <td data-ko="2인 기준" data-en="2 Guests">2인 기준</td>
               </tr>
               <tr>
-                <td><strong>스탠다드 트윈룸</strong></td>
+                <td><strong data-ko="스탠다드 트윈룸" data-en="Standard Twin Room">스탠다드 트윈룸</strong></td>
                 <td class="price-value">55,000 ~ 65,000원</td>
                 <td class="price-value">75,000 ~ 85,000원</td>
-                <td>2인 기준</td>
+                <td data-ko="2인 기준" data-en="2 Guests">2인 기준</td>
               </tr>
               <tr>
-                <td><strong>트리플룸</strong></td>
+                <td><strong data-ko="트리플룸" data-en="Triple Room">트리플룸</strong></td>
                 <td class="price-value">70,000 ~ 85,000원</td>
                 <td class="price-value">95,000 ~ 110,000원</td>
-                <td>3인 기준</td>
+                <td data-ko="3인 기준" data-en="3 Guests">3인 기준</td>
               </tr>
               <tr>
-                <td><strong>패밀리룸</strong></td>
+                <td><strong data-ko="패밀리룸" data-en="Family Room">패밀리룸</strong></td>
                 <td class="price-value">90,000 ~ 110,000원</td>
                 <td class="price-value">120,000 ~ 140,000원</td>
-                <td>4인 기준</td>
+                <td data-ko="4인 기준" data-en="4 Guests">4인 기준</td>
               </tr>
               <tr>
-                <td><strong>VIP 온돌+거실</strong></td>
-                <td class="price-value">별도 협의</td>
-                <td class="price-value">별도 협의</td>
-                <td>3인 기준</td>
+                <td><strong data-ko="VIP 온돌+거실" data-en="VIP Ondol Suite">VIP 온돌+거실</strong></td>
+                <td class="price-value" data-ko="별도 협의" data-en="By Inquiry">별도 협의</td>
+                <td class="price-value" data-ko="별도 협의" data-en="By Inquiry">별도 협의</td>
+                <td data-ko="3인 기준" data-en="3 Guests">3인 기준</td>
               </tr>
               <tr>
-                <td><strong>도미토리 (1인)</strong></td>
+                <td><strong data-ko="도미토리 (1인)" data-en="Dormitory (per person)">도미토리 (1인)</strong></td>
                 <td class="price-value">20,000 ~ 25,000원</td>
                 <td class="price-value">25,000 ~ 30,000원</td>
-                <td>1인 기준</td>
+                <td data-ko="1인 기준" data-en="Per Person">1인 기준</td>
               </tr>
               <tr>
-                <td><strong>단체 객실</strong></td>
-                <td class="price-value">별도 협의</td>
-                <td class="price-value">별도 협의</td>
-                <td>10인 이상</td>
+                <td><strong data-ko="단체 객실" data-en="Group Rooms">단체 객실</strong></td>
+                <td class="price-value" data-ko="별도 협의" data-en="By Inquiry">별도 협의</td>
+                <td class="price-value" data-ko="별도 협의" data-en="By Inquiry">별도 협의</td>
+                <td data-ko="10인 이상" data-en="10+ Guests">10인 이상</td>
               </tr>
             </tbody>
           </table>
         </div>
       </div>
 
-      <!-- 성수기 요금 테이블 -->
+      <!-- 성수기 요금 -->
       <div class="pricing-panel" data-pricing-panel="peak">
-        <h3 style="color:var(--color-accent);margin-bottom:16px;">성수기 객실 요금 <span style="font-size:0.85rem;font-weight:400;color:var(--color-text-sub);">(7월 15일 ~ 8월 31일 / 설 · 추석 연휴)</span></h3>
+        <h3 style="color:var(--color-accent);margin-bottom:16px;">
+          <span data-ko="성수기 객실 요금" data-en="Peak Season Room Rates">성수기 객실 요금</span>
+          <span style="font-size:0.85rem;font-weight:400;color:var(--color-text-sub);"
+            data-ko=" (7월 15일 ~ 8월 31일 / 설 · 추석 연휴)"
+            data-en=" (Jul 15 – Aug 31 / Lunar New Year &amp; Chuseok)"> (7월 15일 ~ 8월 31일 / 설 · 추석 연휴)</span>
+        </h3>
         <div style="overflow-x:auto;">
           <table class="pricing-table">
             <thead>
               <tr>
-                <th>객실 타입</th>
-                <th>성수기 요금</th>
-                <th>비고</th>
+                <th data-ko="객실 타입" data-en="Room Type">객실 타입</th>
+                <th data-ko="성수기 요금" data-en="Peak Season Rate">성수기 요금</th>
+                <th data-ko="비고" data-en="Note">비고</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td><strong>스탠다드 온돌룸</strong></td>
+                <td><strong data-ko="스탠다드 온돌룸" data-en="Standard Ondol Room">스탠다드 온돌룸</strong></td>
                 <td class="price-value">90,000 ~ 110,000원</td>
-                <td>2인 기준</td>
+                <td data-ko="2인 기준" data-en="2 Guests">2인 기준</td>
               </tr>
               <tr>
-                <td><strong>스탠다드 침대룸</strong></td>
+                <td><strong data-ko="스탠다드 침대룸" data-en="Standard Bed Room">스탠다드 침대룸</strong></td>
                 <td class="price-value">95,000 ~ 115,000원</td>
-                <td>2인 기준</td>
+                <td data-ko="2인 기준" data-en="2 Guests">2인 기준</td>
               </tr>
               <tr>
-                <td><strong>스탠다드 트윈룸</strong></td>
+                <td><strong data-ko="스탠다드 트윈룸" data-en="Standard Twin Room">스탠다드 트윈룸</strong></td>
                 <td class="price-value">95,000 ~ 115,000원</td>
-                <td>2인 기준</td>
+                <td data-ko="2인 기준" data-en="2 Guests">2인 기준</td>
               </tr>
               <tr>
-                <td><strong>트리플룸</strong></td>
+                <td><strong data-ko="트리플룸" data-en="Triple Room">트리플룸</strong></td>
                 <td class="price-value">120,000 ~ 140,000원</td>
-                <td>3인 기준</td>
+                <td data-ko="3인 기준" data-en="3 Guests">3인 기준</td>
               </tr>
               <tr>
-                <td><strong>패밀리룸</strong></td>
+                <td><strong data-ko="패밀리룸" data-en="Family Room">패밀리룸</strong></td>
                 <td class="price-value">150,000 ~ 180,000원</td>
-                <td>4인 기준</td>
+                <td data-ko="4인 기준" data-en="4 Guests">4인 기준</td>
               </tr>
               <tr>
-                <td><strong>VIP 온돌+거실</strong></td>
+                <td><strong data-ko="VIP 온돌+거실" data-en="VIP Ondol Suite">VIP 온돌+거실</strong></td>
                 <td class="price-value">200,000원~</td>
-                <td>3인 기준</td>
+                <td data-ko="3인 기준" data-en="3 Guests">3인 기준</td>
               </tr>
               <tr>
-                <td><strong>도미토리 (1인)</strong></td>
+                <td><strong data-ko="도미토리 (1인)" data-en="Dormitory (per person)">도미토리 (1인)</strong></td>
                 <td class="price-value">35,000 ~ 45,000원</td>
-                <td>1인 기준</td>
+                <td data-ko="1인 기준" data-en="Per Person">1인 기준</td>
               </tr>
               <tr>
-                <td><strong>단체 객실</strong></td>
-                <td class="price-value">별도 협의</td>
-                <td>10인 이상</td>
+                <td><strong data-ko="단체 객실" data-en="Group Rooms">단체 객실</strong></td>
+                <td class="price-value" data-ko="별도 협의" data-en="By Inquiry">별도 협의</td>
+                <td data-ko="10인 이상" data-en="10+ Guests">10인 이상</td>
               </tr>
             </tbody>
           </table>
@@ -201,99 +213,128 @@
 
       <!-- 추가 요금 -->
       <div class="extra-fee-box mt-32">
-        <h3>추가 요금 안내</h3>
+        <h3 data-ko="추가 요금 안내" data-en="Additional Charges">추가 요금 안내</h3>
         <div class="extra-fee-item">
-          <span>기준 인원 초과 (17세 이하)</span>
-          <span style="font-weight:600;color:var(--color-accent);">1인당 10,000원</span>
+          <span data-ko="기준 인원 초과 (17세 이하)" data-en="Extra Guest (Under 17)">기준 인원 초과 (17세 이하)</span>
+          <span style="font-weight:600;color:var(--color-accent);"
+            data-ko="1인당 10,000원" data-en="10,000 KRW / person">1인당 10,000원</span>
         </div>
         <div class="extra-fee-item">
-          <span>기준 인원 초과 (18세 이상)</span>
-          <span style="font-weight:600;color:var(--color-accent);">1인당 15,000원</span>
+          <span data-ko="기준 인원 초과 (18세 이상)" data-en="Extra Guest (18 and over)">기준 인원 초과 (18세 이상)</span>
+          <span style="font-weight:600;color:var(--color-accent);"
+            data-ko="1인당 15,000원" data-en="15,000 KRW / person">1인당 15,000원</span>
         </div>
         <div class="extra-fee-item">
-          <span>반려동물</span>
-          <span style="font-weight:600;color:var(--color-accent);">10,000원 / 객실 / 1일</span>
+          <span data-ko="반려동물" data-en="Pet">반려동물</span>
+          <span style="font-weight:600;color:var(--color-accent);"
+            data-ko="10,000원 / 객실 / 1일" data-en="10,000 KRW / room / night">10,000원 / 객실 / 1일</span>
         </div>
       </div>
 
       <!-- 할인 혜택 -->
       <div class="section__header" style="margin-top:60px;">
-        <h2 class="section__title">할인 혜택</h2>
-        <p class="section__subtitle">다양한 방법으로 더 저렴하게 이용하세요</p>
+        <h2 class="section__title"
+          data-ko="할인 혜택" data-en="Discount Benefits">할인 혜택</h2>
+        <p class="section__subtitle"
+          data-ko="다양한 방법으로 더 저렴하게 이용하세요"
+          data-en="Save more with various discount options">다양한 방법으로 더 저렴하게 이용하세요</p>
         <div class="section__divider"></div>
       </div>
       <div class="discount-grid">
         <div class="discount-card">
           <div class="discount-card__icon">🏠</div>
-          <div class="discount-card__title">홈페이지 직접 예약</div>
-          <div class="discount-card__desc">OTA 대비 5% 추가 할인 + 무료 생수 2병 제공</div>
+          <div class="discount-card__title"
+            data-ko="홈페이지 직접 예약" data-en="Direct Website Booking">홈페이지 직접 예약</div>
+          <div class="discount-card__desc"
+            data-ko="OTA 대비 5% 추가 할인 + 무료 생수 2병 제공"
+            data-en="5% off vs OTA + 2 free water bottles">OTA 대비 5% 추가 할인 + 무료 생수 2병 제공</div>
         </div>
         <div class="discount-card">
           <div class="discount-card__icon">🎫</div>
-          <div class="discount-card__title">HIKOREA 회원 할인</div>
-          <div class="discount-card__desc">회원증 제시 시 10% 할인 (체크인 시 확인)</div>
+          <div class="discount-card__title"
+            data-ko="HIKOREA 회원 할인" data-en="HIKOREA Member Discount">HIKOREA 회원 할인</div>
+          <div class="discount-card__desc"
+            data-ko="회원증 제시 시 10% 할인 (체크인 시 확인)"
+            data-en="10% off with membership card (verified at check-in)">회원증 제시 시 10% 할인 (체크인 시 확인)</div>
         </div>
         <div class="discount-card">
           <div class="discount-card__icon">📅</div>
-          <div class="discount-card__title">장기 투숙 할인</div>
-          <div class="discount-card__desc">3박 이상 투숙 시 5% 할인 (성수기 제외)</div>
+          <div class="discount-card__title"
+            data-ko="장기 투숙 할인" data-en="Long Stay Discount">장기 투숙 할인</div>
+          <div class="discount-card__desc"
+            data-ko="3박 이상 투숙 시 5% 할인 (성수기 제외)"
+            data-en="5% off for 3+ nights (excluding peak season)">3박 이상 투숙 시 5% 할인 (성수기 제외)</div>
         </div>
         <div class="discount-card">
           <div class="discount-card__icon">👥</div>
-          <div class="discount-card__title">단체 할인</div>
-          <div class="discount-card__desc">10인 이상 단체 예약 시 최대 15% 할인 (별도 협의)</div>
+          <div class="discount-card__title"
+            data-ko="단체 할인" data-en="Group Discount">단체 할인</div>
+          <div class="discount-card__desc"
+            data-ko="10인 이상 단체 예약 시 최대 15% 할인 (별도 협의)"
+            data-en="Up to 15% off for groups of 10+ (by arrangement)">10인 이상 단체 예약 시 최대 15% 할인 (별도 협의)</div>
         </div>
         <div class="discount-card">
           <div class="discount-card__icon">⏰</div>
-          <div class="discount-card__title">조기 예약 혜택</div>
-          <div class="discount-card__desc">30일 이상 사전 예약 시 조식 1회 무료 또는 5% 할인</div>
+          <div class="discount-card__title"
+            data-ko="조기 예약 혜택" data-en="Early Booking Benefit">조기 예약 혜택</div>
+          <div class="discount-card__desc"
+            data-ko="30일 이상 사전 예약 시 조식 1회 무료 또는 5% 할인"
+            data-en="Free breakfast or 5% off for bookings 30+ days ahead">30일 이상 사전 예약 시 조식 1회 무료 또는 5% 할인</div>
         </div>
       </div>
 
       <!-- 부대시설 요금 -->
       <div class="section__header" style="margin-top:60px;">
-        <h2 class="section__title">부대시설 요금</h2>
+        <h2 class="section__title"
+          data-ko="부대시설 요금" data-en="Facility Charges">부대시설 요금</h2>
         <div class="section__divider"></div>
       </div>
       <div style="overflow-x:auto;">
         <table class="pricing-table">
           <thead>
             <tr>
-              <th>시설</th>
-              <th>요금</th>
-              <th>비고</th>
+              <th data-ko="시설" data-en="Facility">시설</th>
+              <th data-ko="요금" data-en="Rate">요금</th>
+              <th data-ko="비고" data-en="Note">비고</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td><strong>강당·세미나실</strong></td>
-              <td class="price-value">4시간 100,000원~ / 종일 180,000원~</td>
-              <td>사전 예약 필수</td>
+              <td><strong data-ko="강당·세미나실" data-en="Hall / Seminar Room">강당·세미나실</strong></td>
+              <td class="price-value"
+                data-ko="4시간 100,000원~ / 종일 180,000원~"
+                data-en="4 hrs 100,000 KRW~ / Full day 180,000 KRW~">4시간 100,000원~ / 종일 180,000원~</td>
+              <td data-ko="사전 예약 필수" data-en="Advance booking required">사전 예약 필수</td>
             </tr>
             <tr>
-              <td><strong>바베큐 시설</strong></td>
-              <td class="price-value">무료 (화로 제공)</td>
-              <td>숯·그릴 별도</td>
+              <td><strong data-ko="바베큐 시설" data-en="BBQ Facility">바베큐 시설</strong></td>
+              <td class="price-value"
+                data-ko="무료 (화로 제공)" data-en="Free (brazier provided)">무료 (화로 제공)</td>
+              <td data-ko="숯·그릴 별도" data-en="Charcoal &amp; grill extra">숯·그릴 별도</td>
             </tr>
             <tr>
-              <td><strong>조식</strong></td>
-              <td class="price-value">1인 10,000원</td>
-              <td>사전 예약 필수</td>
+              <td><strong data-ko="조식" data-en="Breakfast">조식</strong></td>
+              <td class="price-value"
+                data-ko="1인 10,000원" data-en="10,000 KRW / person">1인 10,000원</td>
+              <td data-ko="사전 예약 필수" data-en="Advance booking required">사전 예약 필수</td>
             </tr>
             <tr>
-              <td><strong>석식</strong></td>
-              <td class="price-value">1인 15,000원</td>
-              <td>단체 20인 이상 사전 예약</td>
+              <td><strong data-ko="석식" data-en="Dinner">석식</strong></td>
+              <td class="price-value"
+                data-ko="1인 15,000원" data-en="15,000 KRW / person">1인 15,000원</td>
+              <td data-ko="단체 20인 이상 사전 예약" data-en="Groups of 20+ advance booking">단체 20인 이상 사전 예약</td>
             </tr>
             <tr>
-              <td><strong>세탁기</strong></td>
-              <td class="price-value">1회 3,000원</td>
-              <td>코인 운영</td>
+              <td><strong data-ko="세탁기" data-en="Washing Machine">세탁기</strong></td>
+              <td class="price-value"
+                data-ko="1회 3,000원" data-en="3,000 KRW / use">1회 3,000원</td>
+              <td data-ko="코인 운영" data-en="Coin operated">코인 운영</td>
             </tr>
             <tr>
-              <td><strong>건조기</strong></td>
-              <td class="price-value">1회 2,000원</td>
-              <td>코인 운영</td>
+              <td><strong data-ko="건조기" data-en="Dryer">건조기</strong></td>
+              <td class="price-value"
+                data-ko="1회 2,000원" data-en="2,000 KRW / use">1회 2,000원</td>
+              <td data-ko="코인 운영" data-en="Coin operated">코인 운영</td>
             </tr>
           </tbody>
         </table>
@@ -301,11 +342,17 @@
 
       <!-- 예약 CTA -->
       <div style="text-align:center;margin-top:60px;padding:48px 24px;background:var(--color-primary);border-radius:var(--radius-card);color:#fff;">
-        <h3 style="color:#fff;margin-bottom:12px;font-size:1.5rem;">지금 바로 예약하고 혜택을 받으세요</h3>
-        <p style="opacity:0.85;margin-bottom:28px;">홈페이지 직접 예약 시 OTA 대비 5% 추가 할인 + 무료 생수 2병</p>
+        <h3 style="color:#fff;margin-bottom:12px;font-size:1.5rem;"
+          data-ko="지금 바로 예약하고 혜택을 받으세요"
+          data-en="Book Now and Enjoy the Benefits">지금 바로 예약하고 혜택을 받으세요</h3>
+        <p style="opacity:0.85;margin-bottom:28px;"
+          data-ko="홈페이지 직접 예약 시 OTA 대비 5% 추가 할인 + 무료 생수 2병"
+          data-en="5% off vs OTA + 2 free water bottles for direct bookings">홈페이지 직접 예약 시 OTA 대비 5% 추가 할인 + 무료 생수 2병</p>
         <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
-          <a href="reservation.html" class="btn btn--primary">예약 안내 보기</a>
-          <a href="tel:+821082493453" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;border:2px solid rgba(255,255,255,0.5);color:#fff;font-weight:600;transition:all 0.2s;">📞 전화 예약</a>
+          <a href="reservation.html" class="btn btn--primary"
+            data-ko="예약 안내 보기" data-en="View Reservation Info">예약 안내 보기</a>
+          <a href="tel:+821082493453" style="display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:6px;border:2px solid rgba(255,255,255,0.5);color:#fff;font-weight:600;transition:all 0.2s;"
+            data-ko="📞 전화 예약" data-en="📞 Call to Book">📞 전화 예약</a>
         </div>
       </div>
 
