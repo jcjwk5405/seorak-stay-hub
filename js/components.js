@@ -1,7 +1,7 @@
 /**
  * 공통 HTML 컴포넌트 인젝션
  * data-ko / data-en 방식 적용
- * SYH-WEB-2026-002
+ * SYH-WEB-2026-003
  */
 
 const BASE = (() => {
@@ -33,11 +33,17 @@ const NAVBAR_HTML = `
         data-ko="호스텔 소개" data-en="About">호스텔 소개</a></li>
     </ul>
     <div class="navbar__actions">
-      <div class="lang-toggle">
+      <!-- 데스크톱 언어 토글 (768px 이상 표시) -->
+      <div class="lang-toggle lang-toggle-desktop">
         <button data-lang="ko" class="active">KO</button>
         <button data-lang="en">EN</button>
       </div>
-      <a href="${BASE}reservation.html" class="navbar__reserve-btn"
+      <!-- 모바일 언어 토글 (767px 이하 표시, 햄버거 왼쪽) -->
+      <div class="lang-toggle lang-toggle-mobile">
+        <button data-lang="ko" class="active">KO</button>
+        <button data-lang="en">EN</button>
+      </div>
+      <a href="${BASE}reservation.html" class="navbar__reserve-btn navbar__reserve-btn--desktop"
         data-ko="예약하기" data-en="Book Now">예약하기</a>
       <button class="hamburger" aria-label="메뉴">
         <span></span><span></span><span></span>
@@ -60,6 +66,7 @@ const NAVBAR_HTML = `
     data-ko="갤러리" data-en="Gallery">갤러리</a>
   <a href="${BASE}about.html"
     data-ko="호스텔 소개" data-en="About">호스텔 소개</a>
+  <!-- 햄버거 메뉴 하단 언어 토글 -->
   <div class="mobile-nav__lang">
     <div class="lang-toggle">
       <button data-lang="ko" class="active">KO</button>
@@ -134,12 +141,18 @@ const FOOTER_HTML = `
     </div>
   </div>
 </footer>
+<!-- 모바일 하단 고정 CTA 바 (767px 이하) -->
 <div class="mobile-cta">
   <div class="mobile-cta__inner">
+    <!-- 언어 토글 (왼쪽) -->
+    <div class="lang-toggle mobile-cta__lang">
+      <button data-lang="ko" class="active">KO</button>
+      <button data-lang="en">EN</button>
+    </div>
     <a href="tel:+821082493453" class="mobile-cta__btn mobile-cta__btn--call"
       data-ko="📞 전화 예약" data-en="📞 Call Us">📞 전화 예약</a>
-    <a href="mailto:sorakyhotel@gmail.com" class="mobile-cta__btn mobile-cta__btn--email"
-      data-ko="✉️ 이메일 문의" data-en="✉️ Email Us">✉️ 이메일 문의</a>
+    <a href="${BASE}reservation.html" class="mobile-cta__btn mobile-cta__btn--email"
+      data-ko="📅 예약 안내" data-en="📅 Book Now">📅 예약 안내</a>
   </div>
 </div>
 `;
