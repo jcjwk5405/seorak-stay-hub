@@ -167,4 +167,12 @@ document.addEventListener('DOMContentLoaded', () => {
   if (footerPlaceholder) {
     footerPlaceholder.outerHTML = FOOTER_HTML;
   }
+  // 컴포넌트 삽입 후 즉시 한국어 강제 적용
+  document.querySelectorAll('[data-ko]').forEach(el => {
+    el.textContent = el.getAttribute('data-ko');
+  });
+  document.querySelectorAll('.lang-toggle button').forEach(btn => {
+    btn.classList.toggle('active', btn.getAttribute('data-lang') === 'ko');
+  });
 });
+
