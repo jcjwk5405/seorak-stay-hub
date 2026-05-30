@@ -9,6 +9,11 @@
    다국어 (KO / EN) — data-ko / data-en 방식
    ============================================================ */
 let currentLang = localStorage.getItem('syh_lang') || 'ko';
+// 저장값 없으면 한국어로 초기화
+if (!localStorage.getItem('syh_lang')) {
+  localStorage.setItem('syh_lang', 'ko');
+  currentLang = 'ko';
+}
 
 /**
  * 언어 전환 함수
@@ -485,3 +490,4 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollAnimation();
   initPWA();
 });
+
