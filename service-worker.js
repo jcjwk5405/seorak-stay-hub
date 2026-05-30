@@ -1,5 +1,5 @@
-// 설악산유스호스텔 Service Worker v2.0
-const CACHE_NAME = 'seorak-hostel-v2';
+// 설악산유스호스텔 Service Worker v3.0
+const CACHE_NAME = 'seorak-hostel-v3';
 const BASE_PATH = '/seorak-hostel';
 
 const STATIC_ASSETS = [
@@ -43,12 +43,12 @@ self.addEventListener('install', (event) => {
     caches.open(CACHE_NAME).then((cache) => {
       return cache.addAll(STATIC_ASSETS);
     }).then(() => {
-      return self.skipWaiting();
+      return self.skipWaiting(); // 즉시 새 SW 활성화
     })
   );
 });
 
-// Activate: 구버전 캐시 삭제
+// Activate: 구버전 캐시 전부 삭제
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys().then((cacheNames) => {
@@ -58,32 +58,46 @@ self.addEventListener('activate', (event) => {
           .map((name) => caches.delete(name))
       );
     }).then(() => {
-      return self.clients.claim();
+      return self.clients.claim(); // 열려 있는 탭에도 즉시 적용
     })
   );
 });
 
-// Fetch: Cache First → Network Fallback
+// Fetch: Network First → Cache Fallback
+// HTML/JS/CSS는 항상 네트워크 최신본 우선, 실패 시 캐시 제공
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
+  const url = new URL(event.request.url);
+
+  // 이미지는 Cache First (변경 빈도 낮음)
+  if (event.request.destination === 'image') {
+    event.respondWith(
+      caches.match(event.request).then((cached) => {
+        return cached || fetch(event.request).then((res) => {
+          const clone = res.clone();
+          caches.open(CACHE_NAME).then((c) => c.put(event.request, clone));
+          return res;
+        });
+      })
+    );
+    return;
+  }
+
+  // HTML / JS / CSS → Network First
   event.respondWith(
-    caches.match(event.request).then((cachedResponse) => {
-      if (cachedResponse) {
-        return cachedResponse;
+    fetch(event.request).then((networkResponse) => {
+      if (networkResponse && networkResponse.status === 200) {
+        const clone = networkResponse.clone();
+        caches.open(CACHE_NAME).then((cache) => {
+          cache.put(event.request, clone);
+        });
       }
-      return fetch(event.request).then((networkResponse) => {
-        if (networkResponse && networkResponse.status === 200 && networkResponse.type === 'basic') {
-          const responseClone = networkResponse.clone();
-          caches.open(CACHE_NAME).then((cache) => {
-            cache.put(event.request, responseClone);
-          });
-        }
-        return networkResponse;
-      }).catch(() => {
-        if (event.request.destination === 'document') {
-          return caches.match(`${BASE_PATH}/index.html`);
-        }
+      return networkResponse;
+    }).catch(() => {
+      // 네트워크 실패 시 캐시 제공 (오프라인 대비)
+      return caches.match(event.request).then((cached) => {
+        return cached || caches.match(`${BASE_PATH}/index.html`);
       });
     })
   );
