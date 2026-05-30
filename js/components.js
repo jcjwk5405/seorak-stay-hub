@@ -117,12 +117,12 @@ const FOOTER_HTML = `
         <div class="footer__col-title"
           data-ko="예약 채널" data-en="Book Online">예약 채널</div>
         <div class="footer__links">
-          <a href="https://www.yanolja.com" target="_blank" rel="noopener">야놀자</a>
-          <a href="https://www.yeogi.com" target="_blank" rel="noopener">여기어때</a>
-          <a href="https://www.agoda.com" target="_blank" rel="noopener">Agoda</a>
-          <a href="https://www.booking.com" target="_blank" rel="noopener">Booking.com</a>
-          <a href="https://www.hotels.com" target="_blank" rel="noopener">Hotels.com</a>
-          <a href="https://www.trip.com" target="_blank" rel="noopener">Trip.com</a>
+          <a href="https://nol.yanolja.com/stay/domestic/10054309" target="_blank" rel="noopener">야놀자</a>
+          <a href="https://www.yeogi.com/domestic-accommodations/76184" target="_blank" rel="noopener">여기어때</a>
+          <a href="https://www.agoda.com/sorak-y-hostel/hotel/sokcho-si-kr.html" target="_blank" rel="noopener">Agoda</a>
+          <a href="https://www.booking.com/hotel/kr/seolagsanyuseuhoseutel.ko.html" target="_blank" rel="noopener">Booking.com</a>
+          <a href="https://kr.hotels.com/ho3193386592/seol-agsan-yuseu-hoseutel-sogcho-hangug/" target="_blank" rel="noopener">Hotels.com</a>
+          <a href="https://kr.trip.com/hotels/sokcho-si-hotel-detail-21861661/sorak-y-hostel/" target="_blank" rel="noopener">Trip.com</a>
         </div>
       </div>
     </div>
