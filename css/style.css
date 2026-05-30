@@ -1644,7 +1644,7 @@ p  { font-size: 1rem; font-weight: 400; }
   }
   .hero__slide img {
     object-fit: cover;
-    object-position: center center;
+    object-position: center top; /* 모바일: 건물 상단 잘림 방지 */
   }
   .hero__title {
     font-size: 1.8rem;
