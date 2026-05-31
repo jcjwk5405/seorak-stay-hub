@@ -38,42 +38,42 @@
           .facility-overview{ grid-template-columns:repeat(2,1fr) !important; }
         }
       </style>
-        <a href="#kitchen" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('kitchen')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🍳</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="공용 주방" data-en="Shared Kitchen">공용 주방</div>
         </div>
-        <a href="#bbq" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('bbq')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🔥</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="야외 바베큐" data-en="Outdoor BBQ">야외 바베큐</div>
         </div>
-        <a href="#hall" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('hall')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🏢</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="강당·세미나실" data-en="Hall / Seminar Room">강당·세미나실</div>
         </div>
-        <a href="#parking" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('parking')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🅿️</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="무료 주차" data-en="Free Parking">무료 주차</div>
         </div>
-        <a href="#laundry" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('laundry')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🧺</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="세탁실" data-en="Laundry">세탁실</div>
         </div>
-        <a href="#pet" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('pet')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🐾</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="반려동물 동반" data-en="Pet Friendly">반려동물 동반</div>
         </div>
-        <a href="#lounge" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('lounge')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">☕</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="라운지·휴게공간" data-en="Lounge Area">라운지·휴게공간</div>
         </div>
-        <a href="#wifi" style="text-decoration:none;"><div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
+        <div class="facility-overview-item" onclick="toggleFacility('wifi')"  style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;cursor:pointer;transition:border-color 0.2s;" onmouseover="this.style.borderColor='#C8960C'" onmouseout="this.style.borderColor='rgba(255,255,255,0.1)'">
           <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">📶</div>
           <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="무료 Wi-Fi" data-en="Free Wi-Fi">무료 Wi-Fi</div>
@@ -81,7 +81,7 @@
       </div>
 
       <!-- 1. 공용 주방 -->
-      <div class="facility-detail" id="kitchen">
+      <div class="facility-detail" id="kitchen" style="display:none;margin-top:16px;">
         <div class="facility-detail__img">
           <img src="images/kitchen_01.jpg" alt="설악산유스호스텔 공용 주방"
             style="width:100%;height:100%;min-height:240px;object-fit:cover;border-radius:var(--radius-card);">
@@ -114,7 +114,7 @@
       </div>
 
       <!-- 2. 야외 바베큐 -->
-      <div class="facility-detail facility-detail--reverse" id="bbq">
+      <div class="facility-detail facility-detail--reverse" id="bbq" style="display:none;margin-top:16px;">
         <div class="facility-detail__img">
           <img src="images/outdoor-06.jpeg" alt="야외 데크 바베큐" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-card);">
         </div>
@@ -142,7 +142,7 @@
       </div>
 
       <!-- 3. 강당·세미나실 -->
-      <div class="facility-detail" id="hall">
+      <div class="facility-detail" id="hall" style="display:none;margin-top:16px;">
         <div class="facility-detail__img">
           <img src="images/hall-03.jpeg" alt="강당·연회장" style="width:100%;height:100%;object-fit:cover;border-radius:var(--radius-card);">
         </div>
@@ -176,7 +176,7 @@
       </div>
 
       <!-- 4. 세탁실 -->
-      <div class="facility-detail facility-detail--reverse" id="laundry">
+      <div class="facility-detail facility-detail--reverse" id="laundry" style="display:none;margin-top:16px;">
         <div class="facility-detail__img">
           <img src="images/laundry-01.jpg" alt="세탁실"
             style="width:100%;height:100%;min-height:240px;object-fit:cover;border-radius:var(--radius-card);">
@@ -201,7 +201,7 @@
       </div>
 
       <!-- 5. 무료 주차 -->
-      <div class="facility-detail" id="parking">
+      <div class="facility-detail" id="parking" style="display:none;margin-top:16px;">
         <div class="facility-detail__img">
           <img src="images/parking-01.jpg" alt="설악산유스호스텔 주차장"
             style="width:100%;height:100%;min-height:240px;object-fit:cover;border-radius:var(--radius-card);">
@@ -230,7 +230,7 @@
       </div>
 
       <!-- 6. 반려동물 동반 -->
-      <div class="facility-detail facility-detail--reverse">
+      <div class="facility-detail facility-detail--reverse" id="pet" style="display:none;margin-top:16px;">
         <div class="facility-detail__img">
           <div style="background:var(--color-bg-sub);height:100%;min-height:240px;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-card);">
             <span style="font-size:5rem;">🐾</span>
@@ -351,5 +351,22 @@
   <div id="footer-placeholder"></div>
   <script src="js/components.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    function toggleFacility(id) {
+      const allIds = ['kitchen','bbq','hall','parking','laundry','pet','lounge','wifi'];
+      allIds.forEach(function(sid) {
+        const el = document.getElementById(sid);
+        if (!el) return;
+        if (sid === id) {
+          const isOpen = el.style.display !== 'none';
+          el.style.display = isOpen ? 'none' : 'grid';
+          // 열릴 때 스크롤
+          if (!isOpen) setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100);
+        } else {
+          el.style.display = 'none';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
