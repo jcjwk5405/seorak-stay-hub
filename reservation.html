@@ -292,6 +292,52 @@
     .checkin-card__label { font-size: 0.75rem; color: var(--color-text-sub); margin-bottom: 4px; }
     .checkin-card__time { font-size: 1.2rem; font-weight: 700; color: var(--color-gold); }
 
+    /* ── 노션 예약 현황 달력 ── */
+    .notion-avail-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .notion-avail-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .notion-avail-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .notion-avail-desc {
+      font-size: 0.75rem;
+      color: var(--color-text-sub);
+    }
+    .notion-avail-frame {
+      width: 100%;
+      height: 580px;
+      border: none;
+      display: block;
+      background: #fff;
+    }
+    .notion-avail-footer {
+      padding: 10px 20px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.75rem;
+      color: var(--color-text-sub);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     /* 리셋 버튼 */
     .btn--reset {
       margin-top: 16px;
@@ -332,6 +378,22 @@
   <!-- 메인 콘텐츠 -->
   <section class="section">
     <div class="container">
+
+      <!-- 📅 예약 가능 현황 (노션 달력) -->
+      <div class="notion-avail-card">
+        <div class="notion-avail-head">
+          <div class="notion-avail-title">📅 예약 가능 현황</div>
+          <div class="notion-avail-desc">날짜를 확인 후 전화 또는 OTA로 예약하세요</div>
+        </div>
+        <iframe
+          class="notion-avail-frame"
+          src="https://glory-goldenrod-9ce.notion.site/ebd/3712b824d3ad80569a5efeb3572ba18c"
+          allowfullscreen>
+        </iframe>
+        <div class="notion-avail-footer">
+          📌 위 현황은 참고용입니다. 실제 예약 확정은 전화(<strong>010-8249-3453</strong>) 또는 OTA를 통해 진행됩니다.
+        </div>
+      </div>
 
       <!-- 직접 예약 혜택 배너 -->
       <div class="direct-banner">
@@ -443,9 +505,9 @@
                 </label>
                 <select id="room-type" class="form-control" required onchange="calcAmount()">
                   <option value="" data-ko="선택하세요" data-en="Please select">선택하세요</option>
-                  <option value="스탠다드 한실룸|50000" data-ko="스탠다드 한실룸 (50,000원~)" data-en="Standard Hanshil (₩50,000~)">스탠다드 한실룸 (50,000원~)</option>
+                  <option value="스탠다드 온돌룸|50000" data-ko="스탠다드 온돌룸 (50,000원~)" data-en="Standard Ondol (₩50,000~)">스탠다드 온돌룸 (50,000원~)</option>
                   <option value="스탠다드 침대룸|55000" data-ko="스탠다드 침대룸 (55,000원~)" data-en="Standard Bed Room (₩55,000~)">스탠다드 침대룸 (55,000원~)</option>
-                  <option value="VIP 한실+거실|90000" data-ko="VIP 한실+거실 (90,000원~)" data-en="VIP Hanshil Suite (₩90,000~)">VIP 한실+거실 (90,000원~)</option>
+                  <option value="VIP 온돌+거실|90000" data-ko="VIP 온돌+거실 (90,000원~)" data-en="VIP Ondol Suite (₩90,000~)">VIP 온돌+거실 (90,000원~)</option>
                   <option value="패밀리 룸|90000" data-ko="패밀리 룸 (90,000원~)" data-en="Family Room (₩90,000~)">패밀리 룸 (90,000원~)</option>
                   <option value="트리플 룸|70000" data-ko="트리플 룸 (70,000원~)" data-en="Triple Room (₩70,000~)">트리플 룸 (70,000원~)</option>
                   <option value="도미토리|20000" data-ko="도미토리 (20,000원~/1인)" data-en="Dormitory (₩20,000~/person)">도미토리 (20,000원~/1인)</option>
@@ -618,32 +680,32 @@
               🌐 <span data-ko="OTA 예약" data-en="Book via OTA">OTA 예약</span>
             </div>
             <div class="ota-grid" style="margin-top:14px;">
-              <a href="https://nol.yanolja.com/stay/domestic/10054309" target="_blank" rel="noopener" class="ota-card">
+              <a href="https://www.yanolja.com" target="_blank" rel="noopener" class="ota-card">
                 <div style="font-size:1.5rem;">🏨</div>
                 <div class="ota-card__name">야놀자</div>
                 <div class="ota-card__desc">예약하기 →</div>
               </a>
-              <a href="https://www.yeogi.com/domestic-accommodations/76184" target="_blank" rel="noopener" class="ota-card">
+              <a href="https://www.yeogi.com" target="_blank" rel="noopener" class="ota-card">
                 <div style="font-size:1.5rem;">🏡</div>
                 <div class="ota-card__name">여기어때</div>
                 <div class="ota-card__desc">예약하기 →</div>
               </a>
-              <a href="https://www.agoda.com/sorak-y-hostel/hotel/sokcho-si-kr.html" target="_blank" rel="noopener" class="ota-card">
+              <a href="https://www.agoda.com" target="_blank" rel="noopener" class="ota-card">
                 <div style="font-size:1.5rem;">✈️</div>
                 <div class="ota-card__name">아고다</div>
                 <div class="ota-card__desc">예약하기 →</div>
               </a>
-              <a href="https://www.booking.com/hotel/kr/seolagsanyuseuhoseutel.ko.html" target="_blank" rel="noopener" class="ota-card">
+              <a href="https://www.booking.com" target="_blank" rel="noopener" class="ota-card">
                 <div style="font-size:1.5rem;">🌍</div>
                 <div class="ota-card__name">부킹닷컴</div>
                 <div class="ota-card__desc">예약하기 →</div>
               </a>
-              <a href="https://kr.hotels.com/ho3193386592/seol-agsan-yuseu-hoseutel-sogcho-hangug/" target="_blank" rel="noopener" class="ota-card">
+              <a href="https://www.hotels.com" target="_blank" rel="noopener" class="ota-card">
                 <div style="font-size:1.5rem;">🏪</div>
                 <div class="ota-card__name">호텔스닷컴</div>
                 <div class="ota-card__desc">예약하기 →</div>
               </a>
-              <a href="https://kr.trip.com/hotels/sokcho-si-hotel-detail-21861661/sorak-y-hostel/" target="_blank" rel="noopener" class="ota-card">
+              <a href="https://www.trip.com" target="_blank" rel="noopener" class="ota-card">
                 <div style="font-size:1.5rem;">🗺️</div>
                 <div class="ota-card__name">트립닷컴</div>
                 <div class="ota-card__desc">예약하기 →</div>
@@ -824,14 +886,16 @@
       preview.style.display = 'block';
     }
 
-    // 폼 제출 처리
-    function submitForm() {
+    // 폼 제출 처리 (Web3Forms 연동)
+    async function submitForm() {
       const checkin  = document.getElementById('checkin').value;
       const checkout = document.getElementById('checkout').value;
       const roomVal  = document.getElementById('room-type').value;
       const name     = document.getElementById('name').value.trim();
       const phone    = document.getElementById('phone').value.trim();
       const email    = document.getElementById('email').value.trim();
+      const guests   = document.getElementById('guests').value;
+      const requests = document.getElementById('requests').value.trim();
       const privacy  = document.getElementById('privacy').checked;
 
       if (!checkin || !checkout || !roomVal || !name || !phone || !email) {
@@ -840,21 +904,69 @@
       if (!privacy) { alert('개인정보 수집·이용에 동의해 주세요.'); return; }
 
       const basePrice = parseInt(roomVal.split('|')[1]);
+      const roomName  = roomVal.split('|')[0];
       const nights    = Math.max(1, (new Date(checkout) - new Date(checkin)) / 86400000);
       const dl        = new Date();
       dl.setDate(dl.getDate() + 1);
 
-      document.getElementById('depositor-display').textContent = name + ' 님';
-      document.getElementById('amount-display').textContent = basePrice
-        ? (basePrice * nights).toLocaleString() + '원 ~ (담당자 확인 후 최종 안내)'
-        : '담당자 확인 후 안내';
-      document.getElementById('deadline-display').textContent =
-        dl.toLocaleDateString('ko-KR') + ' 까지';
+      // 제출 버튼 비활성화
+      const btn = document.querySelector('.btn--submit');
+      btn.disabled = true;
+      btn.textContent = '전송 중...';
 
-      document.getElementById('form-card').style.display = 'none';
-      const sp = document.getElementById('success-panel');
-      sp.style.display = 'block';
-      sp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: '95c7d6b8-4e2f-4885-9ccf-a35dfae3fe37',
+            subject: `[설악산유스호스텔] 예약문의 — ${name} (${checkin} ~ ${checkout})`,
+            from_name: '설악산유스호스텔 홈페이지',
+            name,
+            email,
+            message:
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `📋 설악산유스호스텔 예약 문의\n` +
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `예약자명 : ${name}\n` +
+              `연락처   : ${phone}\n` +
+              `이메일   : ${email}\n` +
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `객실     : ${roomName}\n` +
+              `체크인   : ${checkin}\n` +
+              `체크아웃 : ${checkout}\n` +
+              `숙박     : ${nights}박\n` +
+              `인원     : ${guests}명\n` +
+              `예상금액 : ${basePrice ? (basePrice * nights).toLocaleString() + '원 ~' : '문의 필요'}\n` +
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `요청사항 : ${requests || '없음'}\n`
+          })
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          // 성공 — 안내 패널 표시
+          document.getElementById('depositor-display').textContent = name + ' 님';
+          document.getElementById('amount-display').textContent = basePrice
+            ? (basePrice * nights).toLocaleString() + '원 ~ (담당자 확인 후 최종 안내)'
+            : '담당자 확인 후 안내';
+          document.getElementById('deadline-display').textContent =
+            dl.toLocaleDateString('ko-KR') + ' 까지';
+
+          document.getElementById('form-card').style.display = 'none';
+          const sp = document.getElementById('success-panel');
+          sp.style.display = 'block';
+          sp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          alert('전송 중 오류가 발생했습니다. 전화(010-8249-3453)로 문의해 주세요.');
+          btn.disabled = false;
+          btn.textContent = '📨 예약 문의 제출하기';
+        }
+      } catch (e) {
+        alert('네트워크 오류가 발생했습니다. 전화(010-8249-3453)로 문의해 주세요.');
+        btn.disabled = false;
+        btn.textContent = '📨 예약 문의 제출하기';
+      }
     }
 
     // 폼 리셋
