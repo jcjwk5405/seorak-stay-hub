@@ -292,6 +292,45 @@
     .checkin-card__label { font-size: 0.75rem; color: var(--color-text-sub); margin-bottom: 4px; }
     .checkin-card__time { font-size: 1.2rem; font-weight: 700; color: var(--color-gold); }
 
+    /* ── 아코디언 달력 ── */
+    .avail-accordion {
+      border-top: 1px solid var(--color-border);
+    }
+    .avail-acc-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .avail-acc-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      color: var(--color-text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: left;
+      transition: background 0.2s;
+    }
+    .avail-acc-btn:hover { background: rgba(255,255,255,0.04); }
+    .avail-acc-btn.open  { background: rgba(44,95,46,0.1); color: var(--color-gold); }
+    .avail-acc-icon { font-size: 1.2rem; }
+    .avail-acc-label { flex: 1; }
+    .avail-acc-arrow {
+      font-size: 0.75rem;
+      color: var(--color-text-sub);
+      transition: transform 0.3s;
+    }
+    .avail-acc-btn.open .avail-acc-arrow { transform: rotate(180deg); }
+    .avail-acc-body {
+      display: none;
+      overflow: hidden;
+    }
+    .avail-acc-body.open { display: block; }
+
     /* ── 노션 예약 현황 달력 ── */
     .notion-avail-card {
       background: var(--color-bg-card);
@@ -382,17 +421,102 @@
   <section class="section">
     <div class="container">
 
-      <!-- 📅 예약 가능 현황 (노션 달력) -->
+      <!-- 📅 예약 가능 현황 (객실별 아코디언 달력) -->
       <div class="notion-avail-card">
         <div class="notion-avail-head">
           <div class="notion-avail-title">📅 예약 가능 현황</div>
-          <div class="notion-avail-desc">날짜를 확인 후 전화 또는 OTA로 예약하세요</div>
+          <div class="notion-avail-desc" data-ko="객실을 선택해 날짜를 확인하세요" data-en="Select a room type to check availability">객실을 선택해 날짜를 확인하세요</div>
         </div>
-        <iframe
-          class="notion-avail-frame"
-          src="https://glory-goldenrod-9ce.notion.site/ebd/3712b824d3ad80569a5efeb3572ba18c?hide_page_cover=true&hide_toolbar=true&theme=dark"
-          allowfullscreen>
-        </iframe>
+
+        <!-- 아코디언 아이템들 -->
+        <div class="avail-accordion">
+
+          <!-- 1. 온돌룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🛏</span>
+              <span class="avail-acc-label" data-ko="스탠다드 온돌룸 (한실)" data-en="Standard Ondol Room">스탠다드 온돌룸 (한실)</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/d8f2b824d3ad8230a07601bbe05d2bd6"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 2. 침대룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🛌</span>
+              <span class="avail-acc-label" data-ko="스탠다드 침대룸" data-en="Standard Bed Room">스탠다드 침대룸</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/1352b824d3ad83c6b3a10141da0c6750"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 3. 패밀리룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">👨‍👩‍👧‍👦</span>
+              <span class="avail-acc-label" data-ko="패밀리 룸" data-en="Family Room">패밀리 룸</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/2d82b824d3ad8393946f017271b6ec58"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 4. 트리플룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">👥</span>
+              <span class="avail-acc-label" data-ko="트리플 룸" data-en="Triple Room">트리플 룸</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/5132b824d3ad82519761015d1509929f"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 5. 도미토리 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🎒</span>
+              <span class="avail-acc-label" data-ko="도미토리" data-en="Dormitory">도미토리</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/4fa2b824d3ad83e4a4a701cff5f951e1"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 6. 단체객실 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🏢</span>
+              <span class="avail-acc-label" data-ko="단체 객실" data-en="Group Room">단체 객실</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/fd52b824d3ad833e91e0816680d5e049"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+        </div><!-- /avail-accordion -->
+
         <div class="notion-avail-footer">
           📌 위 현황은 참고용입니다. 실제 예약 확정은 전화(<strong>010-8249-3453</strong>) 또는 OTA를 통해 진행됩니다.
         </div>
@@ -887,6 +1011,24 @@
       document.getElementById('calc-amount').textContent =
         (basePrice * nights).toLocaleString() + '원 ~';
       preview.style.display = 'block';
+    }
+
+    // 아코디언 토글
+    function toggleAcc(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      // 모두 닫기
+      document.querySelectorAll('.avail-acc-btn').forEach(b => {
+        b.classList.remove('open');
+        b.nextElementSibling.classList.remove('open');
+      });
+      // 클릭한 것만 열기 (이미 열려있으면 닫힘)
+      if (!isOpen) {
+        btn.classList.add('open');
+        body.classList.add('open');
+        // 스크롤
+        setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+      }
     }
 
     // 폼 제출 처리 (Web3Forms 연동)
