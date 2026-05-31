@@ -32,45 +32,50 @@
     <div class="container">
 
       <!-- 시설 개요 그리드 -->
-      <div class="facility-overview">
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">🍳</div>
-          <div class="facility-overview-item__title"
+      <div class="facility-overview" style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-bottom:48px;">
+      <style>
+        @media(max-width:767px){
+          .facility-overview{ grid-template-columns:repeat(2,1fr) !important; }
+        }
+      </style>
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🍳</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="공용 주방" data-en="Shared Kitchen">공용 주방</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">🔥</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🔥</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="야외 바베큐" data-en="Outdoor BBQ">야외 바베큐</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">🏢</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🏢</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="강당·세미나실" data-en="Hall / Seminar Room">강당·세미나실</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">🅿️</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🅿️</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="무료 주차" data-en="Free Parking">무료 주차</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">🧺</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🧺</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="세탁실" data-en="Laundry">세탁실</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">🐾</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">🐾</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="반려동물 동반" data-en="Pet Friendly">반려동물 동반</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">☕</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">☕</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="라운지·휴게공간" data-en="Lounge Area">라운지·휴게공간</div>
         </div>
-        <div class="facility-overview-item">
-          <div class="facility-overview-item__icon">📶</div>
-          <div class="facility-overview-item__title"
+        <div class="facility-overview-item" style="background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;text-align:center;">
+          <div class="facility-overview-item__icon" style="font-size:2rem;margin-bottom:8px;">📶</div>
+          <div class="facility-overview-item__title" style="font-size:0.85rem;font-weight:600;color:var(--color-text);"
             data-ko="무료 Wi-Fi" data-en="Free Wi-Fi">무료 Wi-Fi</div>
         </div>
       </div>
