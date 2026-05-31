@@ -295,7 +295,16 @@
           data-en="National Park, Cable Car, Waterpia — all nearby">국립공원, 케이블카, 워터피아 — 모두 가까이</p>
         <div class="section__divider"></div>
       </div>
-      <div class="seorak-grid">
+      <div class="seorak-grid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:20px;">
+      <style>
+        @media(max-width:767px){ .seorak-grid{ grid-template-columns:1fr !important; } }
+        @media(min-width:768px) and (max-width:1023px){ .seorak-grid{ grid-template-columns:repeat(2,1fr) !important; } }
+        .seorak-card{ background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px; }
+        .seorak-card__icon{ font-size:2rem; }
+        .seorak-card__title{ font-size:1rem;font-weight:700;color:var(--color-text); }
+        .seorak-card__desc{ font-size:0.85rem;color:var(--color-text-sub);line-height:1.6;flex:1; }
+        .seorak-card__time{ font-size:0.78rem;color:var(--color-gold);font-weight:600; }
+      </style>
         <div class="seorak-card">
           <div class="seorak-card__icon">🚶</div>
           <h3 class="seorak-card__title"
