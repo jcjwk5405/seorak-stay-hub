@@ -21,10 +21,10 @@ const NAVBAR_HTML = `
         data-ko="홈" data-en="Home">홈</a></li>
       <li><a href="${BASE}rooms.html"
         data-ko="객실 안내" data-en="Rooms">객실 안내</a></li>
-      <li><a href="${BASE}facilities.html"
-        data-ko="시설 안내" data-en="Facilities">시설 안내</a></li>
       <li><a href="${BASE}pricing.html"
         data-ko="요금 안내" data-en="Pricing">요금 안내</a></li>
+      <li><a href="${BASE}facilities.html"
+        data-ko="시설 안내" data-en="Facilities">시설 안내</a></li>
       <li><a href="${BASE}reservation.html"
         data-ko="예약 안내" data-en="Reservation">예약 안내</a></li>
       <li><a href="${BASE}gallery.html"
@@ -56,10 +56,10 @@ const NAVBAR_HTML = `
     data-ko="홈" data-en="Home">홈</a>
   <a href="${BASE}rooms.html"
     data-ko="객실 안내" data-en="Rooms">객실 안내</a>
-  <a href="${BASE}facilities.html"
-    data-ko="시설 안내" data-en="Facilities">시설 안내</a>
   <a href="${BASE}pricing.html"
     data-ko="요금 안내" data-en="Pricing">요금 안내</a>
+  <a href="${BASE}facilities.html"
+    data-ko="시설 안내" data-en="Facilities">시설 안내</a>
   <a href="${BASE}reservation.html"
     data-ko="예약 안내" data-en="Reservation">예약 안내</a>
   <a href="${BASE}gallery.html"
