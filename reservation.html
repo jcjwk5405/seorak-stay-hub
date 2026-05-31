@@ -1012,6 +1012,29 @@
       preview.style.display = 'block';
     }
 
+    // 홈 히어로 예약 바에서 전달된 날짜·인원 자동 입력
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const checkin  = params.get('checkin');
+      const checkout = params.get('checkout');
+      const guests   = params.get('guests');
+      if (checkin)  { const el = document.getElementById('checkin');  if(el) el.value = checkin; }
+      if (checkout) { const el = document.getElementById('checkout'); if(el) el.value = checkout; }
+      if (guests)   {
+        const el = document.getElementById('guests');
+        if (el) {
+          [...el.options].forEach(opt => { if(opt.value === guests) opt.selected = true; });
+        }
+      }
+      // 날짜가 있으면 폼으로 스크롤
+      if (checkin || checkout) {
+        setTimeout(() => {
+          const form = document.getElementById('form-card');
+          if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500);
+      }
+    })();
+
     // 아코디언 토글
     function toggleAcc(btn) {
       const body = btn.nextElementSibling;

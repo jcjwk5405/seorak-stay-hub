@@ -88,10 +88,25 @@
           </select>
         </div>
         <button type="submit" class="btn btn--primary"
-          data-ko="예약 가능 확인" data-en="Check Availability">예약 가능 확인</button>
+          data-ko="예약 문의하기" data-en="Inquire Now">예약 문의하기</button>
       </form>
     </div>
   </section>
+
+  <script>
+    // 히어로 예약 바 → 예약 페이지 폼으로 날짜·인원 전달
+    document.getElementById('booking-form').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const checkin  = document.getElementById('checkin').value;
+      const checkout = document.getElementById('checkout').value;
+      const guests   = document.getElementById('guests').value;
+      const params = new URLSearchParams();
+      if (checkin)  params.set('checkin',  checkin);
+      if (checkout) params.set('checkout', checkout);
+      if (guests)   params.set('guests',   guests);
+      window.location.href = 'reservation.html?' + params.toString();
+    });
+  </script>
 
   <div class="trust-bar">
     <div class="trust-bar__inner">
