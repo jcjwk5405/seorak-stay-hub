@@ -292,6 +292,94 @@
     .checkin-card__label { font-size: 0.75rem; color: var(--color-text-sub); margin-bottom: 4px; }
     .checkin-card__time { font-size: 1.2rem; font-weight: 700; color: var(--color-gold); }
 
+    /* ── 아코디언 달력 ── */
+    .avail-accordion {
+      border-top: 1px solid var(--color-border);
+    }
+    .avail-acc-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+    .avail-acc-btn {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      cursor: pointer;
+      color: var(--color-text);
+      font-family: inherit;
+      font-size: 0.95rem;
+      font-weight: 600;
+      text-align: left;
+      transition: background 0.2s;
+    }
+    .avail-acc-btn:hover { background: rgba(255,255,255,0.04); }
+    .avail-acc-btn.open  { background: rgba(44,95,46,0.1); color: var(--color-gold); }
+    .avail-acc-icon { font-size: 1.2rem; }
+    .avail-acc-label { flex: 1; }
+    .avail-acc-arrow {
+      font-size: 0.75rem;
+      color: var(--color-text-sub);
+      transition: transform 0.3s;
+    }
+    .avail-acc-btn.open .avail-acc-arrow { transform: rotate(180deg); }
+    .avail-acc-body {
+      display: none;
+      overflow: hidden;
+    }
+    .avail-acc-body.open { display: block; }
+
+    /* ── 노션 예약 현황 달력 ── */
+    .notion-avail-card {
+      background: var(--color-bg-card);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 28px;
+    }
+    .notion-avail-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 20px;
+      border-bottom: 1px solid var(--color-border);
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .notion-avail-title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--color-gold);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .notion-avail-desc {
+      font-size: 0.75rem;
+      color: var(--color-text-sub);
+    }
+    .notion-avail-frame {
+      width: 100%;
+      height: 580px;
+      border: none;
+      display: block;
+      background: #fff;
+      /* 노션 상단 툴바 영역 가리기 */
+      margin-top: -50px;
+      clip-path: inset(50px 0 0 0);
+    }
+    .notion-avail-footer {
+      padding: 10px 20px;
+      border-top: 1px solid var(--color-border);
+      font-size: 0.75rem;
+      color: var(--color-text-sub);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
     /* 리셋 버튼 */
     .btn--reset {
       margin-top: 16px;
@@ -307,47 +395,6 @@
       transition: background 0.2s;
     }
     .btn--reset:hover { background: #3a7a3c; }
-
-    /* FAQ 아코디언 */
-    .faq-item { border-bottom: 1px solid rgba(255,255,255,0.08); }
-    .faq-item:last-child { border-bottom: none; }
-    .faq-question {
-      width: 100%;
-      background: none;
-      border: none;
-      color: #e0e0e0;
-      font-size: 0.95rem;
-      font-weight: 500;
-      text-align: left;
-      padding: 14px 8px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      transition: color 0.2s;
-    }
-    .faq-question:hover { color: #f5a623; }
-    .faq-question.open { color: #f5a623; }
-    .faq-arrow {
-      font-size: 0.85rem;
-      transition: transform 0.25s;
-      flex-shrink: 0;
-      margin-left: 8px;
-    }
-    .faq-question.open .faq-arrow { transform: rotate(180deg); }
-    .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
-      color: #b0b8c1;
-      font-size: 0.88rem;
-      line-height: 1.65;
-      padding: 0 8px;
-    }
-    .faq-answer.open {
-      max-height: 200px;
-      padding: 0 8px 14px;
-    }
   </style>
 </head>
 <body>
@@ -374,6 +421,107 @@
   <section class="section">
     <div class="container">
 
+      <!-- 📅 예약 가능 현황 (객실별 아코디언 달력) -->
+      <div class="notion-avail-card">
+        <div class="notion-avail-head">
+          <div class="notion-avail-title">📅 예약 가능 현황</div>
+          <div class="notion-avail-desc" data-ko="객실을 선택해 날짜를 확인하세요" data-en="Select a room type to check availability">객실을 선택해 날짜를 확인하세요</div>
+        </div>
+
+        <!-- 아코디언 아이템들 -->
+        <div class="avail-accordion">
+
+          <!-- 1. 온돌룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🛏</span>
+              <span class="avail-acc-label" data-ko="스탠다드 온돌룸 (한실)" data-en="Standard Ondol Room">스탠다드 온돌룸 (한실)</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/d8f2b824d3ad8230a07601bbe05d2bd6"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 2. 침대룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🛌</span>
+              <span class="avail-acc-label" data-ko="스탠다드 침대룸" data-en="Standard Bed Room">스탠다드 침대룸</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/1352b824d3ad83c6b3a10141da0c6750"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 3. 패밀리룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">👨‍👩‍👧‍👦</span>
+              <span class="avail-acc-label" data-ko="패밀리 룸" data-en="Family Room">패밀리 룸</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/2d82b824d3ad8393946f017271b6ec58"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 4. 트리플룸 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">👥</span>
+              <span class="avail-acc-label" data-ko="트리플 룸" data-en="Triple Room">트리플 룸</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/5132b824d3ad82519761015d1509929f"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 5. 도미토리 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🎒</span>
+              <span class="avail-acc-label" data-ko="도미토리" data-en="Dormitory">도미토리</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/4fa2b824d3ad83e4a4a701cff5f951e1"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+          <!-- 6. 단체객실 -->
+          <div class="avail-acc-item">
+            <button class="avail-acc-btn" onclick="toggleAcc(this)">
+              <span class="avail-acc-icon">🏢</span>
+              <span class="avail-acc-label" data-ko="단체 객실" data-en="Group Room">단체 객실</span>
+              <span class="avail-acc-arrow">▼</span>
+            </button>
+            <div class="avail-acc-body">
+              <iframe class="notion-avail-frame"
+                src="https://glory-goldenrod-9ce.notion.site/ebd/fd52b824d3ad833e91e0816680d5e049"
+                allowfullscreen loading="lazy"></iframe>
+            </div>
+          </div>
+
+        </div><!-- /avail-accordion -->
+
+        <div class="notion-avail-footer">
+          📌 위 현황은 참고용입니다. 실제 예약 확정은 전화(<strong>010-8249-3453</strong>) 또는 OTA를 통해 진행됩니다.
+        </div>
+      </div>
+
       <!-- 직접 예약 혜택 배너 -->
       <div class="direct-banner">
         <div class="direct-banner__text">
@@ -383,7 +531,6 @@
             OTA(야놀자·아고다 등) 대비 5% 추가 할인 + 무료 생수 2병 제공
           </span>
         </div>
-        <div class="direct-banner__badge" data-ko="직접예약 특가" data-en="Direct Rate">직접예약 특가</div>
       </div>
 
       <div class="grid-2">
@@ -865,14 +1012,57 @@
       preview.style.display = 'block';
     }
 
-    // 폼 제출 처리
-    function submitForm() {
+    // 홈 히어로 예약 바에서 전달된 날짜·인원 자동 입력
+    (function() {
+      const params = new URLSearchParams(window.location.search);
+      const checkin  = params.get('checkin');
+      const checkout = params.get('checkout');
+      const guests   = params.get('guests');
+      if (checkin)  { const el = document.getElementById('checkin');  if(el) el.value = checkin; }
+      if (checkout) { const el = document.getElementById('checkout'); if(el) el.value = checkout; }
+      if (guests)   {
+        const el = document.getElementById('guests');
+        if (el) {
+          [...el.options].forEach(opt => { if(opt.value === guests) opt.selected = true; });
+        }
+      }
+      // 날짜가 있으면 폼으로 스크롤
+      if (checkin || checkout) {
+        setTimeout(() => {
+          const form = document.getElementById('form-card');
+          if (form) form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }, 500);
+      }
+    })();
+
+    // 아코디언 토글
+    function toggleAcc(btn) {
+      const body = btn.nextElementSibling;
+      const isOpen = btn.classList.contains('open');
+      // 모두 닫기
+      document.querySelectorAll('.avail-acc-btn').forEach(b => {
+        b.classList.remove('open');
+        b.nextElementSibling.classList.remove('open');
+      });
+      // 클릭한 것만 열기 (이미 열려있으면 닫힘)
+      if (!isOpen) {
+        btn.classList.add('open');
+        body.classList.add('open');
+        // 스크롤
+        setTimeout(() => btn.scrollIntoView({ behavior: 'smooth', block: 'nearest' }), 100);
+      }
+    }
+
+    // 폼 제출 처리 (Web3Forms 연동)
+    async function submitForm() {
       const checkin  = document.getElementById('checkin').value;
       const checkout = document.getElementById('checkout').value;
       const roomVal  = document.getElementById('room-type').value;
       const name     = document.getElementById('name').value.trim();
       const phone    = document.getElementById('phone').value.trim();
       const email    = document.getElementById('email').value.trim();
+      const guests   = document.getElementById('guests').value;
+      const requests = document.getElementById('requests').value.trim();
       const privacy  = document.getElementById('privacy').checked;
 
       if (!checkin || !checkout || !roomVal || !name || !phone || !email) {
@@ -881,21 +1071,69 @@
       if (!privacy) { alert('개인정보 수집·이용에 동의해 주세요.'); return; }
 
       const basePrice = parseInt(roomVal.split('|')[1]);
+      const roomName  = roomVal.split('|')[0];
       const nights    = Math.max(1, (new Date(checkout) - new Date(checkin)) / 86400000);
       const dl        = new Date();
       dl.setDate(dl.getDate() + 1);
 
-      document.getElementById('depositor-display').textContent = name + ' 님';
-      document.getElementById('amount-display').textContent = basePrice
-        ? (basePrice * nights).toLocaleString() + '원 ~ (담당자 확인 후 최종 안내)'
-        : '담당자 확인 후 안내';
-      document.getElementById('deadline-display').textContent =
-        dl.toLocaleDateString('ko-KR') + ' 까지';
+      // 제출 버튼 비활성화
+      const btn = document.querySelector('.btn--submit');
+      btn.disabled = true;
+      btn.textContent = '전송 중...';
 
-      document.getElementById('form-card').style.display = 'none';
-      const sp = document.getElementById('success-panel');
-      sp.style.display = 'block';
-      sp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      try {
+        const res = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            access_key: '95c7d6b8-4e2f-4885-9ccf-a35dfae3fe37',
+            subject: `[설악산유스호스텔] 예약문의 — ${name} (${checkin} ~ ${checkout})`,
+            from_name: '설악산유스호스텔 홈페이지',
+            name,
+            email,
+            message:
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `📋 설악산유스호스텔 예약 문의\n` +
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `예약자명 : ${name}\n` +
+              `연락처   : ${phone}\n` +
+              `이메일   : ${email}\n` +
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `객실     : ${roomName}\n` +
+              `체크인   : ${checkin}\n` +
+              `체크아웃 : ${checkout}\n` +
+              `숙박     : ${nights}박\n` +
+              `인원     : ${guests}명\n` +
+              `예상금액 : ${basePrice ? (basePrice * nights).toLocaleString() + '원 ~' : '문의 필요'}\n` +
+              `━━━━━━━━━━━━━━━━━━━━\n` +
+              `요청사항 : ${requests || '없음'}\n`
+          })
+        });
+
+        const data = await res.json();
+        if (data.success) {
+          // 성공 — 안내 패널 표시
+          document.getElementById('depositor-display').textContent = name + ' 님';
+          document.getElementById('amount-display').textContent = basePrice
+            ? (basePrice * nights).toLocaleString() + '원 ~ (담당자 확인 후 최종 안내)'
+            : '담당자 확인 후 안내';
+          document.getElementById('deadline-display').textContent =
+            dl.toLocaleDateString('ko-KR') + ' 까지';
+
+          document.getElementById('form-card').style.display = 'none';
+          const sp = document.getElementById('success-panel');
+          sp.style.display = 'block';
+          sp.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          alert('전송 중 오류가 발생했습니다. 전화(010-8249-3453)로 문의해 주세요.');
+          btn.disabled = false;
+          btn.textContent = '📨 예약 문의 제출하기';
+        }
+      } catch (e) {
+        alert('네트워크 오류가 발생했습니다. 전화(010-8249-3453)로 문의해 주세요.');
+        btn.disabled = false;
+        btn.textContent = '📨 예약 문의 제출하기';
+      }
     }
 
     // 폼 리셋
