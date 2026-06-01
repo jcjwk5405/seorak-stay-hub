@@ -336,17 +336,14 @@
     }
     .faq-question.open .faq-arrow { transform: rotate(180deg); }
     .faq-answer {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease, padding 0.3s ease;
+      display: none;
+      padding: 16px 20px;
+      font-size: 0.9rem;
       color: #b0b8c1;
-      font-size: 0.88rem;
-      line-height: 1.65;
-      padding: 0 8px;
+      line-height: 1.7;
     }
     .faq-answer.open {
-      max-height: 200px;
-      padding: 0 8px 14px;
+      display: block;
     }
   </style>
 </head>
