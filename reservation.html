@@ -916,7 +916,7 @@
             </div>
             <div class="faq-list" style="margin-top:14px;">
               <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" type="button">
                   <span data-ko="체크인·체크아웃 시간은?" data-en="What are the check-in/out times?">체크인·체크아웃 시간은?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -927,7 +927,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" type="button">
                   <span data-ko="반려동물 동반 가능한가요?" data-en="Are pets allowed?">반려동물 동반 가능한가요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -938,7 +938,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" type="button">
                   <span data-ko="주차는 가능한가요?" data-en="Is parking available?">주차는 가능한가요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -949,7 +949,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" type="button">
                   <span data-ko="조식은 있나요?" data-en="Is breakfast available?">조식은 있나요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -960,7 +960,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" onclick="toggleFaq(this)">
+                <button class="faq-question" type="button">
                   <span data-ko="단체 예약은 어떻게 하나요?" data-en="How do I book for a group?">단체 예약은 어떻게 하나요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -1182,17 +1182,7 @@
       });
     }
 
-    // FAQ 토글 — main.js 방식과 동일하게
-    function toggleFaq(btn) {
-      const answer = btn.nextElementSibling;
-      const isOpen = answer.classList.contains('open');
-      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
-      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
-      if (!isOpen) {
-        answer.classList.add('open');
-        btn.classList.add('open');
-      }
-    }
+
 
     // 외국인 OTA 안내 박스 — 영어 전환 시 표시, 한국어 시 숨김
     function updateForeignNotice() {
