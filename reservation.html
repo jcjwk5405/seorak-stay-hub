@@ -590,6 +590,17 @@
               </span>
             </div>
 
+            <!-- 외국인 OTA 안내 (영어 전환 시에만 표시) -->
+            <div id="foreign-notice-success" style="display:none; background:rgba(245,166,35,0.08); border:1px solid rgba(245,166,35,0.35); border-radius:10px; padding:14px 16px; margin-bottom:14px; font-size:0.88rem; line-height:1.7; color:var(--color-text);">
+              💳 <strong>Unable to transfer from overseas?</strong><br>
+              You may cancel this inquiry and book instead via an OTA that accepts international cards:
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                <a href="https://www.agoda.com" target="_blank" rel="noopener" style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; padding:7px 14px; color:var(--color-text); text-decoration:none; font-weight:600; font-size:0.85rem;">✈️ Agoda</a>
+                <a href="https://www.booking.com" target="_blank" rel="noopener" style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; padding:7px 14px; color:var(--color-text); text-decoration:none; font-weight:600; font-size:0.85rem;">🌍 Booking.com</a>
+                <a href="https://www.trip.com" target="_blank" rel="noopener" style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; padding:7px 14px; color:var(--color-text); text-decoration:none; font-weight:600; font-size:0.85rem;">🗺️ Trip.com</a>
+              </div>
+            </div>
+
             <button class="btn--reset" onclick="resetForm()"
               data-ko="↩ 새 예약 문의하기" data-en="↩ New Inquiry">↩ 새 예약 문의하기</button>
           </div>
@@ -604,6 +615,17 @@
               data-en="Submit form → Staff review → Account info → Payment → Confirmation">
               폼 제출 → 담당자 확인 → 계좌 안내 → 입금 확인 → 예약 확정
             </p>
+
+            <!-- 외국인 OTA 안내 (영어 전환 시에만 표시) -->
+            <div id="foreign-notice" style="display:none; background:rgba(245,166,35,0.08); border:1px solid rgba(245,166,35,0.35); border-radius:10px; padding:14px 16px; margin-bottom:18px; font-size:0.88rem; line-height:1.7; color:var(--color-text);">
+              💳 <strong>International guests:</strong> This form uses Korean bank transfer (무통장 입금) as the only payment method, which may not be available from overseas.<br>
+              We recommend booking via OTA platforms that accept international cards:
+              <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:10px;">
+                <a href="https://www.agoda.com" target="_blank" rel="noopener" style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; padding:7px 14px; color:var(--color-text); text-decoration:none; font-weight:600; font-size:0.85rem;">✈️ Agoda</a>
+                <a href="https://www.booking.com" target="_blank" rel="noopener" style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; padding:7px 14px; color:var(--color-text); text-decoration:none; font-weight:600; font-size:0.85rem;">🌍 Booking.com</a>
+                <a href="https://www.trip.com" target="_blank" rel="noopener" style="background:var(--color-bg-card); border:1px solid var(--color-border); border-radius:8px; padding:7px 14px; color:var(--color-text); text-decoration:none; font-weight:600; font-size:0.85rem;">🗺️ Trip.com</a>
+              </div>
+            </div>
 
             <!-- 날짜 -->
             <div class="form-row">
@@ -894,7 +916,7 @@
             </div>
             <div class="faq-list" style="margin-top:14px;">
               <div class="faq-item">
-                <button class="faq-question" type="button">
+                <button class="faq-question" onclick="toggleFaq(this)">
                   <span data-ko="체크인·체크아웃 시간은?" data-en="What are the check-in/out times?">체크인·체크아웃 시간은?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -905,7 +927,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" type="button">
+                <button class="faq-question" onclick="toggleFaq(this)">
                   <span data-ko="반려동물 동반 가능한가요?" data-en="Are pets allowed?">반려동물 동반 가능한가요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -916,7 +938,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" type="button">
+                <button class="faq-question" onclick="toggleFaq(this)">
                   <span data-ko="주차는 가능한가요?" data-en="Is parking available?">주차는 가능한가요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -927,7 +949,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" type="button">
+                <button class="faq-question" onclick="toggleFaq(this)">
                   <span data-ko="조식은 있나요?" data-en="Is breakfast available?">조식은 있나요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -938,7 +960,7 @@
                 </div>
               </div>
               <div class="faq-item">
-                <button class="faq-question" type="button">
+                <button class="faq-question" onclick="toggleFaq(this)">
                   <span data-ko="단체 예약은 어떻게 하나요?" data-en="How do I book for a group?">단체 예약은 어떻게 하나요?</span>
                   <span class="faq-arrow">▾</span>
                 </button>
@@ -1160,7 +1182,34 @@
       });
     }
 
+    // FAQ 토글 — main.js 방식과 동일하게
+    function toggleFaq(btn) {
+      const answer = btn.nextElementSibling;
+      const isOpen = answer.classList.contains('open');
+      document.querySelectorAll('.faq-answer').forEach(a => a.classList.remove('open'));
+      document.querySelectorAll('.faq-question').forEach(q => q.classList.remove('open'));
+      if (!isOpen) {
+        answer.classList.add('open');
+        btn.classList.add('open');
+      }
+    }
 
+    // 외국인 OTA 안내 박스 — 영어 전환 시 표시, 한국어 시 숨김
+    function updateForeignNotice() {
+      const isEn = (localStorage.getItem('syh_lang') === 'en');
+      ['foreign-notice', 'foreign-notice-success'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.style.display = isEn ? 'block' : 'none';
+      });
+    }
+    document.addEventListener('DOMContentLoaded', () => {
+      updateForeignNotice();
+      document.querySelectorAll('.lang-toggle button').forEach(btn => {
+        btn.addEventListener('click', () => {
+          setTimeout(updateForeignNotice, 50);
+        });
+      });
+    });
   </script>
 </body>
 </html>
