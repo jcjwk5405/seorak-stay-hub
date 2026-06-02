@@ -13,17 +13,17 @@
   --color-secondary:     #2E86C1;
   --color-accent:        #E67E22;
   --color-gold:          #C9A84C;
-  --color-bg:            #0D1B2A;
-  --color-bg-sub:        #1A2B3C;
-  --color-bg-card:       rgba(255,255,255,0.05);
-  --color-border:        rgba(255,255,255,0.10);
-  --color-text:          #FFFFFF;
-  --color-text-sub:      #B0C4D8;
+  --color-bg:            #F2F4F6;
+  --color-bg-sub:        #E4E8ED;
+  --color-bg-card:       #FFFFFF;
+  --color-border:        rgba(0,0,0,0.10);
+  --color-text:          #1A1A2E;
+  --color-text-sub:      #4A5568;
   --font-main: 'Noto Sans KR', 'Inter', sans-serif;
   --max-width: 1200px;
   --radius-card: 12px;
-  --shadow-card: 0 2px 16px rgba(0,0,0,0.35);
-  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.55);
+  --shadow-card: 0 2px 16px rgba(0,0,0,0.10);
+  --shadow-card-hover: 0 8px 32px rgba(0,0,0,0.18);
   --transition: 0.2s ease;
   --nav-height: 64px;
 }
@@ -191,7 +191,7 @@ p  { font-size: 1rem; font-weight: 400; }
   position: fixed;
   top: 0; left: 0; right: 0;
   height: var(--nav-height);
-  background: rgba(13,27,42,0.97);
+  background: rgba(242,244,246,0.97);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--color-border);
   z-index: 1000;
@@ -311,7 +311,7 @@ p  { font-size: 1rem; font-weight: 400; }
   border-bottom: 1px solid var(--color-border);
   z-index: 999;
   padding: 16px 24px 24px;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
 }
 .mobile-nav.open { display: block; }
 .mobile-nav a {
@@ -425,7 +425,7 @@ p  { font-size: 1rem; font-weight: 400; }
 .booking-bar {
   position: absolute;
   bottom: 0; left: 0; right: 0;
-  background: rgba(13,27,42,0.92);
+  background: rgba(242,244,246,0.92);
   backdrop-filter: blur(12px);
   padding: 20px 24px;
   border-top: 1px solid var(--color-border);
@@ -460,7 +460,7 @@ p  { font-size: 1rem; font-weight: 400; }
   border-radius: 6px;
   font-size: 0.95rem;
   color: var(--color-text);
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.85);
   transition: border-color var(--transition);
   min-height: 44px;
 }
@@ -476,7 +476,7 @@ p  { font-size: 1rem; font-weight: 400; }
 
 /* Trust Bar */
 .trust-bar {
-  background: rgba(44,95,46,0.15);
+  background: rgba(44,95,46,0.08);
   border-bottom: 2px solid var(--color-primary);
   padding: 14px 24px;
 }
@@ -1421,7 +1421,7 @@ p  { font-size: 1rem; font-weight: 400; }
   transition: background var(--transition);
   font-size: 0.95rem;
 }
-.faq-question:hover { background: rgba(255,255,255,0.08); }
+.faq-question:hover { background: rgba(255,255,255,0.85); }
 .faq-question.open { background: var(--color-primary-light); color: var(--color-gold); }
 .faq-arrow { transition: transform var(--transition); font-size: 0.8rem; }
 .faq-question.open .faq-arrow { transform: rotate(180deg); }
