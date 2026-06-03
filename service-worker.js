@@ -1,6 +1,6 @@
 // 설악산유스호스텔 Service Worker v3.0
-const CACHE_NAME = 'seorak-hostel-v3';
-const BASE_PATH = '/seorak-hostel';
+const CACHE_NAME = 'seorak-stay-hub-v1';
+const BASE_PATH = '/seorak-stay-hub';
 
 const STATIC_ASSETS = [
   `${BASE_PATH}/`,

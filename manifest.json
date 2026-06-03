@@ -2,8 +2,8 @@
   "name": "설악산유스호스텔",
   "short_name": "설악산유스호스텔",
   "description": "설악산 국립공원 도보 5분 – 설악산유스호스텔 공식 홈페이지",
-  "start_url": "/seorak-hostel/",
-  "scope": "/seorak-hostel/",
+  "start_url": "/seorak-stay-hub/",
+  "scope": "/seorak-stay-hub/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#2C5F2E",
@@ -29,13 +29,13 @@
     {
       "name": "예약 안내",
       "short_name": "예약",
-      "url": "/seorak-hostel/reservation.html",
+      "url": "/seorak-stay-hub/reservation.html",
       "icons": [{ "src": "images/icon-192.png", "sizes": "192x192" }]
     },
     {
       "name": "객실 안내",
       "short_name": "객실",
-      "url": "/seorak-hostel/rooms.html",
+      "url": "/seorak-stay-hub/rooms.html",
       "icons": [{ "src": "images/icon-192.png", "sizes": "192x192" }]
     }
   ]
